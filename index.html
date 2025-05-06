@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa z logowaniem</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+</head>
+<body>
+  <div id="map"></div>
+  <div class="login-box">
+    <h2>Witamy!</h2>
+    <button class="google-btn">🔍 zaloguj się przez Google</button>
+    <button>zobacz inne opcje</button>
+    <p class="separator">albo</p>
+    <input type="email" placeholder="wpisz e-mail" />
+    <button>kontynuuj</button>
+  </div>
+
+  <div class="user-panel" style="display: none;">
+    <img id="user-photo" src="" alt="Zdjęcie profilowe" />
+    <span id="user-name"></span>
+    <button id="logout-btn">Wyloguj</button>
+  </div>
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyA7AhSYWt2hCaJD4rPDri4I3NZbs6L48B8",
+      authDomain: "vibespot-39623.firebaseapp.com",
+      projectId: "vibespot-39623",
+      storageBucket: "vibespot-39623.firebasestorage.app",
+      messagingSenderId: "193028011307",
+      appId: "1:193028011307:web:8353723f1abb392e28816e",
+      measurementId: "G-36GPG7M0J5"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <div id="user-initials" style="display: none; position: absolute; top: 20px; right: 20px; z-index: 1000;
+    background-color: #4a90e2; color: white; border-radius: 50%; width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; cursor: pointer;">
+  </div>
+  <div id="user-menu" style="
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 1001;
+    font-size: 14px;
+  ">
+    <button id="logout-btn" style="
+      padding: 10px 20px;
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    ">Wyloguj się</button>
+  </div>
+
+  <div id="filter-panel" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff3d4;
+  border-radius: 30px;
+  padding: 20px 40px;
+  max-width: 600px;
+  max-height: 40vh;
+  overflow-y: auto;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  ">
+
+  <h2 style="text-align: center; font-family:'Mogra';">Filtry</h2>
+  <p>Kategoria:</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <button class="filter-btn">Sportowa</button>
+    <button class="filter-btn">Kreatywna</button>
+    <button class="filter-btn">Kulturowa</button>
+    <button class="filter-btn">Kulinarna</button>
+    <button class="filter-btn">Imprezowa</button>
+    <button class="filter-btn">Towarzyska</button>
+    <button class="filter-btn">Blisko natury</button>
+    <button class="filter-btn">  </button>
+    <button class="filter-btn">   </button></div>
+    
+  <p style="margin-top: 20px;">Nastrój:</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <button class="mood_btn">😊</button>
+    <button class="mood_btn">😒</button>
+    <button class="mood_btn">😎</button>
+    <button class="mood_btn">😆</button>
+    <button class="mood_btn">😍</button>
+    <button class="mood_btn">😌</button>
+    <button class="mood_btn">🎉</button>
+    <button class="mood_btn">🏞️</button>
+    </div>
+
+  <p style="margin-top: 20px;">Dystans:</p>
+  <div class="range-labels">
+    <span>0</span>
+    <span>50 km</span>
+  </div>
+  <input type="range" id="distance" class="full-width" min="0" max="50" />
+  <p style="margin-top: 20px;">Budżet:</p>
+  <div class="range-labels">
+    <span>0</span>
+    <span>200 zł</span>
+  </div>
+  <input type="range" id="budget" class="full-width" min="0" max="200" />
+
+
+  <p style="margin-top: 20px;">Termin:</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <button class="filter-btn">dzisiaj</button>
+    <button class="filter-btn">jutro</button>
+    <button class="filter-btn">pojutrze</button>
+    <button class="filter-btn">inny termin</button>
+    </div>
+
+  <p style="margin-top: 20px;">Pora dnia:</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <button class="filter-btn">rano</button>
+    <button class="filter-btn">w południe</button>
+    <button class="filter-btn">popołudniu</button>
+    <button class="filter-btn">wieczorem</button>
+    <button class="filter-btn">w nocy</button>
+    </div>
+
+  <p style="margin-top: 20px;">Inne:</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <button class="filter-btn">ze zwierzętami</button>
+    <button class="filter-btn">dla dzieci</button>
+    <button class="filter-btn">dla niepełnosprawnych</button>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
