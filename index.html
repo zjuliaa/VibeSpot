@@ -8,7 +8,11 @@
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet/dist/leaflet.css"
-  />
+    />
+  <!-- Link do stylów Flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- Link do skryptu Flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
   <div id="map"></div>
@@ -132,6 +136,8 @@
     <button class="filter-btn">pojutrze</button>
     <button class="filter-btn">inny termin</button>
     </div>
+    
+  <div id="calendar-container" style="display: none; margin-top: 20px;"></div>
 
   <p style="margin-top: 20px;">Pora dnia:</p>
   <div style="display: flex; flex-wrap: wrap; gap: 10px;">
