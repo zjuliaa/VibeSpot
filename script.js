@@ -47,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.login-box').style.display = 'block';
       document.getElementById('user-initials').style.display = 'none';
       document.getElementById('user-menu').style.display = 'none';
+      const filterPanel = document.getElementById('filter-panel');
+      if (filterPanel) {
+        filterPanel.style.display = 'none';
+      }
     }
   });
 
@@ -61,6 +65,10 @@ if (logoutButtonMenu) {
       document.querySelector('.login-box').style.display = 'block';
       document.getElementById('user-initials').style.display = 'none';
       document.getElementById('user-menu').style.display = 'none';
+      const filterPanel = document.getElementById('filter-panel');
+      if (filterPanel) {
+        filterPanel.style.display = 'none';
+      }
     }).catch(error => {
       console.error("Błąd wylogowywania:", error);
     });
