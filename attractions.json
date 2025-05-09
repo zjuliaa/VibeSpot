@@ -414,12 +414,77 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "longitude": 21.0236,
         "address": "ul. Okólnik 1, Warszawa"
       }
+    }, 
+    {
+      "id": "imprezowe_001",
+      "name": "Level 27",
+      "description": "Ekskluzywny rooftop club z panoramicznym widokiem na Warszawę.",
+      "category": "imprezowa",
+      "mood": ["elegancki", "towarzyski"],
+      "budget": "wysoki",
+      "distance_km": 1.5,
+      "location": {
+        "latitude": 52.2309,
+        "longitude": 21.0037,
+        "address": "Al. Jerozolimskie 123A, Warszawa"
+      }
+    },
+    {
+      "id": "imprezowe_002",
+      "name": "Hala Koszyki",
+      "description": "Stylowa hala gastronomiczna z barami, restauracjami i muzyką na żywo.",
+      "category": "imprezowa",
+      "mood": ["towarzyski", "kulinarne"],
+      "budget": "średni",
+      "distance_km": 1.2,
+      "location": {
+        "latitude": 52.2236,
+        "longitude": 21.0133,
+        "address": "ul. Koszykowa 63, Warszawa"
+      }
+    },
+    {
+      "id": "imprezowe_003",
+      "name": "Pawilony Nowy Świat",
+      "description": "Kompleks małych barów w podwórku przy Nowym Świecie – popularne miejsce nocnego życia.",
+      "category": "imprezowa",
+      "mood": ["imprezowy", "luźny"],
+      "budget": "niski",
+      "distance_km": 0.9,
+      "location": {
+        "latitude": 52.2314,
+        "longitude": 21.0167,
+        "address": "ul. Nowy Świat 22/28, Warszawa"
+      }
+    },
+    {
+      "id": "imprezowe_004",
+      "name": "Sen",
+      "description": "Stylowy klub nad Wisłą z imprezami i klimatem beach clubu.",
+      "category": "imprezowa",
+      "mood": ["modny", "towarzyski"],
+      "budget": "wysoki",
+      "distance_km": 2.3,
+      "location": {
+        "latitude": 52.2428,
+        "longitude": 21.0375,
+        "address": "ul. Wioślarska 6, Warszawa"
+      }
+    },
+    {
+      "id": "imprezowe_005",
+      "name": "Czarna Perła",
+      "description": "Legendarny klub rockowy z taneczną atmosferą i karaoke.",
+      "category": "imprezowa",
+      "mood": ["rockowy", "zabawny"],
+      "budget": "średni",
+      "distance_km": 1.4,
+      "location": {
+        "latitude": 52.2311,
+        "longitude": 21.0079,
+        "address": "ul. Marszałkowska 99/101, Warszawa"
+      }
     }
   ]
 }
 
-  ]
-}
-
-]
-}
