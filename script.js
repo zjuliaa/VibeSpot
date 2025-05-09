@@ -50,24 +50,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  const logoutButton = document.getElementById('logout-btn');
-  if (logoutButton) {
-    console.log("Przycisk wylogowania załadowany!");  
-    logoutButton.addEventListener('click', () => {
-      console.log("Kliknięto przycisk wylogowania!");  
-      firebase.auth().signOut().then(() => {
-        console.log("Użytkownik został wylogowany"); 
-        document.querySelector('.user-panel').style.display = 'none';
-        document.querySelector('.login-box').style.display = 'block';
-        document.getElementById('user-initials').style.display = 'none';
-        document.getElementById('user-menu').style.display = 'none';
-      }).catch(error => {
-        console.error("Błąd wylogowywania:", error);
-      });
+  const logoutButtonMenu = document.getElementById('logout-btn-menu');
+if (logoutButtonMenu) {
+  console.log("Przycisk wylogowania (menu) załadowany!");
+  logoutButtonMenu.addEventListener('click', () => {
+    console.log("Kliknięto przycisk wylogowania (menu)!");
+    firebase.auth().signOut().then(() => {
+      console.log("Użytkownik został wylogowany");
+      document.querySelector('.user-panel').style.display = 'none';
+      document.querySelector('.login-box').style.display = 'block';
+      document.getElementById('user-initials').style.display = 'none';
+      document.getElementById('user-menu').style.display = 'none';
+    }).catch(error => {
+      console.error("Błąd wylogowywania:", error);
     });
-  } else {
-    console.log("Przycisk wylogowania nie istnieje!");
-  }
+  });
+} else {
+  console.log("Przycisk wylogowania (menu) nie istnieje!");
+}
+
 
   document.getElementById('user-initials').addEventListener('click', () => {
     const menu = document.getElementById('user-menu');
