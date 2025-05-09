@@ -101,17 +101,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood
         "longitude": 21.0125,
         "address": "ul. Nowogrodzka 10, Warszawa"
       },
-      "weather_preferences": ["dowolna"],
-      "reviews": {
-        "average_rating": 4.7,
-        "total_reviews": 432
-      },
-      "available_for_premium": false,
-      "features": {
-        "reservation_available": true,
-        "offline_access": false,
-        "favorite_option": true
-      }
     },
     {
       "id": "w008",
@@ -126,17 +115,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood
         "longitude": 21.0100,
         "address": "ul. Wilcza 46, Warszawa"
       },
-      "weather_preferences": ["dowolna"],
-      "reviews": {
-        "average_rating": 4.9,
-        "total_reviews": 389
-      },
-      "available_for_premium": true,
-      "features": {
-        "reservation_available": true,
-        "offline_access": false,
-        "favorite_option": true
-      }
     },
     {
       "id": "w009",
@@ -151,17 +129,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood
         "longitude": 21.0130,
         "address": "ul. Nowogrodzka 18A, Warszawa"
       },
-      "weather_preferences": ["dowolna"],
-      "reviews": {
-        "average_rating": 4.8,
-        "total_reviews": 512
-      },
-      "available_for_premium": false,
-      "features": {
-        "reservation_available": true,
-        "offline_access": false,
-        "favorite_option": true
-      }
     },
     {
       "id": "w010",
@@ -176,17 +143,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood
         "longitude": 21.0360,
         "address": "ul. Mińska 25, Warszawa"
       },
-      "weather_preferences": ["dowolna"],
-      "reviews": {
-        "average_rating": 4.5,
-        "total_reviews": 967
-      },
-      "available_for_premium": true,
-      "features": {
-        "reservation_available": true,
-        "offline_access": false,
-        "favorite_option": true
-      }
     }
   ]
 }
