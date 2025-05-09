@@ -91,4 +91,55 @@ if (logoutButtonMenu) {
     }
   });
 
+  const calendarContainer = document.getElementById('calendar-container');
+  
+  const otherDateBtn = Array.from(document.querySelectorAll('.filter-btn'))
+    .find(btn => btn.textContent.trim().toLowerCase() === 'inny termin');
+  
+  if (otherDateBtn) {
+    otherDateBtn.addEventListener('click', () => {
+      if (calendarContainer.style.display === 'none') {
+        // Dodaj kalendarz, jeśli jeszcze go nie ma
+        if (!document.getElementById('date-picker')) {
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.id = 'date-picker';
+          input.style.padding = '10px';
+          input.style.fontSize = '16px';
+          calendarContainer.appendChild(input);
+          flatpickr("#date-picker", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            locale: "pl"
+          });
+        }
+        calendarContainer.style.display = 'block';
+      } else {
+        calendarContainer.style.display = 'none';
+      }
+    });
+  }
+  const timeSlider = document.getElementById("time-slider");
+  if (timeSlider) {
+    noUiSlider.create(timeSlider, {
+      start: [8, 18],
+      connect: true,
+      step: 1,
+      range: {
+        min: 0,
+        max: 24,
+      },
+      format: {
+        to: value => `${Math.round(value).toString().padStart(2, '0')}:00`,
+        from: value => parseInt(value),
+      }
+    });
+
+    const timeOutput = document.getElementById("time-range-output");
+    timeSlider.noUiSlider.on("update", function (values) {
+      timeOutput.textContent = values.join(" – ");
+    });
+  } else {
+    console.error("Nie znaleziono #time-slider");
+  }
 });
