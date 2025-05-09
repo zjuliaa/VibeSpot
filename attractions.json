@@ -549,6 +549,83 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "longitude": 21.0201,
         "address": "Park Ujazdowski, Warszawa"
       }
+    }, 
+{
+  "attractions": [
+    {
+      "id": "towarzyska_001",
+      "name": "Bulwary Wiślane",
+      "description": "Popularne miejsce spotkań nad Wisłą z food truckami, barami i strefami relaksu.",
+      "category": "towarzyska",
+      "mood": ["luźny", "towarzyski"],
+      "budget": "niski",
+      "distance_km": 2.0,
+      "location": {
+        "latitude": 52.2419,
+        "longitude": 21.0302,
+        "address": "Bulwar gen. Pattona, Warszawa"
+      }
+    },
+    {
+      "id": "towarzyska_002",
+      "name": "Plac Zbawiciela",
+      "description": "Stylowe miejsce z kawiarniami i restauracjami, chętnie odwiedzane przez mieszkańców.",
+      "category": "towarzyska",
+      "mood": ["towarzyski", "modny"],
+      "budget": "średni",
+      "distance_km": 1.3,
+      "location": {
+        "latitude": 52.2197,
+        "longitude": 21.0188,
+        "address": "Plac Zbawiciela, Warszawa"
+      }
+    },
+    {
+      "id": "towarzyska_003",
+      "name": "Miejsce Chwila",
+      "description": "Kawiarnia z klimatem bohemy, z planszówkami i wydarzeniami artystycznymi.",
+      "category": "towarzyska",
+      "mood": ["relaksujący", "artystyczny"],
+      "budget": "niski",
+      "distance_km": 1.7,
+      "location": {
+        "latitude": 52.2325,
+        "longitude": 20.9950,
+        "address": "ul. Ogrodowa 31/35, Warszawa"
+      }
+    },
+    {
+      "id": "towarzyska_004",
+      "name": "Granda Bar",
+      "description": "Modny bar z dużą salą, głośną muzyką i dobrymi drinkami – świetny na spotkania w większym gronie.",
+      "category": "towarzyska",
+      "mood": ["imprezowy", "towarzyski"],
+      "budget": "średni",
+      "distance_km": 1.1,
+      "location": {
+        "latitude": 52.2272,
+        "longitude": 21.0135,
+        "address": "ul. Żurawia 32/34, Warszawa"
+      }
+    },
+    {
+      "id": "towarzyska_005",
+      "name": "Cud nad Wisłą",
+      "description": "Letni bar nad Wisłą z leżakami, muzyką i atmosferą chilloutu.",
+      "category": "towarzyska",
+      "mood": ["luźny", "relaksujący"],
+      "budget": "niski",
+      "distance_km": 2.4,
+      "location": {
+        "latitude": 52.2405,
+        "longitude": 21.0369,
+        "address": "Bulwar Flotylli Wiślanej, Warszawa"
+      }
+    }
+  ]
+}
+
+    
   ]
 }
 
