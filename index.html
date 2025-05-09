@@ -9,11 +9,15 @@
     rel="stylesheet"
     href="https://unpkg.com/leaflet/dist/leaflet.css"
     />
-  <!-- Link do stylów Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <!-- Link do skryptu Flatpickr -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-</head>
+  <!-- noUiSlider CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet">
+  <!-- noUiSlider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
+
+
+ </head>
 <body>
   <div id="map"></div>
   <div class="login-box">
@@ -139,14 +143,11 @@
     
   <div id="calendar-container" style="display: none; margin-top: 20px;"></div>
 
-  <p style="margin-top: 20px;">Pora dnia:</p>
-  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <button class="filter-btn">rano</button>
-    <button class="filter-btn">w południe</button>
-    <button class="filter-btn">popołudniu</button>
-    <button class="filter-btn">wieczorem</button>
-    <button class="filter-btn">w nocy</button>
-    </div>
+
+  <p style="margin-top: 20px;">Przedział godzinowy:</p>
+  <div id="time-slider" style="margin: 20px 0;"></div>
+  <p id="time-range-output" style="text-align: center; font-weight: bold;">08:00 – 18:00</p>
+
 
   <p style="margin-top: 20px;">Inne:</p>
   <div style="display: flex; flex-wrap: wrap; gap: 10px;">

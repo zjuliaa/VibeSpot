@@ -119,4 +119,27 @@ if (logoutButtonMenu) {
       }
     });
   }
+  const timeSlider = document.getElementById("time-slider");
+  if (timeSlider) {
+    noUiSlider.create(timeSlider, {
+      start: [8, 18],
+      connect: true,
+      step: 1,
+      range: {
+        min: 0,
+        max: 24,
+      },
+      format: {
+        to: value => `${Math.round(value).toString().padStart(2, '0')}:00`,
+        from: value => parseInt(value),
+      }
+    });
+
+    const timeOutput = document.getElementById("time-range-output");
+    timeSlider.noUiSlider.on("update", function (values) {
+      timeOutput.textContent = values.join(" – ");
+    });
+  } else {
+    console.error("Nie znaleziono #time-slider");
+  }
 });
