@@ -1,29 +1,22 @@
+category : sportowa, kreatywna, kulturowa, blisko natury, imprezowa, kulinarna, towarzyska
+mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood
+
+
 {
   "attractions": [
     {
       "id": "w001",
       "name": "Pałac Kultury i Nauki",
-      "description": "Ikoniczny wieżowiec z tarasem widokowym, muzeami i teatrami.",
-      "category": "kreatywne",
-      "mood": ["kulturalny", "widokowy"],
+      "description": "Ikoniczny wieżowiec z tarasem widokowym.",
+      "category": "kulturowe",
+      "mood": ["happy"],
       "budget": "niski",
-      "distance_km": 0.5,
+      "distance_km": ,
       "location": {
-        "latitude": 52.2319,
-        "longitude": 21.0059,
+        "latitude": 52.231766,
+        "longitude": 21.00618,
         "address": "Plac Defilad 1, Warszawa"
       },
-      "weather_preferences": ["dowolna"],
-      "reviews": {
-        "average_rating": 4.5,
-        "total_reviews": 1523
-      },
-      "available_for_premium": false,
-      "features": {
-        "reservation_available": false,
-        "offline_access": true,
-        "favorite_option": true
-      }
     },
     {
       "id": "w002",
@@ -38,17 +31,6 @@
         "longitude": 21.0128,
         "address": "Skwer I Dywizji Pancernej, Warszawa"
       },
-      "weather_preferences": ["słonecznie", "pochmurno"],
-      "reviews": {
-        "average_rating": 4.7,
-        "total_reviews": 984
-      },
-      "available_for_premium": false,
-      "features": {
-        "reservation_available": false,
-        "offline_access": false,
-        "favorite_option": true
-      }
     },
     {
       "id": "w003",
@@ -62,18 +44,7 @@
         "latitude": 52.2416,
         "longitude": 21.0303,
         "address": "Wybrzeże Kościuszkowskie 20, Warszawa"
-      },
-      "weather_preferences": ["dowolna"],
-      "reviews": {
-        "average_rating": 4.8,
-        "total_reviews": 2103
-      },
-      "available_for_premium": true,
-      "features": {
-        "reservation_available": true,
-        "offline_access": true,
-        "favorite_option": true
-      }
+      },}
     },
     {
       "id": "w004",
@@ -88,17 +59,6 @@
         "longitude": 21.0333,
         "address": "ul. Agrykola 1, Warszawa"
       },
-      "weather_preferences": ["słonecznie", "pochmurno"],
-      "reviews": {
-        "average_rating": 4.9,
-        "total_reviews": 3456
-      },
-      "available_for_premium": false,
-      "features": {
-        "reservation_available": false,
-        "offline_access": true,
-        "favorite_option": true
-      }
     },
     {
       "id": "w005",
@@ -113,17 +73,6 @@
         "longitude": 20.9831,
         "address": "ul. Grzybowska 79, Warszawa"
       },
-      "weather_preferences": ["dowolna"],
-      "reviews": {
-        "average_rating": 4.8,
-        "total_reviews": 1890
-      },
-      "available_for_premium": true,
-      "features": {
-        "reservation_available": true,
-        "offline_access": true,
-        "favorite_option": true
-      }
     },
     {
       "id": "w006",
@@ -138,17 +87,6 @@
         "longitude": 21.0123,
         "address": "ul. Mokotowska 48, Warszawa"
       },
-      "weather_preferences": ["dowolna"],
-      "reviews": {
-        "average_rating": 4.6,
-        "total_reviews": 654
-      },
-      "available_for_premium": true,
-      "features": {
-        "reservation_available": true,
-        "offline_access": false,
-        "favorite_option": true
-      }
     },
     {
       "id": "w007",
