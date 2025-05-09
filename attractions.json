@@ -15,7 +15,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.231766,
         "longitude": 21.00618,
         "address": "Plac Defilad 1, Warszawa"
-      },
+      }
     },
     {
       "id": "w002",
@@ -28,7 +28,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2531,
         "longitude": 21.0128,
         "address": "Skwer I Dywizji Pancernej, Warszawa"
-      },
+      }
     },
     {
       "id": "w003",
@@ -42,7 +42,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2416,
         "longitude": 21.0303,
         "address": "Wybrzeże Kościuszkowskie 20, Warszawa"
-      },
+      }
     },
     {
       "id": "w004",
@@ -55,7 +55,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2167,
         "longitude": 21.0333,
         "address": "ul. Agrykola 1, Warszawa"
-      },
+      }
     },
     {
       "id": "w005",
@@ -68,7 +68,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2328,
         "longitude": 20.9831,
         "address": "ul. Grzybowska 79, Warszawa"
-      },
+      }
     },
     {
       "id": "w006",
@@ -81,7 +81,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2234,
         "longitude": 21.0123,
         "address": "ul. Mokotowska 48, Warszawa"
-      },
+      }
     },
     {
       "id": "w007",
@@ -94,7 +94,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2291,
         "longitude": 21.0125,
         "address": "ul. Nowogrodzka 10, Warszawa"
-      },
+      }
     },
     {
       "id": "w008",
@@ -107,7 +107,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2280,
         "longitude": 21.0100,
         "address": "ul. Wilcza 46, Warszawa"
-      },
+      }
     },
     {
       "id": "w009",
@@ -120,7 +120,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2285,
         "longitude": 21.0130,
         "address": "ul. Nowogrodzka 18A, Warszawa"
-      },
+      }
     },
     {
       "id": "w010",
@@ -133,7 +133,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "latitude": 52.2510,
         "longitude": 21.0360,
         "address": "ul. Mińska 25, Warszawa"
-      },
+      }
     }, 
     {
       "id": "w011",
@@ -142,7 +142,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "blisko natury",
       "mood": ["relaksujący", "spokojny"],
       "budget": "niski",
-      "distance_km": 2.0,
       "location": {
         "latitude": 52.2192,
         "longitude": 21.0208,
@@ -156,7 +155,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "blisko natury",
       "mood": ["aktywny", "spokojny"],
       "budget": "niski",
-      "distance_km": 6.5,
       "location": {
         "latitude": 52.1923,
         "longitude": 21.0614,
@@ -170,7 +168,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "blisko natury",
       "mood": ["relaksujący", "romantyczny"],
       "budget": "niski",
-      "distance_km": 3.2,
       "location": {
         "latitude": 52.2411,
         "longitude": 21.0585,
@@ -184,7 +181,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "blisko natury",
       "mood": ["aktywny", "relaksujący"],
       "budget": "bezpłatny",
-      "distance_km": 12.0,
       "location": {
         "latitude": 52.1215,
         "longitude": 21.0625,
@@ -198,7 +194,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "blisko natury",
       "mood": ["towarzyski", "relaksujący"],
       "budget": "niski",
-      "distance_km": 2.8,
       "location": {
         "latitude": 52.2140,
         "longitude": 20.9933,
@@ -206,13 +201,12 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     }, 
     {
-        "id": "sport_real_001",
+        "id": "w016",
         "name": "PGE Narodowy",
         "description": "Największy stadion w Polsce, miejsce wydarzeń sportowych i koncertów.",
         "category": "sportowa",
         "mood": ["ekscytujący", "towarzyski"],
         "budget": "średni",
-        "distance_km": 2.0,
         "location": {
             "latitude": 52.2394,
             "longitude": 21.0458,
@@ -220,13 +214,12 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         }
     },
     {
-        "id": "sport_real_002",
+        "id": "w017",
         "name": "Stadion Legii Warszawa",
         "description": "Siedziba klubu Legia Warszawa, z bogatą historią sportową.",
         "category": "sportowa",
         "mood": ["ekscytujący", "towarzyski"],
         "budget": "średni",
-        "distance_km": 1.5,
         "location": {
             "latitude": 52.2194,
             "longitude": 21.0422,
@@ -234,13 +227,12 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         }
     },
     {
-        "id": "sport_real_003",
+        "id": "w018",
         "name": "Hala Torwar",
         "description": "Wielofunkcyjna hala sportowa, miejsce zawodów i wydarzeń masowych.",
         "category": "sportowa",
         "mood": ["ekscytujący"],
         "budget": "średni",
-        "distance_km": 2.0,
         "location": {
             "latitude": 52.2209,
             "longitude": 21.0442,
@@ -248,13 +240,12 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         }
     },
     {
-        "id": "sport_real_004",
+        "id": "w019",
         "name": "Ośrodek Stegny",
         "description": "Tor łyżwiarski oraz obiekty sportowe dostępne dla mieszkańców.",
         "category": "sportowa",
         "mood": ["aktywny"],
         "budget": "niski",
-        "distance_km": 5.5,
         "location": {
             "latitude": 52.1807,
             "longitude": 21.0408,
@@ -262,13 +253,12 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         }
     },
     {
-        "id": "sport_real_005",
+        "id": "w020",
         "name": "Górka Szczęśliwicka",
         "description": "Całoroczny stok narciarski i miejsce rekreacyjne.",
         "category": "sportowa",
         "mood": ["aktywny", "rodzinny"],
         "budget": "niski",
-        "distance_km": 6.0,
         "location": {
             "latitude": 52.2041,
             "longitude": 20.9587,
@@ -282,7 +272,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kreatywna",
       "mood": ["ciekawski", "rodzinny"],
       "budget": "średni",
-      "distance_km": 1.8,
       "location": {
         "latitude": 52.2416,
         "longitude": 21.0303,
@@ -296,7 +285,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kreatywna",
       "mood": ["refleksyjny", "ciekawski"],
       "budget": "bezpłatny",
-      "distance_km": 1.1,
       "location": {
         "latitude": 52.2393,
         "longitude": 21.0194,
@@ -310,7 +298,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kreatywna",
       "mood": ["zaskoczony", "zabawny"],
       "budget": "średni",
-      "distance_km": 0.8,
       "location": {
         "latitude": 52.2472,
         "longitude": 21.0131,
@@ -324,7 +311,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kreatywna",
       "mood": ["inspirujący", "artystyczny"],
       "budget": "średni",
-      "distance_km": 2.3,
       "location": {
         "latitude": 52.2187,
         "longitude": 21.0321,
@@ -338,7 +324,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kreatywna",
       "mood": ["nowoczesny", "twórczy"],
       "budget": "średni",
-      "distance_km": 2.0,
       "location": {
         "latitude": 52.2317,
         "longitude": 20.9929,
@@ -352,7 +337,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kulturowa",
       "mood": ["elegancki", "refleksyjny"],
       "budget": "wysoki",
-      "distance_km": 0.8,
       "location": {
         "latitude": 52.2434,
         "longitude": 21.0101,
@@ -366,7 +350,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kulturowa",
       "mood": ["historyczny", "refleksyjny"],
       "budget": "średni",
-      "distance_km": 1.0,
       "location": {
         "latitude": 52.2473,
         "longitude": 21.0136,
@@ -380,7 +363,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kulturowa",
       "mood": ["refleksyjny", "ciekawski"],
       "budget": "średni",
-      "distance_km": 1.6,
       "location": {
         "latitude": 52.2296,
         "longitude": 21.0273,
@@ -408,7 +390,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "kulturowa",
       "mood": ["artystyczny", "refleksyjny"],
       "budget": "średni",
-      "distance_km": 1.2,
       "location": {
         "latitude": 52.2332,
         "longitude": 21.0236,
@@ -422,7 +403,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       "category": "imprezowa",
       "mood": ["elegancki", "towarzyski"],
       "budget": "wysoki",
-      "distance_km": 1.5,
       "location": {
         "latitude": 52.2309,
         "longitude": 21.0037,
@@ -550,8 +530,6 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "address": "Park Ujazdowski, Warszawa"
       }
     }, 
-{
-  "attractions": [
     {
       "id": "towarzyska_001",
       "name": "Bulwary Wiślane",
@@ -621,11 +599,72 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "longitude": 21.0369,
         "address": "Bulwar Flotylli Wiślanej, Warszawa"
       }
-    }
-  ]
-}
-
-    
+    },
+    {
+      "id": "w011",
+      "name": "Łazienki Królewskie – Strefa Ciszy",
+      "description": "Specjalna część parku sprzyjająca kontemplacji i relaksowi w otoczeniu zieleni i śpiewu ptaków.",
+      "category": "spokojne",
+      "mood": ["relaksujący", "refleksyjny"],
+      "budget": "bezpłatny",
+      "location": {
+        "latitude": 52.2171,
+        "longitude": 21.0344,
+        "address": "ul. Agrykola 1, Warszawa"
+      }
+    },
+    {
+      "id": "w012",
+      "name": "Floating Spa",
+      "description": "Sesje floatingu w kapsułach z solanką, które pomagają się wyciszyć i zregenerować.",
+      "category": "wellness",
+      "mood": ["relaksujący", "regenerujący"],
+      "budget": "wysoki",
+      "location": {
+        "latitude": 52.2322,
+        "longitude": 21.0159,
+        "address": "ul. Piękna 44, Warszawa"
+      }
+    },
+    {
+      "id": "w013",
+      "name": "Ogród Botaniczny UW",
+      "description": "Zielona oaza spokoju w centrum miasta, idealna na powolne spacery i kontakt z naturą.",
+      "category": "spokojne",
+      "mood": ["relaksujący", "romantyczny"],
+      "budget": "niski",
+      "location": {
+        "latitude": 52.2205,
+        "longitude": 21.0209,
+        "address": "Al. Ujazdowskie 4, Warszawa"
+      }
+    },
+    {
+      "id": "w014",
+      "name": "Warsztaty Jogi w Parku Skaryszewskim",
+      "description": "Weekendowe zajęcia jogi na świeżym powietrzu dla każdego poziomu zaawansowania.",
+      "category": "aktywny relaks",
+      "mood": ["relaksujący", "zdrowy"],
+      "budget": "dobrowolna opłata",
+      "location": {
+        "latitude": 52.2457,
+        "longitude": 21.0571,
+        "address": "Park Skaryszewski, Warszawa"
+      }
+    },
+    {
+      "id": "w015",
+      "name": "Saunarium – Termy Mszczonów (niedaleko Warszawy)",
+      "description": "Kompleks saun, jacuzzi i basenów z wodami termalnymi dla pełnego relaksu.",
+      "category": "wellness",
+      "mood": ["relaksujący", "regenerujący"],
+      "budget": "średni",
+      "location": {
+        "latitude": 51.9782,
+        "longitude": 20.5079,
+        "address": "ul. Warszawska 52, Mszczonów"
+      }
+    }    
   ]
 }
 
