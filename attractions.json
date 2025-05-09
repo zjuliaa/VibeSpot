@@ -266,7 +266,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         }
     }, 
     {
-      "id": "kreatywna_001",
+      "id": "w021",
       "name": "Centrum Nauki Kopernik",
       "description": "Nowoczesne, interaktywne centrum nauki dla dzieci i dorosłych.",
       "category": "kreatywna",
@@ -279,7 +279,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "kreatywna_002",
+      "id": "w022",
       "name": "Dom Spotkań z Historią",
       "description": "Galeria i miejsce spotkań promujące historię poprzez wystawy i projekcje.",
       "category": "kreatywna",
@@ -292,7 +292,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "kreatywna_003",
+      "id": "w023",
       "name": "Muzeum Iluzji",
       "description": "Interaktywna wystawa iluzji optycznych i sztuki percepcji.",
       "category": "kreatywna",
@@ -305,7 +305,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "kreatywna_004",
+      "id": "w024",
       "name": "Ujazdowski Castle Centre for Contemporary Art",
       "description": "Przestrzeń współczesnej sztuki i twórczości interdyscyplinarnej.",
       "category": "kreatywna",
@@ -318,7 +318,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "kreatywna_005",
+      "id": "w025",
       "name": "Fabryka Norblina",
       "description": "Kreatywny kompleks z galeriami, sklepami z designem i muzeum.",
       "category": "kreatywna",
@@ -331,7 +331,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     }, 
     {
-      "id": "kulturowa_001",
+      "id": "w026",
       "name": "Teatr Wielki - Opera Narodowa",
       "description": "Monumentalna opera z bogatym repertuarem baletu i klasyki.",
       "category": "kulturowa",
@@ -344,7 +344,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "kulturowa_002",
+      "id": "w027",
       "name": "Zamek Królewski w Warszawie",
       "description": "Historyczna siedziba królów Polski, dziś muzeum i symbol miasta.",
       "category": "kulturowa",
@@ -357,7 +357,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "kulturowa_003",
+      "id": "w028",
       "name": "Muzeum Narodowe w Warszawie",
       "description": "Jedno z największych muzeów w Polsce, z bogatą kolekcją sztuki.",
       "category": "kulturowa",
@@ -370,7 +370,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "kulturowa_004",
+      "id": "w029",
       "name": "Muzeum Historii Żydów Polskich POLIN",
       "description": "Nowoczesne muzeum ukazujące dzieje społeczności żydowskiej w Polsce.",
       "category": "kulturowa",
@@ -384,7 +384,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "kulturowa_005",
+      "id": "w030",
       "name": "Muzeum Fryderyka Chopina",
       "description": "Interaktywne muzeum poświęcone życiu i twórczości kompozytora.",
       "category": "kulturowa",
@@ -397,7 +397,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     }, 
     {
-      "id": "imprezowe_001",
+      "id": "w031",
       "name": "Level 27",
       "description": "Ekskluzywny rooftop club z panoramicznym widokiem na Warszawę.",
       "category": "imprezowa",
@@ -410,7 +410,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "imprezowe_002",
+      "id": "w032",
       "name": "Hala Koszyki",
       "description": "Stylowa hala gastronomiczna z barami, restauracjami i muzyką na żywo.",
       "category": "imprezowa",
@@ -424,7 +424,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "imprezowe_003",
+      "id": "w033",
       "name": "Pawilony Nowy Świat",
       "description": "Kompleks małych barów w podwórku przy Nowym Świecie – popularne miejsce nocnego życia.",
       "category": "imprezowa",
@@ -438,7 +438,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "imprezowe_004",
+      "id": "w034",
       "name": "Sen",
       "description": "Stylowy klub nad Wisłą z imprezami i klimatem beach clubu.",
       "category": "imprezowa",
@@ -452,7 +452,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "imprezowe_005",
+      "id": "w035",
       "name": "Czarna Perła",
       "description": "Legendarny klub rockowy z taneczną atmosferą i karaoke.",
       "category": "imprezowa",
@@ -466,7 +466,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
         {
-      "id": "w006",
+      "id": "w036",
       "name": "Zoo Warszawskie",
       "description": "Duży ogród zoologiczny z egzotycznymi zwierzętami, idealny dla rodzin z dziećmi.",
       "category": "rodzinne",
@@ -479,7 +479,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w007",
+      "id": "w037",
       "name": "Park Rozrywki Julinek",
       "description": "Tematyczny park rozrywki z atrakcjami dla dzieci i dorosłych, niedaleko Warszawy.",
       "category": "rodzinne",
@@ -492,7 +492,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w008",
+      "id": "w038",
       "name": "FunPark Digiloo",
       "description": "Kolorowe centrum zabaw z kulkami, zjeżdżalniami i atrakcjami dla najmłodszych.",
       "category": "rodzinne",
@@ -505,7 +505,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w009",
+      "id": "w039",
       "name": "Muzeum dla Dzieci",
       "description": "Specjalnie zaprojektowane muzeum z wystawami interaktywnymi dla najmłodszych.",
       "category": "kreatywne",
@@ -518,7 +518,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w010",
+      "id": "w040",
       "name": "Plac Zabaw w Parku Ujazdowskim",
       "description": "Bezpieczny plac zabaw z nowoczesnymi urządzeniami w zielonym otoczeniu.",
       "category": "spokojne",
@@ -531,7 +531,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     }, 
     {
-      "id": "towarzyska_001",
+      "id": "w041",
       "name": "Bulwary Wiślane",
       "description": "Popularne miejsce spotkań nad Wisłą z food truckami, barami i strefami relaksu.",
       "category": "towarzyska",
@@ -545,7 +545,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "towarzyska_002",
+      "id": "w042",
       "name": "Plac Zbawiciela",
       "description": "Stylowe miejsce z kawiarniami i restauracjami, chętnie odwiedzane przez mieszkańców.",
       "category": "towarzyska",
@@ -559,7 +559,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "towarzyska_003",
+      "id": "w043",
       "name": "Miejsce Chwila",
       "description": "Kawiarnia z klimatem bohemy, z planszówkami i wydarzeniami artystycznymi.",
       "category": "towarzyska",
@@ -573,7 +573,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "towarzyska_004",
+      "id": "w044",
       "name": "Granda Bar",
       "description": "Modny bar z dużą salą, głośną muzyką i dobrymi drinkami – świetny na spotkania w większym gronie.",
       "category": "towarzyska",
@@ -587,7 +587,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "towarzyska_005",
+      "id": "w045",
       "name": "Cud nad Wisłą",
       "description": "Letni bar nad Wisłą z leżakami, muzyką i atmosferą chilloutu.",
       "category": "towarzyska",
@@ -601,7 +601,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w011",
+      "id": "w046",
       "name": "Łazienki Królewskie – Strefa Ciszy",
       "description": "Specjalna część parku sprzyjająca kontemplacji i relaksowi w otoczeniu zieleni i śpiewu ptaków.",
       "category": "spokojne",
@@ -614,7 +614,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w012",
+      "id": "w047",
       "name": "Floating Spa",
       "description": "Sesje floatingu w kapsułach z solanką, które pomagają się wyciszyć i zregenerować.",
       "category": "wellness",
@@ -627,7 +627,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w013",
+      "id": "w048",
       "name": "Ogród Botaniczny UW",
       "description": "Zielona oaza spokoju w centrum miasta, idealna na powolne spacery i kontakt z naturą.",
       "category": "spokojne",
@@ -640,7 +640,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w014",
+      "id": "w049",
       "name": "Warsztaty Jogi w Parku Skaryszewskim",
       "description": "Weekendowe zajęcia jogi na świeżym powietrzu dla każdego poziomu zaawansowania.",
       "category": "aktywny relaks",
@@ -653,7 +653,7 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
       }
     },
     {
-      "id": "w015",
+      "id": "w050",
       "name": "Saunarium – Termy Mszczonów (niedaleko Warszawy)",
       "description": "Kompleks saun, jacuzzi i basenów z wodami termalnymi dla pełnego relaksu.",
       "category": "wellness",
