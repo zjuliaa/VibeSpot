@@ -204,6 +204,76 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "longitude": 20.9933,
         "address": "Pole Mokotowskie, Warszawa"
       }
+    }, 
+    {
+        "id": "sport_real_001",
+        "name": "PGE Narodowy",
+        "description": "Największy stadion w Polsce, miejsce wydarzeń sportowych i koncertów.",
+        "category": "sportowa",
+        "mood": ["ekscytujący", "towarzyski"],
+        "budget": "średni",
+        "distance_km": 2.0,
+        "location": {
+            "latitude": 52.2394,
+            "longitude": 21.0458,
+            "address": "al. Księcia Józefa Poniatowskiego 1, Warszawa"
+        }
+    },
+    {
+        "id": "sport_real_002",
+        "name": "Stadion Legii Warszawa",
+        "description": "Siedziba klubu Legia Warszawa, z bogatą historią sportową.",
+        "category": "sportowa",
+        "mood": ["ekscytujący", "towarzyski"],
+        "budget": "średni",
+        "distance_km": 1.5,
+        "location": {
+            "latitude": 52.2194,
+            "longitude": 21.0422,
+            "address": "ul. Łazienkowska 3, Warszawa"
+        }
+    },
+    {
+        "id": "sport_real_003",
+        "name": "Hala Torwar",
+        "description": "Wielofunkcyjna hala sportowa, miejsce zawodów i wydarzeń masowych.",
+        "category": "sportowa",
+        "mood": ["ekscytujący"],
+        "budget": "średni",
+        "distance_km": 2.0,
+        "location": {
+            "latitude": 52.2209,
+            "longitude": 21.0442,
+            "address": "ul. Łazienkowska 6a, Warszawa"
+        }
+    },
+    {
+        "id": "sport_real_004",
+        "name": "Ośrodek Stegny",
+        "description": "Tor łyżwiarski oraz obiekty sportowe dostępne dla mieszkańców.",
+        "category": "sportowa",
+        "mood": ["aktywny"],
+        "budget": "niski",
+        "distance_km": 5.5,
+        "location": {
+            "latitude": 52.1807,
+            "longitude": 21.0408,
+            "address": "ul. Inspektowa 1, Warszawa"
+        }
+    },
+    {
+        "id": "sport_real_005",
+        "name": "Górka Szczęśliwicka",
+        "description": "Całoroczny stok narciarski i miejsce rekreacyjne.",
+        "category": "sportowa",
+        "mood": ["aktywny", "rodzinny"],
+        "budget": "niski",
+        "distance_km": 6.0,
+        "location": {
+            "latitude": 52.2041,
+            "longitude": 20.9587,
+            "address": "ul. Drawska 22, Warszawa"
+        }
     }
-  ]
+]
 }
