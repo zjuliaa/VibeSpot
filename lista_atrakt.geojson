@@ -4,6 +4,549 @@
     {
       "type": "Feature",
       "properties": {
+        "id": "w021",
+        "name": "Centrum Nauki Kopernik",
+        "description": "Nowoczesne, interaktywne centrum nauki dla dzieci i dorosłych.",
+        "category": "kreatywna",
+        "mood": [
+          "ciekawski",
+          "rodzinny"
+        ],
+        "budget": "średni",
+        "address": "Wybrzeże Kościuszkowskie 20, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.02859249641263,
+          52.24176306558811
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w034",
+        "name": "Sen",
+        "description": "Stylowy klub nad Wisłą z imprezami i klimatem beach clubu.",
+        "category": "imprezowa",
+        "mood": [
+          "modny",
+          "towarzyski"
+        ],
+        "budget": "wysoki",
+        "address": "ul. Wioślarska 6, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0375,
+          52.2428
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w041",
+        "name": "Bulwary Wiślane",
+        "description": "Popularne miejsce spotkań nad Wisłą z food truckami, barami i strefami relaksu.",
+        "category": "towarzyska",
+        "mood": [
+          "luźny",
+          "towarzyski"
+        ],
+        "budget": "niski",
+        "address": "Bulwar gen. Pattona, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0302,
+          52.2419
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w045",
+        "name": "Cud nad Wisłą",
+        "description": "Letni bar nad Wisłą z leżakami, muzyką i atmosferą chilloutu.",
+        "category": "towarzyska",
+        "mood": [
+          "luźny",
+          "relaksujący"
+        ],
+        "budget": "niski",
+        "address": "Bulwar Flotylli Wiślanej, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0369,
+          52.2405
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w013",
+        "name": "Park Skaryszewski",
+        "description": "Jeden z najpiękniejszych parków Warszawy z jeziorkiem, rzeźbami i dużą ilością zieleni.",
+        "category": "blisko natury",
+        "mood": [
+          "relaksujący",
+          "romantyczny"
+        ],
+        "budget": "niski",
+        "address": "al. Zieleniecka, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.05517944946097,
+          52.242077733239725
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w049",
+        "name": "Warsztaty Jogi w Parku Skaryszewskim",
+        "description": "Weekendowe zajęcia jogi na świeżym powietrzu dla każdego poziomu zaawansowania.",
+        "category": "aktywny relaks",
+        "mood": [
+          "relaksujący",
+          "zdrowy"
+        ],
+        "budget": "dobrowolna opłata",
+        "address": "Park Skaryszewski, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.052428439114557,
+          52.24206777378552
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w010",
+        "name": "Restauracja Warszawa Wschodnia",
+        "description": "Restauracja Mateusza Gesslera z otwartą kuchnią i industrialnym wnętrzem.",
+        "category": "imprezowe",
+        "mood": "[\"towarzyski\",\"kulinarne\"]",
+        "budget": "wysoki",
+        "address": "Soho Factory, Mińska 29A/bud. 46, 03-808 Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.060589668683036,
+          52.249636648322046
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w036",
+        "name": "Zoo Warszawskie",
+        "description": "Duży ogród zoologiczny z egzotycznymi zwierzętami, idealny dla rodzin z dziećmi.",
+        "category": "rodzinne",
+        "mood": [
+          "rodzinny",
+          "ciekawski"
+        ],
+        "budget": "średni",
+        "address": "ul. Ratuszowa 1/3, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.021684155387877,
+          52.25882496033085
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w029",
+        "name": "Muzeum Historii Żydów Polskich POLIN",
+        "description": "Nowoczesne muzeum ukazujące dzieje społeczności żydowskiej w Polsce.",
+        "category": "kulturowa",
+        "mood": [
+          "refleksyjny",
+          "historyczny"
+        ],
+        "budget": "średni",
+        "address": "ul. Anielewicza 6, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          20.99315923759937,
+          52.24936429336751
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w002",
+        "name": "Multimedialny Park Fontann",
+        "description": "Spektakularne pokazy światła, dźwięku i wody nad Wisłą.",
+        "category": "spokojne",
+        "mood": [
+          "relaksujący",
+          "romantyczny"
+        ],
+        "budget": "niski",
+        "address": "Skwer I Dywizji Pancernej, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.011296118319137,
+          52.254079317201914
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w023",
+        "name": "Muzeum Iluzji",
+        "description": "Interaktywna wystawa iluzji optycznych i sztuki percepcji.",
+        "category": "kreatywna",
+        "mood": [
+          "zaskoczony",
+          "zabawny"
+        ],
+        "budget": "średni",
+        "address": "Rynek Starego Miasta 21, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.011853221648828,
+          52.24951141407889
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w027",
+        "name": "Zamek Królewski w Warszawie",
+        "description": "Historyczna siedziba królów Polski, dziś muzeum i symbol miasta.",
+        "category": "kulturowa",
+        "mood": [
+          "historyczny",
+          "refleksyjny"
+        ],
+        "budget": "średni",
+        "address": "Plac Zamkowy 4, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.01525475439593,
+          52.24787075488579
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w026",
+        "name": "Teatr Wielki - Opera Narodowa",
+        "description": "Monumentalna opera z bogatym repertuarem baletu i klasyki.",
+        "category": "kulturowa",
+        "mood": [
+          "elegancki",
+          "refleksyjny"
+        ],
+        "budget": "wysoki",
+        "address": "Plac Teatralny 1, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.010362401275337,
+          52.243628989320335
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w022",
+        "name": "Dom Spotkań z Historią",
+        "description": "Galeria i miejsce spotkań promujące historię poprzez wystawy i projekcje.",
+        "category": "kreatywna",
+        "mood": [
+          "refleksyjny",
+          "ciekawski"
+        ],
+        "budget": "bezpłatny",
+        "address": "ul. Karowa 20, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.016706205642162,
+          52.24240609741004
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w030",
+        "name": "Muzeum Fryderyka Chopina",
+        "description": "Interaktywne muzeum poświęcone życiu i twórczości kompozytora.",
+        "category": "kulturowa",
+        "mood": [
+          "artystyczny",
+          "refleksyjny"
+        ],
+        "budget": "średni",
+        "address": "ul. Okólnik 1, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.02293336554511,
+          52.236463453865
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w028",
+        "name": "Muzeum Narodowe w Warszawie",
+        "description": "Jedno z największych muzeów w Polsce, z bogatą kolekcją sztuki.",
+        "category": "kulturowa",
+        "mood": [
+          "refleksyjny",
+          "ciekawski"
+        ],
+        "budget": "średni",
+        "address": "al. Jerozolimskie 3, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.024788655557646,
+          52.231679386228556
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w018",
+        "name": "Hala Torwar",
+        "description": "Wielofunkcyjna hala sportowa, miejsce zawodów i wydarzeń masowych.",
+        "category": "sportowa",
+        "mood": [
+          "ekscytujący"
+        ],
+        "budget": "średni",
+        "address": "ul. Łazienkowska 6a, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.042214871079192,
+          52.2224584824537
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w017",
+        "name": "Stadion Legii Warszawa",
+        "description": "Siedziba klubu Legia Warszawa, z bogatą historią sportową.",
+        "category": "sportowa",
+        "mood": [
+          "ekscytujący",
+          "towarzyski"
+        ],
+        "budget": "średni",
+        "address": "ul. Łazienkowska 3, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.04075582204876,
+          52.22043697937266
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w004",
+        "name": "Łazienki Królewskie",
+        "description": "Zabytkowy park z pałacami, pomnikami i pawilonami.",
+        "category": "spokojne",
+        "mood": [
+          "relaksujący",
+          "romantyczny"
+        ],
+        "budget": "niski",
+        "address": "ul. Agrykola 1, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.034542821227777,
+          52.21398296869705
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w024",
+        "name": "Zamek Ujazdowski",
+        "description": "Przestrzeń współczesnej sztuki i twórczości interdyscyplinarnej.",
+        "category": "kreatywna",
+        "mood": "[\"inspirujący\",\"artystyczny\"]",
+        "budget": "średni",
+        "address": "ul. Jazdów 2, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.03104654699719,
+          52.21949851463525
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w011",
+        "name": "Ogród Botaniczny UW",
+        "description": "Zielona oaza z setkami gatunków roślin w samym centrum Warszawy.",
+        "category": "blisko natury",
+        "mood": [
+          "relaksujący",
+          "spokojny"
+        ],
+        "budget": "niski",
+        "address": "Aleje Ujazdowskie 4, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.02826732278347,
+          52.21751400823936
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w032",
+        "name": "Hala Koszyki",
+        "description": "Stylowa hala gastronomiczna z barami, restauracjami i muzyką na żywo.",
+        "category": "imprezowa",
+        "mood": [
+          "towarzyski",
+          "kulinarne"
+        ],
+        "budget": "średni",
+        "address": "ul. Koszykowa 63, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.010988331054094,
+          52.222218365092964
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w042",
+        "name": "Plac Zbawiciela",
+        "description": "Stylowe miejsce z kawiarniami i restauracjami, chętnie odwiedzane przez mieszkańców.",
+        "category": "towarzyska",
+        "mood": [
+          "towarzyski",
+          "modny"
+        ],
+        "budget": "średni",
+        "address": "Plac Zbawiciela, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.01793995360535,
+          52.219836485849
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w006",
+        "name": "Restauracja Ale Wino",
+        "description": "Nowoczesna restauracja z ogrodem, serwująca dania kuchni europejskiej.",
+        "category": "imprezowe",
+        "mood": [
+          "towarzyski",
+          "kulinarne"
+        ],
+        "budget": "wysoki",
+        "address": "ul. Mokotowska 48, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.021821190177537,
+          52.22507277586055
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w008",
+        "name": "Restauracja Nolita",
+        "description": "Ekskluzywna restauracja oferująca nowoczesną kuchnię europejską.",
+        "category": "imprezowe",
+        "mood": [
+          "elegancki",
+          "kulinarne"
+        ],
+        "budget": "wysoki",
+        "address": "ul. Wilcza 46, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.012515341873222,
+          52.22431768234764
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": "w007",
         "name": "Restauracja Bibenda",
         "description": "Klimatyczne miejsce z sezonowym menu i szerokim wyborem win.",
@@ -157,28 +700,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w002",
-        "name": "Multimedialny Park Fontann",
-        "description": "Spektakularne pokazy światła, dźwięku i wody nad Wisłą.",
-        "category": "spokojne",
-        "mood": [
-          "relaksujący",
-          "romantyczny"
-        ],
-        "budget": "niski",
-        "address": "Skwer I Dywizji Pancernej, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0128,
-          52.2531
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w003",
         "name": "Centrum Nauki Kopernik",
         "description": "Interaktywne centrum nauki dla dzieci i dorosłych.",
@@ -194,28 +715,6 @@
         "coordinates": [
           21.0303,
           52.2416
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w004",
-        "name": "Łazienki Królewskie",
-        "description": "Zabytkowy park z pałacami, pomnikami i pawilonami.",
-        "category": "spokojne",
-        "mood": [
-          "relaksujący",
-          "romantyczny"
-        ],
-        "budget": "niski",
-        "address": "ul. Agrykola 1, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0333,
-          52.2167
         ],
         "type": "Point"
       }
@@ -245,50 +744,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w006",
-        "name": "Restauracja Ale Wino",
-        "description": "Nowoczesna restauracja z ogrodem, serwująca dania kuchni europejskiej.",
-        "category": "imprezowe",
-        "mood": [
-          "towarzyski",
-          "kulinarne"
-        ],
-        "budget": "wysoki",
-        "address": "ul. Mokotowska 48, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0123,
-          52.2234
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w008",
-        "name": "Restauracja Nolita",
-        "description": "Ekskluzywna restauracja oferująca nowoczesną kuchnię europejską.",
-        "category": "imprezowe",
-        "mood": [
-          "elegancki",
-          "kulinarne"
-        ],
-        "budget": "wysoki",
-        "address": "ul. Wilcza 46, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.01,
-          52.228
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w009",
         "name": "Restauracja Soul Kitchen",
         "description": "Nowoczesna kuchnia polska z akcentami międzynarodowymi.",
@@ -311,50 +766,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w010",
-        "name": "Restauracja Warszawa Wschodnia",
-        "description": "Restauracja Mateusza Gesslera z otwartą kuchnią i industrialnym wnętrzem.",
-        "category": "imprezowe",
-        "mood": [
-          "towarzyski",
-          "kulinarne"
-        ],
-        "budget": "wysoki",
-        "address": "ul. Mińska 25, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.036,
-          52.251
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w011",
-        "name": "Ogród Botaniczny UW",
-        "description": "Zielona oaza z setkami gatunków roślin w samym centrum Warszawy.",
-        "category": "blisko natury",
-        "mood": [
-          "relaksujący",
-          "spokojny"
-        ],
-        "budget": "niski",
-        "address": "Aleje Ujazdowskie 4, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0208,
-          52.2192
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w012",
         "name": "Rezerwat Przyrody Jeziorko Czerniakowskie",
         "description": "Naturalny rezerwat wodno-leśny z kąpieliskiem i ścieżkami spacerowymi.",
@@ -370,28 +781,6 @@
         "coordinates": [
           21.0614,
           52.1923
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w013",
-        "name": "Park Skaryszewski",
-        "description": "Jeden z najpiękniejszych parków Warszawy z jeziorkiem, rzeźbami i dużą ilością zieleni.",
-        "category": "blisko natury",
-        "mood": [
-          "relaksujący",
-          "romantyczny"
-        ],
-        "budget": "niski",
-        "address": "al. Zieleniecka, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0585,
-          52.2411
         ],
         "type": "Point"
       }
@@ -465,49 +854,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w017",
-        "name": "Stadion Legii Warszawa",
-        "description": "Siedziba klubu Legia Warszawa, z bogatą historią sportową.",
-        "category": "sportowa",
-        "mood": [
-          "ekscytujący",
-          "towarzyski"
-        ],
-        "budget": "średni",
-        "address": "ul. Łazienkowska 3, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0422,
-          52.2194
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w018",
-        "name": "Hala Torwar",
-        "description": "Wielofunkcyjna hala sportowa, miejsce zawodów i wydarzeń masowych.",
-        "category": "sportowa",
-        "mood": [
-          "ekscytujący"
-        ],
-        "budget": "średni",
-        "address": "ul. Łazienkowska 6a, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0442,
-          52.2209
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w019",
         "name": "Ośrodek Stegny",
         "description": "Tor łyżwiarski oraz obiekty sportowe dostępne dla mieszkańców.",
@@ -551,94 +897,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w021",
-        "name": "Centrum Nauki Kopernik",
-        "description": "Nowoczesne, interaktywne centrum nauki dla dzieci i dorosłych.",
-        "category": "kreatywna",
-        "mood": [
-          "ciekawski",
-          "rodzinny"
-        ],
-        "budget": "średni",
-        "address": "Wybrzeże Kościuszkowskie 20, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0303,
-          52.2416
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w022",
-        "name": "Dom Spotkań z Historią",
-        "description": "Galeria i miejsce spotkań promujące historię poprzez wystawy i projekcje.",
-        "category": "kreatywna",
-        "mood": [
-          "refleksyjny",
-          "ciekawski"
-        ],
-        "budget": "bezpłatny",
-        "address": "ul. Karowa 20, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0194,
-          52.2393
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w023",
-        "name": "Muzeum Iluzji",
-        "description": "Interaktywna wystawa iluzji optycznych i sztuki percepcji.",
-        "category": "kreatywna",
-        "mood": [
-          "zaskoczony",
-          "zabawny"
-        ],
-        "budget": "średni",
-        "address": "Rynek Starego Miasta 21, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0131,
-          52.2472
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w024",
-        "name": "Ujazdowski Castle Centre for Contemporary Art",
-        "description": "Przestrzeń współczesnej sztuki i twórczości interdyscyplinarnej.",
-        "category": "kreatywna",
-        "mood": [
-          "inspirujący",
-          "artystyczny"
-        ],
-        "budget": "średni",
-        "address": "ul. Jazdów 2, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0321,
-          52.2187
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w025",
         "name": "Fabryka Norblina",
         "description": "Kreatywny kompleks z galeriami, sklepami z designem i muzeum.",
@@ -661,116 +919,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w026",
-        "name": "Teatr Wielki - Opera Narodowa",
-        "description": "Monumentalna opera z bogatym repertuarem baletu i klasyki.",
-        "category": "kulturowa",
-        "mood": [
-          "elegancki",
-          "refleksyjny"
-        ],
-        "budget": "wysoki",
-        "address": "Plac Teatralny 1, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0101,
-          52.2434
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w027",
-        "name": "Zamek Królewski w Warszawie",
-        "description": "Historyczna siedziba królów Polski, dziś muzeum i symbol miasta.",
-        "category": "kulturowa",
-        "mood": [
-          "historyczny",
-          "refleksyjny"
-        ],
-        "budget": "średni",
-        "address": "Plac Zamkowy 4, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0136,
-          52.2473
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w028",
-        "name": "Muzeum Narodowe w Warszawie",
-        "description": "Jedno z największych muzeów w Polsce, z bogatą kolekcją sztuki.",
-        "category": "kulturowa",
-        "mood": [
-          "refleksyjny",
-          "ciekawski"
-        ],
-        "budget": "średni",
-        "address": "al. Jerozolimskie 3, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0273,
-          52.2296
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w029",
-        "name": "Muzeum Historii Żydów Polskich POLIN",
-        "description": "Nowoczesne muzeum ukazujące dzieje społeczności żydowskiej w Polsce.",
-        "category": "kulturowa",
-        "mood": [
-          "refleksyjny",
-          "historyczny"
-        ],
-        "budget": "średni",
-        "address": "ul. Anielewicza 6, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          20.9931,
-          52.249
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w030",
-        "name": "Muzeum Fryderyka Chopina",
-        "description": "Interaktywne muzeum poświęcone życiu i twórczości kompozytora.",
-        "category": "kulturowa",
-        "mood": [
-          "artystyczny",
-          "refleksyjny"
-        ],
-        "budget": "średni",
-        "address": "ul. Okólnik 1, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0236,
-          52.2332
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w031",
         "name": "Level 27",
         "description": "Ekskluzywny rooftop club z panoramicznym widokiem na Warszawę.",
@@ -786,72 +934,6 @@
         "coordinates": [
           21.0037,
           52.2309
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w032",
-        "name": "Hala Koszyki",
-        "description": "Stylowa hala gastronomiczna z barami, restauracjami i muzyką na żywo.",
-        "category": "imprezowa",
-        "mood": [
-          "towarzyski",
-          "kulinarne"
-        ],
-        "budget": "średni",
-        "address": "ul. Koszykowa 63, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0133,
-          52.2236
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w034",
-        "name": "Sen",
-        "description": "Stylowy klub nad Wisłą z imprezami i klimatem beach clubu.",
-        "category": "imprezowa",
-        "mood": [
-          "modny",
-          "towarzyski"
-        ],
-        "budget": "wysoki",
-        "address": "ul. Wioślarska 6, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0375,
-          52.2428
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w036",
-        "name": "Zoo Warszawskie",
-        "description": "Duży ogród zoologiczny z egzotycznymi zwierzętami, idealny dla rodzin z dziećmi.",
-        "category": "rodzinne",
-        "mood": [
-          "rodzinny",
-          "ciekawski"
-        ],
-        "budget": "średni",
-        "address": "ul. Ratuszowa 1/3, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0247,
-          52.258
         ],
         "type": "Point"
       }
@@ -925,50 +1007,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w041",
-        "name": "Bulwary Wiślane",
-        "description": "Popularne miejsce spotkań nad Wisłą z food truckami, barami i strefami relaksu.",
-        "category": "towarzyska",
-        "mood": [
-          "luźny",
-          "towarzyski"
-        ],
-        "budget": "niski",
-        "address": "Bulwar gen. Pattona, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0302,
-          52.2419
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w042",
-        "name": "Plac Zbawiciela",
-        "description": "Stylowe miejsce z kawiarniami i restauracjami, chętnie odwiedzane przez mieszkańców.",
-        "category": "towarzyska",
-        "mood": [
-          "towarzyski",
-          "modny"
-        ],
-        "budget": "średni",
-        "address": "Plac Zbawiciela, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0188,
-          52.2197
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w043",
         "name": "Miejsce Chwila",
         "description": "Kawiarnia z klimatem bohemy, z planszówkami i wydarzeniami artystycznymi.",
@@ -984,116 +1022,6 @@
         "coordinates": [
           20.995,
           52.2325
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w044",
-        "name": "Granda Bar",
-        "description": "Modny bar z dużą salą, głośną muzyką i dobrymi drinkami – świetny na spotkania w większym gronie.",
-        "category": "towarzyska",
-        "mood": [
-          "imprezowy",
-          "towarzyski"
-        ],
-        "budget": "średni",
-        "address": "ul. Żurawia 32/34, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0135,
-          52.2272
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w045",
-        "name": "Cud nad Wisłą",
-        "description": "Letni bar nad Wisłą z leżakami, muzyką i atmosferą chilloutu.",
-        "category": "towarzyska",
-        "mood": [
-          "luźny",
-          "relaksujący"
-        ],
-        "budget": "niski",
-        "address": "Bulwar Flotylli Wiślanej, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0369,
-          52.2405
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w046",
-        "name": "Łazienki Królewskie – Strefa Ciszy",
-        "description": "Specjalna część parku sprzyjająca kontemplacji i relaksowi w otoczeniu zieleni i śpiewu ptaków.",
-        "category": "spokojne",
-        "mood": [
-          "relaksujący",
-          "refleksyjny"
-        ],
-        "budget": "bezpłatny",
-        "address": "ul. Agrykola 1, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0344,
-          52.2171
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w048",
-        "name": "Ogród Botaniczny UW",
-        "description": "Zielona oaza spokoju w centrum miasta, idealna na powolne spacery i kontakt z naturą.",
-        "category": "spokojne",
-        "mood": [
-          "relaksujący",
-          "romantyczny"
-        ],
-        "budget": "niski",
-        "address": "Al. Ujazdowskie 4, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0209,
-          52.2205
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w049",
-        "name": "Warsztaty Jogi w Parku Skaryszewskim",
-        "description": "Weekendowe zajęcia jogi na świeżym powietrzu dla każdego poziomu zaawansowania.",
-        "category": "aktywny relaks",
-        "mood": [
-          "relaksujący",
-          "zdrowy"
-        ],
-        "budget": "dobrowolna opłata",
-        "address": "Park Skaryszewski, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0571,
-          52.2457
         ],
         "type": "Point"
       }
