@@ -134,6 +134,76 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
         "longitude": 21.0360,
         "address": "ul. Mińska 25, Warszawa"
       },
+    }, 
+    {
+      "id": "w011",
+      "name": "Ogród Botaniczny UW",
+      "description": "Zielona oaza z setkami gatunków roślin w samym centrum Warszawy.",
+      "category": "blisko natury",
+      "mood": ["relaksujący", "spokojny"],
+      "budget": "niski",
+      "distance_km": 2.0,
+      "location": {
+        "latitude": 52.2192,
+        "longitude": 21.0208,
+        "address": "Aleje Ujazdowskie 4, Warszawa"
+      }
+    },
+    {
+      "id": "w012",
+      "name": "Rezerwat Przyrody Jeziorko Czerniakowskie",
+      "description": "Naturalny rezerwat wodno-leśny z kąpieliskiem i ścieżkami spacerowymi.",
+      "category": "blisko natury",
+      "mood": ["aktywny", "spokojny"],
+      "budget": "niski",
+      "distance_km": 6.5,
+      "location": {
+        "latitude": 52.1923,
+        "longitude": 21.0614,
+        "address": "ul. Jeziorna, Warszawa"
+      }
+    },
+    {
+      "id": "w013",
+      "name": "Park Skaryszewski",
+      "description": "Jeden z najpiękniejszych parków Warszawy z jeziorkiem, rzeźbami i dużą ilością zieleni.",
+      "category": "blisko natury",
+      "mood": ["relaksujący", "romantyczny"],
+      "budget": "niski",
+      "distance_km": 3.2,
+      "location": {
+        "latitude": 52.2411,
+        "longitude": 21.0585,
+        "address": "al. Zieleniecka, Warszawa"
+      }
+    },
+    {
+      "id": "w014",
+      "name": "Las Kabacki",
+      "description": "Duży kompleks leśny idealny na spacery, rower czy jogging.",
+      "category": "blisko natury",
+      "mood": ["aktywny", "relaksujący"],
+      "budget": "bezpłatny",
+      "distance_km": 12.0,
+      "location": {
+        "latitude": 52.1215,
+        "longitude": 21.0625,
+        "address": "Las Kabacki, Ursynów, Warszawa"
+      }
+    },
+    {
+      "id": "w015",
+      "name": "Pole Mokotowskie",
+      "description": "Popularny park z alejkami, knajpkami i stawem.",
+      "category": "blisko natury",
+      "mood": ["towarzyski", "relaksujący"],
+      "budget": "niski",
+      "distance_km": 2.8,
+      "location": {
+        "latitude": 52.2140,
+        "longitude": 20.9933,
+        "address": "Pole Mokotowskie, Warszawa"
+      }
     }
   ]
 }
