@@ -274,6 +274,152 @@ mood: stress, energy, romantic, happy, sad, party_mood, crazy_mood, relaxed
             "longitude": 20.9587,
             "address": "ul. Drawska 22, Warszawa"
         }
+    }, 
+    {
+      "id": "kreatywna_001",
+      "name": "Centrum Nauki Kopernik",
+      "description": "Nowoczesne, interaktywne centrum nauki dla dzieci i dorosłych.",
+      "category": "kreatywna",
+      "mood": ["ciekawski", "rodzinny"],
+      "budget": "średni",
+      "distance_km": 1.8,
+      "location": {
+        "latitude": 52.2416,
+        "longitude": 21.0303,
+        "address": "Wybrzeże Kościuszkowskie 20, Warszawa"
+      }
+    },
+    {
+      "id": "kreatywna_002",
+      "name": "Dom Spotkań z Historią",
+      "description": "Galeria i miejsce spotkań promujące historię poprzez wystawy i projekcje.",
+      "category": "kreatywna",
+      "mood": ["refleksyjny", "ciekawski"],
+      "budget": "bezpłatny",
+      "distance_km": 1.1,
+      "location": {
+        "latitude": 52.2393,
+        "longitude": 21.0194,
+        "address": "ul. Karowa 20, Warszawa"
+      }
+    },
+    {
+      "id": "kreatywna_003",
+      "name": "Muzeum Iluzji",
+      "description": "Interaktywna wystawa iluzji optycznych i sztuki percepcji.",
+      "category": "kreatywna",
+      "mood": ["zaskoczony", "zabawny"],
+      "budget": "średni",
+      "distance_km": 0.8,
+      "location": {
+        "latitude": 52.2472,
+        "longitude": 21.0131,
+        "address": "Rynek Starego Miasta 21, Warszawa"
+      }
+    },
+    {
+      "id": "kreatywna_004",
+      "name": "Ujazdowski Castle Centre for Contemporary Art",
+      "description": "Przestrzeń współczesnej sztuki i twórczości interdyscyplinarnej.",
+      "category": "kreatywna",
+      "mood": ["inspirujący", "artystyczny"],
+      "budget": "średni",
+      "distance_km": 2.3,
+      "location": {
+        "latitude": 52.2187,
+        "longitude": 21.0321,
+        "address": "ul. Jazdów 2, Warszawa"
+      }
+    },
+    {
+      "id": "kreatywna_005",
+      "name": "Fabryka Norblina",
+      "description": "Kreatywny kompleks z galeriami, sklepami z designem i muzeum.",
+      "category": "kreatywna",
+      "mood": ["nowoczesny", "twórczy"],
+      "budget": "średni",
+      "distance_km": 2.0,
+      "location": {
+        "latitude": 52.2317,
+        "longitude": 20.9929,
+        "address": "ul. Żelazna 51/53, Warszawa"
+      }
+    }, 
+    {
+      "id": "kulturowa_001",
+      "name": "Teatr Wielki - Opera Narodowa",
+      "description": "Monumentalna opera z bogatym repertuarem baletu i klasyki.",
+      "category": "kulturowa",
+      "mood": ["elegancki", "refleksyjny"],
+      "budget": "wysoki",
+      "distance_km": 0.8,
+      "location": {
+        "latitude": 52.2434,
+        "longitude": 21.0101,
+        "address": "Plac Teatralny 1, Warszawa"
+      }
+    },
+    {
+      "id": "kulturowa_002",
+      "name": "Zamek Królewski w Warszawie",
+      "description": "Historyczna siedziba królów Polski, dziś muzeum i symbol miasta.",
+      "category": "kulturowa",
+      "mood": ["historyczny", "refleksyjny"],
+      "budget": "średni",
+      "distance_km": 1.0,
+      "location": {
+        "latitude": 52.2473,
+        "longitude": 21.0136,
+        "address": "Plac Zamkowy 4, Warszawa"
+      }
+    },
+    {
+      "id": "kulturowa_003",
+      "name": "Muzeum Narodowe w Warszawie",
+      "description": "Jedno z największych muzeów w Polsce, z bogatą kolekcją sztuki.",
+      "category": "kulturowa",
+      "mood": ["refleksyjny", "ciekawski"],
+      "budget": "średni",
+      "distance_km": 1.6,
+      "location": {
+        "latitude": 52.2296,
+        "longitude": 21.0273,
+        "address": "al. Jerozolimskie 3, Warszawa"
+      }
+    },
+    {
+      "id": "kulturowa_004",
+      "name": "Muzeum Historii Żydów Polskich POLIN",
+      "description": "Nowoczesne muzeum ukazujące dzieje społeczności żydowskiej w Polsce.",
+      "category": "kulturowa",
+      "mood": ["refleksyjny", "historyczny"],
+      "budget": "średni",
+      "distance_km": 2.1,
+      "location": {
+        "latitude": 52.2490,
+        "longitude": 20.9931,
+        "address": "ul. Anielewicza 6, Warszawa"
+      }
+    },
+    {
+      "id": "kulturowa_005",
+      "name": "Muzeum Fryderyka Chopina",
+      "description": "Interaktywne muzeum poświęcone życiu i twórczości kompozytora.",
+      "category": "kulturowa",
+      "mood": ["artystyczny", "refleksyjny"],
+      "budget": "średni",
+      "distance_km": 1.2,
+      "location": {
+        "latitude": 52.2332,
+        "longitude": 21.0236,
+        "address": "ul. Okólnik 1, Warszawa"
+      }
     }
+  ]
+}
+
+  ]
+}
+
 ]
 }
