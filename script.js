@@ -120,6 +120,8 @@ if (logoutButtonMenu) {
     });
   }
   const timeSlider = document.getElementById("time-slider");
+  const timeOutput = document.getElementById("time-range-output");
+
   if (timeSlider) {
     noUiSlider.create(timeSlider, {
       start: [8, 18],
@@ -134,12 +136,158 @@ if (logoutButtonMenu) {
         from: value => parseInt(value),
       }
     });
-
-    const timeOutput = document.getElementById("time-range-output");
-    timeSlider.noUiSlider.on("update", function (values) {
+  let selectedTimeRange = null;
+  
+  timeSlider.noUiSlider.on("update", function (values) {
       timeOutput.textContent = values.join(" – ");
+      selectedTimeRange = values;
     });
   } else {
     console.error("Nie znaleziono #time-slider");
   }
+  
+  let selectedCategory = null;
+
+  const categoryLabels = ["Sportowa", "Kreatywna", "Kulturowa", "Kulinarna", "Imprezowa", "Towarzyska", "Blisko natury"];
+  
+  const categoryButtons = Array.from(document.querySelectorAll('.filter-btn')).filter(btn =>
+    categoryLabels.includes(btn.textContent.trim())
+  );
+  
+  categoryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Usuń zaznaczenie ze wszystkich kategorii
+      categoryButtons.forEach(b => b.classList.remove('selected-category'));
+  
+      // Zaznacz kliknięty przycisk
+      btn.classList.add('selected');
+  
+      // Zapisz wybraną kategorię
+      selectedCategory = btn.textContent.trim();
+      console.log("Wybrana kategoria:", selectedCategory);
+    });
+  });
+
+  let selectedMood = null;
+let selectedExtras = new Set();
+
+document.querySelectorAll('.mood_btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.mood_btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    selectedMood = btn.textContent.trim();
+    console.log("Wybrany nastrój:", selectedMood);
+  });
+});
+
+document.querySelectorAll('#filter-panel > div:last-of-type .filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const label = btn.textContent.trim();
+    if (selectedExtras.has(label)) {
+      selectedExtras.delete(label);
+      btn.classList.remove('selected');
+    } else {
+      selectedExtras.add(label);
+      btn.classList.add('selected');
+    }
+    console.log("Wybrane dodatki:", Array.from(selectedExtras));
+  });
+});
+
+
+let selectedDate = null;
+
+// Obsługa kliknięcia przycisków "dzisiaj", "jutro", "pojutrze", "inny termin"
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  const text = btn.textContent.trim().toLowerCase();
+
+  if (["dzisiaj", "jutro", "pojutrze", "inny termin"].includes(text)) {
+    btn.addEventListener('click', () => {
+      // Zresetuj zaznaczenia
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        const t = b.textContent.trim().toLowerCase();
+        if (["dzisiaj", "jutro", "pojutrze", "inny termin"].includes(t)) {
+          b.classList.remove('selected');
+        }
+      });
+
+      // Ustaw wybrany przycisk jako zaznaczony
+      btn.classList.add('selected');
+
+      if (text === "inny termin") {
+        document.getElementById("calendar-container").style.display = "block";
+      } else {
+        document.getElementById("calendar-container").style.display = "none";
+        selectedDate = text;
+        console.log("Wybrano termin:", selectedDate);
+      }
+    });
+  }
+});
+
+// Inicjalizacja flatpickr
+flatpickr("#date-picker", {
+  dateFormat: "Y-m-d",
+  minDate: "today",
+  locale: "pl",
+  onChange: (selectedDates, dateStr) => {
+    selectedDate = dateStr;
+    console.log("Wybrano inny termin:", selectedDate);
+
+    // Podświetl "inny termin"
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      const t = b.textContent.trim().toLowerCase();
+      if (["dzisiaj", "jutro", "pojutrze", "inny termin"].includes(t)) {
+        b.classList.remove('selected');
+      }
+    });
+
+    const otherBtn = Array.from(document.querySelectorAll('.filter-btn')).find(
+      b => b.textContent.trim().toLowerCase() === "inny termin"
+    );
+    if (otherBtn) otherBtn.classList.add('selected');
+  }
+});
+
+
+timeSlider.noUiSlider.on("update", function (values) {
+  timeOutput.textContent = values.join(" – ");
+  selectedTimeRange = values;
+});
+
+
+
+  document.getElementById('search-button').addEventListener('click', () => {
+    if (selectedCategory) {
+      console.log("Użytkownik wybrał kategorię:", selectedCategory);
+      // możesz tu filtrować wydarzenia lub wywołać funkcję API itp.
+    } else {
+      alert("Wybierz kategorię przed wyszukiwaniem.");
+    }
+  });
+  const distanceInput = document.getElementById('distance');
+  const budgetInput = document.getElementById('budget');
+  document.getElementById('search-button').addEventListener('click', () => {
+    if (!selectedCategory) {
+      alert("Wybierz kategorię przed wyszukiwaniem.");
+      return;
+    }
+  
+    const filters = {
+      Kategoria: selectedCategory,
+      Nastrój: selectedMood,
+      Dystans: distanceInput.value + " km",
+      Budżet: budgetInput.value + " zł",
+      Termin: selectedDate || "nie wybrano",
+      "Godziny": selectedTimeRange ? selectedTimeRange.join(" – ") : "nie wybrano",
+      Dodatki: Array.from(selectedExtras).join(", ") || "brak"
+    };
+  
+    console.log("Wybrane filtry:");
+    console.table(filters);
+    alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
+  });
+  
+
+
 });
