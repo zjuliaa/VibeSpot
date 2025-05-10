@@ -1025,6 +1025,28 @@
         ],
         "type": "Point"
       }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "id": "w044",
+        "name": "Schronisko Celestyniaki",
+        "description": "Weekendowe spacery z psami z schroniska.",
+        "category": "",
+        "mood": [
+          "relaksujący",
+          "sportowy"
+        ],
+        "budget": "niski",
+        "address": "Prosta 3, 05-430 Celestynów"
+      },
+      "geometry": {
+        "coordinates": [
+          21.370247167271632,
+          52.06773027696676
+        ],
+        "type": "Point"
+      }
     }
   ]
 }
