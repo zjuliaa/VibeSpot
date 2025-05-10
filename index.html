@@ -5,15 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mapa z logowaniem</title>
   <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet/dist/leaflet.css"
-    />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <!-- noUiSlider CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pl.js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet">
-  <!-- noUiSlider JS -->
   <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
 
 
@@ -141,8 +140,11 @@
     <button class="filter-btn">inny termin</button>
     </div>
     
-  <div id="calendar-container" style="display: none; margin-top: 20px;"></div>
-
+  <!-- <div id="calendar-container" style="display: none; margin-top: 20px;"></div> -->
+  <div id="calendar-container" style="display: none; margin-top: 20px;">
+    <input type="text" id="date-picker" placeholder="Wybierz datę" />
+  </div>
+  
 
   <p style="margin-top: 20px;">Przedział godzinowy:</p>
   <div id="time-slider" style="margin: 20px 0;"></div>
