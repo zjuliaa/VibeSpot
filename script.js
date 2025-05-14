@@ -136,7 +136,10 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.login-box').style.display = 'block';
       document.getElementById('user-initials').style.display = 'none';
       document.getElementById('user-menu').style.display = 'none';
-      if (filterPanel) filterPanel.style.display = 'none';
+      if (userLocationMarker){
+        map.removeLayer(userLocationMarker);
+        userLocationMarker=null;
+      }
     }
     if (filterToggleBar) filterToggleBar.style.display = 'none';
     if (infoPanel) infoPanel.style.display = 'none';
