@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(result => {
         const user = result.user;
         alert("Zalogowano jako: " + user.displayName);
-        onUserLogin(user); // <- poprawne wywołanie
+        onUserLogin(user); 
       })
       .catch(error => {
         if (error.code === 'auth/popup-closed-by-user') {
@@ -23,13 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   function onUserLogin(user) {
-    // Ukryj login-box, pokaż info-panel
     document.querySelector('.login-box').style.display = 'none';
     document.getElementById('info-panel').style.display = 'block';
     document.getElementById('filter-panel').style.display = 'none';
   }
-
-  // Obsługa kliknięcia "Zaczynamy!"
   document.getElementById('close-info-btn').addEventListener('click', () => {
     document.getElementById('info-panel').style.display = 'none';
     document.getElementById('filter-panel').style.display = 'block';
@@ -113,7 +110,6 @@ if (logoutButtonMenu) {
   if (otherDateBtn) {
     otherDateBtn.addEventListener('click', () => {
       if (calendarContainer.style.display === 'none') {
-        // Dodaj kalendarz, jeśli jeszcze go nie ma
         if (!document.getElementById('date-picker')) {
           const input = document.createElement('input');
           input.type = 'text';
@@ -159,30 +155,8 @@ if (logoutButtonMenu) {
   } else {
     console.error("Nie znaleziono #time-slider");
   }
-  
-  let selectedCategory = null;
 
-  const categoryLabels = ["Sportowa", "Kreatywna", "Kulturowa", "Kulinarna", "Imprezowa", "Towarzyska", "Blisko natury"];
-  
-  const categoryButtons = Array.from(document.querySelectorAll('.filter-btn')).filter(btn =>
-    categoryLabels.includes(btn.textContent.trim())
-  );
-  
-  categoryButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Usuń zaznaczenie ze wszystkich kategorii
-      categoryButtons.forEach(b => b.classList.remove('selected-category'));
-  
-      // Zaznacz kliknięty przycisk
-      btn.classList.add('selected');
-  
-      // Zapisz wybraną kategorię
-      selectedCategory = btn.textContent.trim();
-      console.log("Wybrana kategoria:", selectedCategory);
-    });
-  });
-
-  let selectedMood = null;
+let selectedMood = null;
 let selectedExtras = new Set();
 
 document.querySelectorAll('.mood_btn').forEach(btn => {
@@ -209,90 +183,19 @@ document.querySelectorAll('#filter-panel > div:last-of-type .filter-btn').forEac
 });
 
 
-let selectedDate = null;
-
-// Obsługa kliknięcia przycisków "dzisiaj", "jutro", "pojutrze", "inny termin"
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  const text = btn.textContent.trim().toLowerCase();
-
-  if (["dzisiaj", "jutro", "pojutrze", "inny termin"].includes(text)) {
-    btn.addEventListener('click', () => {
-      // Zresetuj zaznaczenia
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        const t = b.textContent.trim().toLowerCase();
-        if (["dzisiaj", "jutro", "pojutrze", "inny termin"].includes(t)) {
-          b.classList.remove('selected');
-        }
-      });
-
-      // Ustaw wybrany przycisk jako zaznaczony
-      btn.classList.add('selected');
-
-      if (text === "inny termin") {
-        document.getElementById("calendar-container").style.display = "block";
-      } else {
-        document.getElementById("calendar-container").style.display = "none";
-        selectedDate = text;
-        console.log("Wybrano termin:", selectedDate);
-      }
-    });
-  }
-});
-
-// Inicjalizacja flatpickr
-flatpickr("#date-picker", {
-  dateFormat: "Y-m-d",
-  minDate: "today",
-  locale: "pl",
-  onChange: (selectedDates, dateStr) => {
-    selectedDate = dateStr;
-    console.log("Wybrano inny termin:", selectedDate);
-
-    // Podświetl "inny termin"
-    document.querySelectorAll('.filter-btn').forEach(b => {
-      const t = b.textContent.trim().toLowerCase();
-      if (["dzisiaj", "jutro", "pojutrze", "inny termin"].includes(t)) {
-        b.classList.remove('selected');
-      }
-    });
-
-    const otherBtn = Array.from(document.querySelectorAll('.filter-btn')).find(
-      b => b.textContent.trim().toLowerCase() === "inny termin"
-    );
-    if (otherBtn) otherBtn.classList.add('selected');
-  }
-});
-
-
 timeSlider.noUiSlider.on("update", function (values) {
   timeOutput.textContent = values.join(" – ");
   selectedTimeRange = values;
 });
 
 
-
-  document.getElementById('search-button').addEventListener('click', () => {
-    if (selectedCategory) {
-      console.log("Użytkownik wybrał kategorię:", selectedCategory);
-      // możesz tu filtrować wydarzenia lub wywołać funkcję API itp.
-    } else {
-      alert("Wybierz kategorię przed wyszukiwaniem.");
-    }
-  });
   const distanceInput = document.getElementById('distance');
   const budgetInput = document.getElementById('budget');
   document.getElementById('search-button').addEventListener('click', () => {
-    if (!selectedCategory) {
-      alert("Wybierz kategorię przed wyszukiwaniem.");
-      return;
-    }
-  
     const filters = {
-      Kategoria: selectedCategory,
       Nastrój: selectedMood,
       Dystans: distanceInput.value + " km",
       Budżet: budgetInput.value + " zł",
-      Termin: selectedDate || "nie wybrano",
       "Godziny": selectedTimeRange ? selectedTimeRange.join(" – ") : "nie wybrano",
       Dodatki: Array.from(selectedExtras).join(", ") || "brak"
     };
