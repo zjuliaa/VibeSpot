@@ -8,6 +8,8 @@ body, html {
   #map {
     height: 100vh;
     width: 100%;
+    z-index: 1;
+    position: relative;
   }
   
   .login-box {
@@ -75,6 +77,7 @@ body, html {
     display: flex;
     align-items: center;
     gap: 10px;
+    z-index: 1001;
   }
   
   .user-panel img {
@@ -82,6 +85,31 @@ body, html {
     height: 40px;
     border-radius: 50%;
   }
+
+  /* Panel filtrów */
+  #filter-panel {
+    position: absolute;  /* Ustawiamy absolutnie, żeby mieć pełną kontrolę */
+    z-index: 1002;  /* Filtry na najwyższej warstwie */
+    background: white;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: none;  /* Na początku panel jest ukryty */
+  }
+
+  /* Pasek do rozwijania filtrów */
+  #filter-toggle-bar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    z-index: 1002;  /* Zapewniamy, że pasek nie będzie zasłonięty przez mapę */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transform: rotate(-90deg);  /* Obrócenie paska */
+  }
+
   .filter-btn {
     background: #ccc;
     border: none;
