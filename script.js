@@ -22,6 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
+  let attractionsData = null;
+
+  fetch('lista_atrakt.geojson')
+    .then(response => response.json())
+    .then(data => {
+      attractionsData = data;
+      console.log("GeoJSON załadowany:", data);
+    })
+    .catch(err => console.error("Błąd wczytywania GeoJSON:", err));
+
+
   function onUserLogin(user) {
     document.querySelector('.login-box').style.display = 'none';
     document.getElementById('info-panel').style.display = 'block';
@@ -210,8 +221,29 @@ timeSlider.noUiSlider.on("update", function (values) {
     console.log("Wybrane filtry:");
     console.table(filters);
     alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
-  });
+    
+    document.getElementById('filter-panel').style.display = 'none';
+    document.getElementById('filter-toggle-bar').style.display = 'block';
   
+  });
+
+  document.getElementById('filter-toggle-bar').addEventListener('click', () => {
+  document.getElementById('filter-panel').style.display = 'block';
+  document.getElementById('filter-toggle-bar').style.display = 'none';
+});
+
+  
+
+  function getDistanceInKm(lat1, lon1, lat2, lon2) {
+    const R = 6371; // promień Ziemi w km
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon/2) * Math.sin(dLon/2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    return R * c;
+  }
 
 
 });
