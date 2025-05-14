@@ -28,9 +28,16 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('filter-panel').style.display = 'none';
   }
   document.getElementById('close-info-btn').addEventListener('click', () => {
-    document.getElementById('info-panel').style.display = 'none';
-    document.getElementById('filter-panel').style.display = 'block';
+  document.getElementById('info-panel').style.display = 'none';
+  
+  const user = firebase.auth().currentUser;
+    if (user) {
+      document.getElementById('filter-panel').style.display = 'block';
+    } else {
+      document.querySelector('.login-box').style.display = 'block';
+    }
   });
+
 
 
   function showUserPanel(user) {
