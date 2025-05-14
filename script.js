@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(result => {
         const user = result.user;
         alert("Zalogowano jako: " + user.displayName);
-        document.querySelector('.login-box').style.display = 'none';
-        showUserPanel(user);
+        onUserLogin(user); // <- poprawne wywołanie
       })
       .catch(error => {
         if (error.code === 'auth/popup-closed-by-user') {
@@ -21,6 +20,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
   });
+
+
+  function onUserLogin(user) {
+    // Ukryj login-box, pokaż info-panel
+    document.querySelector('.login-box').style.display = 'none';
+    document.getElementById('info-panel').style.display = 'block';
+    document.getElementById('filter-panel').style.display = 'none';
+  }
+
+  // Obsługa kliknięcia "Zaczynamy!"
+  document.getElementById('close-info-btn').addEventListener('click', () => {
+    document.getElementById('info-panel').style.display = 'none';
+    document.getElementById('filter-panel').style.display = 'block';
+  });
+
 
   function showUserPanel(user) {
     const initialsDiv = document.getElementById('user-initials');
