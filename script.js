@@ -4,6 +4,64 @@ document.addEventListener('DOMContentLoaded', function () {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
+
+  const searchBtn = document.getElementById('search-button');
+  const filterToggleBar = document.getElementById('filter-toggle-bar');
+
+  // Ukryj pasek filtrów na starcie (jeśli jeszcze nie)
+  filterToggleBar.style.display = 'none';
+
+  // Pokaż pasek po kliknięciu "Wyszukaj"
+  if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+      filterToggleBar.style.display = 'block';
+    });
+  }
+
+  // Ukryj pasek po kliknięciu w niego samego
+  filterToggleBar.addEventListener('click', () => {
+    filterToggleBar.style.display = 'none';
+  });
+
+  let userLocationMarker = null;
+
+  function showUserLocation(lat, lon) {
+    console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);  
+    if (userLocationMarker) {
+      userLocationMarker.setLatLng([lat, lon]);
+    } else {
+      userLocationMarker = L.marker([lat, lon]).addTo(map);
+    }
+    map.setView([lat, lon], 13);
+  }
+
+  function getUserLocation() {
+    console.log("Wywołano getUserLocation()"); 
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        console.log('Lokalizacja użytkownika:', lat, lon);  
+        showUserLocation(lat, lon);
+      }, function(error) {
+        console.error("Błąd pobierania lokalizacji: ", error);  
+      });
+    } else {
+      console.error("Geolokalizacja nie jest obsługiwana przez tę przeglądarkę.");
+    }
+  }
+
+
+  if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+      console.log("Kliknięto przycisk Wyszukaj");
+      getUserLocation(); 
+    });
+  } else {
+    console.error("Nie znaleziono przycisku 'search-button'");
+  }
+
+  
   document.querySelector('.google-btn').addEventListener('click', () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
@@ -68,7 +126,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   
-  firebase.auth().onAuthStateChanged(user => {
+  const infoPanel = document.getElementById('info-panel');
+  const filterPanel = document.getElementById('filter-panel');
+    firebase.auth().onAuthStateChanged(user => {
     if (user) {
       document.querySelector('.login-box').style.display = 'none';
       showUserPanel(user);
@@ -76,12 +136,12 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.login-box').style.display = 'block';
       document.getElementById('user-initials').style.display = 'none';
       document.getElementById('user-menu').style.display = 'none';
-      const filterPanel = document.getElementById('filter-panel');
-      if (filterPanel) {
-        filterPanel.style.display = 'none';
-      }
+      if (filterPanel) filterPanel.style.display = 'none';
     }
+    if (filterToggleBar) filterToggleBar.style.display = 'none';
+    if (infoPanel) infoPanel.style.display = 'none';
   });
+
 
   const logoutButtonMenu = document.getElementById('logout-btn-menu');
 if (logoutButtonMenu) {
