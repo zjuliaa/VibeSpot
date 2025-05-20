@@ -27,6 +27,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let userLocationMarker = null;
 
+// function fetchWeather(lat, lon) {
+//   const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
+//   const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
+
+//   fetch(url)
+//     .then(response => {
+//       if (!response.ok) throw new Error("Nie udało się pobrać danych pogodowych");
+//       return response.json();
+//     })
+//     .then(data => {
+//       const weatherDiv = document.getElementById('weather-info');
+//       const forecast = data.list[0]; 
+
+//       const temp = forecast.main.temp;
+//       const description = forecast.weather[0].description;
+//       const icon = forecast.weather[0].icon;
+
+//       weatherDiv.innerHTML = `
+//         <div style="display: flex; align-items: center; gap: 10px;">
+//           <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}">
+//           <div>
+//             <strong>${temp.toFixed(1)}°C</strong><br>
+//             ${description.charAt(0).toUpperCase() + description.slice(1)}
+//           </div>
+//         </div>
+//       `;
+//       weatherDiv.style.display = 'block';
+//     })
+//     .catch(err => {
+//       console.error("Błąd pobierania pogody:", err);
+//     });
+// }
+
 function fetchWeather(lat, lon) {
   const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
   const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
@@ -122,16 +155,17 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
       userLocationMarker = L.marker([lat, lon]).addTo(map);
     }
     map.setView([lat, lon], 13);
+    fetchWeather(lat, lon);
   }
 
   function getUserLocation() {
     console.log("Wywołano getUserLocation()"); 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
-        console.log('Lokalizacja użytkownika:', lat, lon);  
-        showUserLocation(lat, lon);
+        const userlat = position.coords.latitude;
+        const userlon = position.coords.longitude;
+        console.log('Lokalizacja użytkownika:', userlat, userlon);  
+        showUserLocation(userlat, userlon);
       }, function(error) {
         console.error("Błąd pobierania lokalizacji: ", error);  
       });
@@ -140,15 +174,6 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
     }
   }
 
-
-  // if (searchBtn) {
-  //   searchBtn.addEventListener('click', () => {
-  //     console.log("Kliknięto przycisk Wyszukaj");
-  //     getUserLocation(); 
-  //   });
-  // } else {
-  //   console.error("Nie znaleziono przycisku 'search-button'");
-  // }
 
   if (searchBtn) {
   searchBtn.addEventListener('click', () => {
