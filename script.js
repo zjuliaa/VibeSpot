@@ -338,43 +338,85 @@ timeSlider.noUiSlider.on("update", function (values) {
     const R = 6371; // promień Ziemi w km
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
-    const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-              Math.sin(dLon/2) * Math.sin(dLon/2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     return R * c;
+  }
+
+  function budgetCategoryToRange(category) {
+    if (category === "bezpłatny") return [0, 0];
+    if (category === "niski") return [1, 50];
+    if (category === "średni") return [51, 120];
+    if (category === "wysoki") return [121, 200];
+    return [0, Infinity];
   }
 
   let markersLayer = null;
 
+  // Główna funkcja do filtrowania i pokazywania atrakcji
   function displayAttractionsInRange(userLat, userLon, maxDistanceKm) {
-  if (!attractionsData) {
-    console.error("Dane atrakcji nie są jeszcze załadowane.");
-    return;
+    if (!attractionsData) {
+      console.error("Dane atrakcji nie są jeszcze załadowane.");
+      return;
+    }
+
+    const userBudget = parseInt(budgetInput.value);
+
+    const filteredAttractions = attractionsData.features.filter(feature => {
+      const { budget, mood } = feature.properties;
+      const [lon, lat] = feature.geometry.coordinates;
+      const distance = getDistanceInKm(userLat, userLon, lat, lon);
+
+      const [minBudget, maxBudget] = budgetCategoryToRange(budget);
+
+      return (
+        distance <= maxDistanceKm &&
+        userBudget >= minBudget && userBudget <= maxBudget &&
+        (!selectedMood || mood.includes(selectedMood))
+      );
+    });
+
+    console.log(`Znaleziono ${filteredAttractions.length} atrakcji w promieniu ${maxDistanceKm} km.`);
+
+    // Usuń poprzednie markery
+    if (markersLayer) {
+      map.removeLayer(markersLayer);
+    }
+
+    const markers = filteredAttractions.map(feature => {
+      const [lon, lat] = feature.geometry.coordinates;
+      const name = feature.properties.name;
+      const desc = feature.properties.description;
+      return L.marker([lat, lon]).bindPopup(`<strong>${name}</strong><br>${desc}`);
+    });
+
+    markersLayer = L.layerGroup(markers).addTo(map);
   }
 
-  const filteredFeatures = attractionsData.features.filter(feature => {
-    const [lon, lat] = feature.geometry.coordinates;
-    const distance = getDistanceInKm(userLat, userLon, lat, lon);
-    return distance <= maxDistanceKm;
-  });
+  // Obsługa kliknięcia w przycisk WYSZUKAJ
+  if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+      if (!navigator.geolocation) {
+        console.error("Geolokalizacja nie jest obsługiwana.");
+        return;
+      }
 
-  console.log(`Znaleziono ${filteredFeatures.length} atrakcji w promieniu ${maxDistanceKm} km.`);
+      navigator.geolocation.getCurrentPosition(position => {
+        const userLat = position.coords.latitude;
+        const userLon = position.coords.longitude;
 
-  // Usuń stare markery
-  if (markersLayer) {
-    map.removeLayer(markersLayer);
+        showUserLocation(userLat, userLon); // pokaż marker użytkownika
+        const distance = parseInt(distanceInput.value);
+        displayAttractionsInRange(userLat, userLon, distance); // pokaż atrakcje
+      }, error => {
+        console.error("Błąd pobierania lokalizacji:", error);
+      });
+    });
+  } else {
+    console.error("Nie znaleziono przycisku 'search-button'");
   }
-
-  const markers = filteredFeatures.map(feature => {
-    const [lon, lat] = feature.geometry.coordinates;
-    const name = feature.properties.name;
-    const desc = feature.properties.description;
-    return L.marker([lat, lon]).bindPopup(`<strong>${name}</strong><br>${desc}`);
-  });
-
-  markersLayer = L.layerGroup(markers).addTo(map);
-}
 
 
 
