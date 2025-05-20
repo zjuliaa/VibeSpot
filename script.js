@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
+  let userLat = null;
+  let userLon = null;
 
   const searchBtn = document.getElementById('search-button');
   const filterToggleBar = document.getElementById('filter-toggle-bar');
@@ -25,32 +27,95 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let userLocationMarker = null;
 
-  function fetchWeather(lat, lon) {
-    const apiKey = '1f2079bdb83441c8a04d76290d15bd8a'; 
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
+function fetchWeather(lat, lon) {
+  const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
+  const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
 
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        const weatherDiv = document.getElementById('weather-info');
-        const temp = data.main.temp;
-        const description = data.weather[0].description;
-        const icon = data.weather[0].icon;
-        weatherDiv.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}">
-            <div>
-              <strong>${temp.toFixed(1)}°C</strong><br>
-              ${description.charAt(0).toUpperCase() + description.slice(1)}
-            </div>
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw new Error("Nie udało się pobrać danych pogodowych");
+      return response.json();
+    })
+    .then(data => {
+      const weatherDiv = document.getElementById('weather-info');
+      const forecast = data.list[0]; 
+
+      const temp = forecast.main.temp;
+      const description = forecast.weather[0].description;
+      const icon = forecast.weather[0].icon;
+
+      weatherDiv.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}">
+          <div>
+            <strong>${temp.toFixed(1)}°C</strong><br>
+            ${description.charAt(0).toUpperCase() + description.slice(1)}
           </div>
-        `;
-        weatherDiv.style.display = 'block';
-      })
-      .catch(err => {
-        console.error("Błąd pobierania pogody:", err);
-      });
+        </div>
+      `;
+      weatherDiv.style.display = 'block';
+    })
+    .catch(err => {
+      console.error("Błąd pobierania pogody:", err);
+    });
+}
+
+function checkRainInTimeRange(lat, lon, startHour, endHour) {
+  if (!lat || !lon) {
+    console.error("Nieprawidłowe współrzędne:", lat, lon);
+    return;
   }
+
+  const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
+  const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      if (!data.list || !Array.isArray(data.list)) {
+        console.error("Brak listy prognoz pogody:", data);
+        return;
+      }
+
+      const now = new Date();
+      const todayDateStr = now.toISOString().split('T')[0]; // 'YYYY-MM-DD'
+
+      let willRain = false;
+      let willSnow = false;
+
+      data.list.forEach(entry => {
+        const entryDate = new Date(entry.dt * 1000);
+        const entryHour = entryDate.getHours();
+        const entryDateStr = entryDate.toISOString().split('T')[0];
+
+        if (entryDateStr === todayDateStr && entryHour >= startHour && entryHour < endHour) {
+          const weatherMain = entry.weather.map(w => w.main.toLowerCase());
+
+          if (weatherMain.includes('rain')) {
+            willRain = true;
+          }
+
+          if (weatherMain.includes('snow')) {
+            willSnow = true;
+          }
+        }
+      });
+
+      if (willRain) {
+        console.log("🌧 Będzie padać deszcz w wybranym przedziale godzinowym.");
+      } else if (willSnow) {
+        console.log("❄️ Będzie padać śnieg w wybranym przedziale godzinowym.");
+      } else {
+        console.log("✅ Brak opadów w wybranym przedziale godzinowym.");
+      }
+    })
+    .catch(err => {
+      console.error("Błąd pobierania pogody:", err);
+    });
+}
+
+
+
   function showUserLocation(lat, lon) {
     console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);  
     if (userLocationMarker) {
@@ -108,8 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
-        const userLat = position.coords.latitude;
-        const userLon = position.coords.longitude;
+        userLat = position.coords.latitude;
+        userLon = position.coords.longitude;
 
         showUserLocation(userLat, userLon); // już masz tę funkcję
         const maxDist = parseFloat(distanceInput.value); // np. 50 km
@@ -344,7 +409,23 @@ timeSlider.noUiSlider.on("update", function (values) {
       "Godziny": selectedTimeRange ? selectedTimeRange.join(" – ") : "nie wybrano",
       Dodatki: Array.from(selectedExtras).join(", ") || "brak"
     };
-  
+      if (selectedTimeRange) {
+        const startHour = parseInt(selectedTimeRange[0]);
+        const endHour = parseInt(selectedTimeRange[1]);
+        console.log("Wybrane godziny:", startHour, endHour);
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            userLat = position.coords.latitude;
+            userLon = position.coords.longitude;
+            checkRainInTimeRange(userLat, userLon, startHour, endHour);
+          }, function (error) {
+            console.error("Błąd geolokalizacji:", error);
+          });
+        } else {
+          alert("Twoja przeglądarka nie obsługuje geolokalizacji.");
+        }     
+    }
     console.log("Wybrane filtry:");
     console.table(filters);
     alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
