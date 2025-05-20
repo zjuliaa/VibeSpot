@@ -84,19 +84,6 @@
     ">Wyloguj się</button>
   </div>
 
-  <div id="weather-info" style="
-    position: absolute;
-    top: 80px;
-    right: 10px;
-    background: rgba(255,255,255,0.9);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    font-size: 14px;
-    display: none;
-    z-index: 1000;
-  "></div>
-  
   <div id="info-panel" style="
   display: none;
   position: fixed;
@@ -147,14 +134,17 @@
   <h2 style="text-align: center; font-family:'Mogra';">Filtry</h2>
   <p style="margin-top: 20px;">Nastrój:</p>
   <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <button class="mood_btn">😊</button>
-    <button class="mood_btn">😒</button>
-    <button class="mood_btn">😎</button>
-    <button class="mood_btn">😆</button>
-    <button class="mood_btn">😍</button>
-    <button class="mood_btn">😌</button>
-    <button class="mood_btn">🎉</button>
-    <button class="mood_btn">🏞️</button>
+    <button class="mood_btn">wesoły</button>
+    <button class="mood_btn">smutny</button>
+    <button class="mood_btn">romantyczny</button>
+    <button class="mood_btn">zły</button>
+    <button class="mood_btn">zestresowany</button>
+    <button class="mood_btn">ciekawski</button>
+    <button class="mood_btn">kreatywny</button>
+    <button class="mood_btn">głodny</button>
+    <button class="mood_btn">towarzyski</button>
+    <button class="mood_btn">sportowy</button>
+    <button class="mood_btn">kulturalny</button>
     </div>
 
   <p style="margin-top: 20px;">Dystans:</p>
@@ -177,10 +167,11 @@
 
   <p style="margin-top: 20px;">Inne:</p>
   <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <button class="filter-btn">ze zwierzętami</button>
-    <button class="filter-btn">dla dzieci</button>
-    <button class="filter-btn">dla niepełnosprawnych</button>
-    </div>
+    <button class="filter-btn other-btn" data-value="ze zwierzętami">ze zwierzętami</button>
+    <button class="filter-btn other-btn" data-value="dla dzieci">dla dzieci</button>
+    <button class="filter-btn other-btn" data-value="dla niepełnosprawnych">dla niepełnosprawnych</button>
+  </div>
+
   <button id="search-button" style="
     display: block;
     margin: 30px auto 10px auto;
