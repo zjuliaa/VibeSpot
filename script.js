@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let userLocationMarker = null;
 
-// function fetchWeather(lat, lon) {
+  // function fetchWeather(lat, lon) {
 //   const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
 //   const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
 
@@ -147,7 +147,7 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
     });
 }
 
-  function showUserLocation(lat, lon) {
+function showUserLocation(lat, lon) {
     console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);  
     if (userLocationMarker) {
       userLocationMarker.setLatLng([lat, lon]);
@@ -173,9 +173,7 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
       console.error("Geolokalizacja nie jest obsługiwana przez tę przeglądarkę.");
     }
   }
-
-
-  if (searchBtn) {
+if (searchBtn) {
   searchBtn.addEventListener('click', () => {
     console.log("Kliknięto przycisk Wyszukaj");
 
@@ -195,10 +193,10 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
-        userLat = position.coords.latitude;
-        userLon = position.coords.longitude;
+        const userLat = position.coords.latitude;
+        const userLon = position.coords.longitude;
 
-        // showUserLocation(userLat, userLon); 
+        // showUserLocation(userLat, userLon); // już masz tę funkcję
         const maxDist = parseFloat(distanceInput.value); // np. 50 km
         displayAttractionsInRange(userLat, userLon, maxDist); // ta funkcja jest w nowym kodzie
       }, function (error) {
@@ -212,8 +210,7 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
   console.error("Nie znaleziono przycisku 'search-button'");
   }
 
-  
-  document.querySelector('.google-btn').addEventListener('click', () => {
+   document.querySelector('.google-btn').addEventListener('click', () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
       .then(result => {
@@ -241,7 +238,6 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
     })
     .catch(err => console.error("Błąd wczytywania GeoJSON:", err));
 
-
   function onUserLogin(user) {
     document.querySelector('.login-box').style.display = 'none';
     document.getElementById('info-panel').style.display = 'block';
@@ -257,10 +253,7 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
       document.querySelector('.login-box').style.display = 'block';
     }
   });
-
-
-
-  function showUserPanel(user) {
+ function showUserPanel(user) {
     const initialsDiv = document.getElementById('user-initials');
   
     if (user.displayName) {
@@ -334,7 +327,7 @@ if (logoutButtonMenu) {
     }
   });
 
-  const calendarContainer = document.getElementById('calendar-container');
+   const calendarContainer = document.getElementById('calendar-container');
   
   const otherDateBtn = Array.from(document.querySelectorAll('.filter-btn'))
     .find(btn => btn.textContent.trim().toLowerCase() === 'inny termin');
@@ -363,6 +356,8 @@ if (logoutButtonMenu) {
   }
   const timeSlider = document.getElementById("time-slider");
   const timeOutput = document.getElementById("time-range-output");
+let selectedTimeRange = null;
+
 
   if (timeSlider) {
     noUiSlider.create(timeSlider, {
@@ -400,6 +395,14 @@ document.querySelectorAll('.mood_btn').forEach(btn => {
   });
 });
 
+document.querySelectorAll('.other-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active'); // Zmienia zaznaczenie
+    updateAttractions(); // Funkcja, która ponownie wywołuje displayAttractionsInRange
+  });
+});
+
+
 document.querySelectorAll('#filter-panel > div:last-of-type .filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const label = btn.textContent.trim();
@@ -431,7 +434,8 @@ timeSlider.noUiSlider.on("update", function (values) {
       "Godziny": selectedTimeRange ? selectedTimeRange.join(" – ") : "nie wybrano",
       Dodatki: Array.from(selectedExtras).join(", ") || "brak"
     };
-      if (selectedTimeRange) {
+
+    if (selectedTimeRange) {
         const startHour = parseInt(selectedTimeRange[0]);
         const endHour = parseInt(selectedTimeRange[1]);
         console.log("Wybrane godziny:", startHour, endHour);
@@ -448,6 +452,7 @@ timeSlider.noUiSlider.on("update", function (values) {
           alert("Twoja przeglądarka nie obsługuje geolokalizacji.");
         }     
     }
+
     console.log("Wybrane filtry:");
     console.table(filters);
     alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
@@ -485,6 +490,27 @@ timeSlider.noUiSlider.on("update", function (values) {
 
   let markersLayer = null;
 
+  function getSelectedOthers() {
+  return Array.from(document.querySelectorAll('.other-btn.active'))
+    .map(btn => btn.dataset.value);
+}
+
+function doTimeRangesOverlap(userStartHour, userEndHour, openStr, closeStr) {
+  // Atrakcje całodobowe
+  if (openStr === "brak" || closeStr === "brak") {
+    return true;
+  }
+
+  const parseHour = str => parseInt(str.split(":")[0]);
+  const openHour = parseHour(openStr);
+  const closeHour = parseHour(closeStr);
+
+  // Sprawdź, czy przedziały się pokrywają
+  return !(userEndHour <= openHour || userStartHour >= closeHour);
+}
+
+
+
   // Główna funkcja do filtrowania i pokazywania atrakcji
   function displayAttractionsInRange(userLat, userLon, maxDistanceKm) {
     if (!attractionsData) {
@@ -493,19 +519,45 @@ timeSlider.noUiSlider.on("update", function (values) {
     }
 
     const userBudget = parseInt(budgetInput.value);
+    const selectedOthers = getSelectedOthers();
+
+
+    const budgetOrder = [
+      { name: "bezpłatny", min: 0, max: 0 },
+      { name: "niski", min: 1, max: 50 },
+      { name: "średni", min: 51, max: 120 },
+      { name: "wysoki", min: 121, max: Infinity }
+    ];
+
+    const allowedBudgetLevels = budgetOrder
+    .filter(level => userBudget >= level.min)
+    .map(level => level.name);
+
+    // Pobierz zakres godzin z suwaka
+    const [startHourStr, endHourStr] = timeSlider.noUiSlider.get(); // ["08:00", "18:00"]
+    const userStartHour = parseInt(startHourStr.split(":")[0]);
+    const userEndHour = parseInt(endHourStr.split(":")[0]);
+
+
 
     const filteredAttractions = attractionsData.features.filter(feature => {
-      const { budget, mood } = feature.properties;
+      const { budget, mood, other = [] } = feature.properties;
       const [lon, lat] = feature.geometry.coordinates;
       const distance = getDistanceInKm(userLat, userLon, lat, lon);
+      const moodMatch = !selectedMood || (Array.isArray(mood) && mood.includes(selectedMood));
+      const budgetMatch = allowedBudgetLevels.includes(budget);
+      const otherMatch = selectedOthers.length === 0 || selectedOthers.every(tag => other.includes(tag));
+      const { open = "brak", closed = "brak" } = feature.properties;
+      const timeMatch = doTimeRangesOverlap(userStartHour, userEndHour, open, closed);
 
-      const [minBudget, maxBudget] = budgetCategoryToRange(budget);
 
-      return (
-        distance <= maxDistanceKm &&
-        userBudget >= minBudget && userBudget <= maxBudget &&
-        (!selectedMood || mood.includes(selectedMood))
-      );
+
+    return (
+    distance <= maxDistanceKm &&
+    budgetMatch  && // ✅ atrakcja tańsza lub równa od budżetu
+    moodMatch&&
+    otherMatch&&
+    timeMatch);
     });
 
     console.log(`Znaleziono ${filteredAttractions.length} atrakcji w promieniu ${maxDistanceKm} km.`);
@@ -547,7 +599,5 @@ timeSlider.noUiSlider.on("update", function (values) {
   } else {
     console.error("Nie znaleziono przycisku 'search-button'");
   }
-
-
-
 });
+
