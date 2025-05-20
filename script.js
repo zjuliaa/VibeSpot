@@ -52,13 +52,50 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
+  // if (searchBtn) {
+  //   searchBtn.addEventListener('click', () => {
+  //     console.log("Kliknięto przycisk Wyszukaj");
+  //     getUserLocation(); 
+  //   });
+  // } else {
+  //   console.error("Nie znaleziono przycisku 'search-button'");
+  // }
+
   if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
-      console.log("Kliknięto przycisk Wyszukaj");
-      getUserLocation(); 
-    });
+  searchBtn.addEventListener('click', () => {
+    console.log("Kliknięto przycisk Wyszukaj");
+
+    const filters = {
+      Nastrój: selectedMood,
+      Dystans: distanceInput.value + " km",
+      Budżet: budgetInput.value + " zł",
+      "Godziny": selectedTimeRange ? selectedTimeRange.join(" – ") : "nie wybrano",
+      Dodatki: Array.from(selectedExtras).join(", ") || "brak"
+    };
+
+    console.table(filters);
+    alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
+
+    document.getElementById('filter-panel').style.display = 'none';
+    document.getElementById('filter-toggle-bar').style.display = 'block';
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const userLat = position.coords.latitude;
+        const userLon = position.coords.longitude;
+
+        showUserLocation(userLat, userLon); // już masz tę funkcję
+        const maxDist = parseFloat(distanceInput.value); // np. 50 km
+        displayAttractionsInRange(userLat, userLon, maxDist); // ta funkcja jest w nowym kodzie
+      }, function (error) {
+        console.error("Błąd geolokalizacji:", error);
+      });
+    } else {
+      alert("Twoja przeglądarka nie obsługuje geolokalizacji.");
+    }
+  });
   } else {
-    console.error("Nie znaleziono przycisku 'search-button'");
+  console.error("Nie znaleziono przycisku 'search-button'");
   }
 
   
@@ -307,6 +344,38 @@ timeSlider.noUiSlider.on("update", function (values) {
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
     return R * c;
   }
+
+  let markersLayer = null;
+
+  function displayAttractionsInRange(userLat, userLon, maxDistanceKm) {
+  if (!attractionsData) {
+    console.error("Dane atrakcji nie są jeszcze załadowane.");
+    return;
+  }
+
+  const filteredFeatures = attractionsData.features.filter(feature => {
+    const [lon, lat] = feature.geometry.coordinates;
+    const distance = getDistanceInKm(userLat, userLon, lat, lon);
+    return distance <= maxDistanceKm;
+  });
+
+  console.log(`Znaleziono ${filteredFeatures.length} atrakcji w promieniu ${maxDistanceKm} km.`);
+
+  // Usuń stare markery
+  if (markersLayer) {
+    map.removeLayer(markersLayer);
+  }
+
+  const markers = filteredFeatures.map(feature => {
+    const [lon, lat] = feature.geometry.coordinates;
+    const name = feature.properties.name;
+    const desc = feature.properties.description;
+    return L.marker([lat, lon]).bindPopup(`<strong>${name}</strong><br>${desc}`);
+  });
+
+  markersLayer = L.layerGroup(markers).addTo(map);
+}
+
 
 
 });
