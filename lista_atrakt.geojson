@@ -1476,7 +1476,7 @@
     "open": "10:00",
     "closed": "20:00",
     "other": ["dla dzieci", "dla niepełnosprawnych"],
-    "weather": ["słonecznie", "deszczowo"],
+    "weather": ["słonecznie", "deszczowo", "śnieżnie"],
     "budget": "różny",
     "address": "ul. Smolna 9, 00-375 Warszawa",
     "zdj": "w003.jpeg"
@@ -1488,6 +1488,36 @@
     ],
     "type": "Point"
   }
+  },
+{
+  "type": "Feature",
+  "properties": {
+    "id": "w039",
+    "name": "Hangar 646",
+    "description": "Park trampolin z atrakcjami dla dzieci, młodzieży i dorosłych – świetne miejsce na aktywne spędzanie czasu.",
+    "category": "",
+    "mood": [
+      "sportowy",
+      "wesoły",
+      "zestresowany",
+      "towarzyski"
+    ],
+    "open": "10:00",
+    "closed": "21:00",
+    "other": ["dla dzieci"],
+    "weather": ["słonecznie", "deszczowo", "śnieżnie"],
+    "budget": "płatny",
+    "address": "Wał Miedzeszyński 646, 03-994 Warszawa",
+    "zdj": "w039.jpeg"
+  },
+  "geometry": {
+    "coordinates": [
+      21.0827,
+      52.2219
+    ],
+    "type": "Point"
   }
+}
+
   ]
 }
