@@ -479,9 +479,11 @@ function displayAttractionsInCarousel(features) {
     const address = props.address || props.vicinity || "Brak adresu";
     const imageName = props.zdj || "default.jpg"; // jeśli brak zdjęcia, użyj domyślnego
     const imagePath = `zdj/${imageName}`; // ścieżka do zdjęcia
- 
+    const featureId = props.id || `feature-${index}`;
+
     const card = document.createElement('div');
     card.className = 'carousel-card';
+    card.id = `carousel-card-${featureId}`;
     card.innerHTML = `
       <img src="${imagePath}" alt="${name}" class="carousel-image">
       <strong>${name}</strong><br>
@@ -568,7 +570,18 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
     const [lon, lat] = feature.geometry.coordinates;
     const name = feature.properties.name;
     const desc = feature.properties.description;
-    return L.marker([lat, lon]).bindPopup(`<strong>${name}</strong><br>${desc}`);
+    const featureId = feature.properties.id || `feature-${index}`;
+    const marker = L.marker([lat, lon]).bindPopup(`<strong>${name}</strong><br>${desc}`);
+    marker.on('click', () => {
+      const card = document.getElementById(`carousel-card-${featureId}`);
+      if (card) {
+        document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight')); // usuń stare podświetlenia
+        card.classList.add('highlight'); // dodaj podświetlenie
+        card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    });
+
+  return marker;
   });
 
   markersLayer = L.layerGroup(markers).addTo(map);
@@ -591,7 +604,6 @@ if (searchBtn) {
 
       showUserLocation(userLat, userLon);
       const distance = parseInt(distanceInput.value);
-      // displayAttractionsInRange(userLat, userLon, distance);
       const [startHourStr, endHourStr] = timeSlider.noUiSlider.get();
       const userStartHour = parseInt(startHourStr.split(":")[0]);
       const userEndHour = parseInt(endHourStr.split(":")[0]);
