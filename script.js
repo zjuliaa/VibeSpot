@@ -574,10 +574,30 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
     const marker = L.marker([lat, lon]).bindPopup(`<strong>${name}</strong><br>${desc}`);
     marker.on('click', () => {
       const card = document.getElementById(`carousel-card-${featureId}`);
-      if (card) {
+      const carousel = document.getElementById('attraction-carousel');
+      if (card&& carousel) {
         document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight')); // usuń stare podświetlenia
         card.classList.add('highlight'); // dodaj podświetlenie
-        card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        carousel.style.display = 'flex';
+        // card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      // const carouselRect = carousel.getBoundingClientRect();
+      // const cardRect = card.getBoundingClientRect();
+      // const offset = cardRect.left - carouselRect.left - (carouselRect.width / 2) + (cardRect.width / 2);
+
+      // carousel.scrollBy({
+      //   left: offset,
+      //   behavior: 'smooth'
+      // });
+      const cardOffsetLeft = card.offsetLeft;
+      const cardWidth = card.offsetWidth;
+      const carouselWidth = carousel.offsetWidth;
+
+      const scrollTo = cardOffsetLeft - (carouselWidth / 2) + (cardWidth / 2);
+
+      carousel.scrollTo({
+        left: scrollTo,
+        behavior: 'smooth'
+      });
       }
     });
 
