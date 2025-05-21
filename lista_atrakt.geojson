@@ -17,7 +17,8 @@
         "other": ["dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "średni",
-        "address": "Wybrzeże Kościuszkowskie 20, Warszawa"
+        "address": "Wybrzeże Kościuszkowskie 20, Warszawa",
+		"zdj": "w021.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -44,7 +45,8 @@
         "other": [],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "wysoki",
-        "address": "ul. Wioślarska 6, Warszawa"
+        "address": "ul. Wioślarska 6, Warszawa",
+		"zdj": "w034.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -73,7 +75,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],
         "budget": "bezpłatny",
-        "address": "Bulwar gen. Pattona, Warszawa"
+        "address": "Bulwar gen. Pattona, Warszawa",
+		"zdj": "w041.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -102,7 +105,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],
         "budget": "niski",
-        "address": "Bulwar Flotylli Wiślanej, Warszawa"
+        "address": "Bulwar Flotylli Wiślanej, Warszawa",
+		"zdj": "w045.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -133,7 +137,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],
         "budget": "bezpłatny",
-        "address": "al. Zieleniecka, Warszawa"
+        "address": "al. Zieleniecka, Warszawa",
+		"zdj": "w013.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -165,7 +170,8 @@
         "other": ["ze zwierzętami", "dla dzieci"],
         "weather": ["słonecznie"],
         "budget": "bezpłatny",
-        "address": "Park Skaryszewski, Warszawa"
+        "address": "Park Skaryszewski, Warszawa",
+		"zdj": "w049.jpeg"
       },
       "geometry": {
         "coordinates": [
@@ -194,7 +200,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather":  ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "wysoki",
-        "address": "Soho Factory, Mińska 29A/bud. 46, 03-808 Warszawa"
+        "address": "Soho Factory, Mińska 29A/bud. 46, 03-808 Warszawa",
+		"zdj": "w010.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -225,7 +232,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather":  ["słonecznie"],
         "budget": "średni",
-        "address": "ul. Ratuszowa 1/3, Warszawa"
+        "address": "ul. Ratuszowa 1/3, Warszawa",
+		"zdj": "w036.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -252,7 +260,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],        
         "budget": "średni",
-        "address": "ul. Anielewicza 6, Warszawa"
+        "address": "ul. Anielewicza 6, Warszawa",
+		"zdj": "w029.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -284,7 +293,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],        
         "budget": "bezpłatny",
-        "address": "Skwer I Dywizji Pancernej, Warszawa"
+        "address": "Skwer I Dywizji Pancernej, Warszawa",
+		"zdj": "w002.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -314,7 +324,8 @@
         "other": [ "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
-        "address": "Rynek Starego Miasta 21, Warszawa"
+        "address": "Rynek Starego Miasta 21, Warszawa",
+		"zdj": "w023.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -345,7 +356,8 @@
         "other": [ "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
-        "address": "Plac Zamkowy 4, Warszawa"
+        "address": "Plac Zamkowy 4, Warszawa",
+		"zdj": "w027.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -378,7 +390,8 @@
         "other": ["dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "wysoki",
-        "address": "Plac Teatralny 1, Warszawa"
+        "address": "Plac Teatralny 1, Warszawa",
+		"zdj": "w026.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -408,7 +421,8 @@
         "other": [ "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "bezpłatny",
-        "address": "ul. Karowa 20, Warszawa"
+        "address": "ul. Karowa 20, Warszawa",
+		"zdj": "w022.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -440,7 +454,8 @@
         "other": ["dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
-        "address": "ul. Okólnik 1, Warszawa"
+        "address": "ul. Okólnik 1, Warszawa",
+		"zdj": "w030.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -473,7 +488,8 @@
         "other": [ "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
-        "address": "al. Jerozolimskie 3, Warszawa"
+        "address": "al. Jerozolimskie 3, Warszawa",
+		"zdj": "w028.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -507,7 +523,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
-        "address": "ul. Łazienkowska 6a, Warszawa"
+        "address": "ul. Łazienkowska 6a, Warszawa",
+		"zdj": "w018.jpeg"
       },
       "geometry": {
         "coordinates": [
@@ -539,7 +556,8 @@
         "other": [ "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
-        "address": "ul. Łazienkowska 3, Warszawa"
+        "address": "ul. Łazienkowska 3, Warszawa",
+		"zdj": "w017.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -571,7 +589,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],    
         "budget": "bezpłatny",
-        "address": "ul. Agrykola 1, Warszawa"
+        "address": "ul. Agrykola 1, Warszawa",
+		"zdj": "w004.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -604,7 +623,8 @@
         "other": [ "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
-        "address": "ul. Jazdów 2, Warszawa"
+        "address": "ul. Jazdów 2, Warszawa",
+		"zdj": "w024.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -635,7 +655,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],    
         "budget": "bezpłatny",
-        "address": "Aleje Ujazdowskie 4, Warszawa"
+        "address": "Aleje Ujazdowskie 4, Warszawa",
+		"zdj": "w011.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -665,7 +686,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
-        "address": "ul. Koszykowa 63, Warszawa"
+        "address": "ul. Koszykowa 63, Warszawa",
+		"zdj": "w032.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -698,7 +720,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],    
         "budget": "średni",
-        "address": "Plac Zbawiciela, Warszawa"
+        "address": "Plac Zbawiciela, Warszawa",
+		"zdj": "w042.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -730,7 +753,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "wysoki",
-        "address": "ul. Mokotowska 48, Warszawa"
+        "address": "ul. Mokotowska 48, Warszawa",
+		"zdj": "w006.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -762,7 +786,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "wysoki",
-        "address": "ul. Wilcza 46, Warszawa"
+        "address": "ul. Wilcza 46, Warszawa",
+		"zdj": "w008.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -794,7 +819,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
-        "address": "ul. Nowogrodzka 10, Warszawa"
+        "address": "ul. Nowogrodzka 10, Warszawa",
+		"zdj": "w007.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -826,7 +852,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "niski",
-        "address": "ul. Nowy Świat 22/28, Warszawa"
+        "address": "ul. Nowy Świat 22/28, Warszawa",
+		"zdj": "w033.png"
       },
       "geometry": {
         "coordinates": [
@@ -855,7 +882,8 @@
         "other": ["dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
-        "address": "ul. Marszałkowska 99/101, Warszawa"
+        "address": "ul. Marszałkowska 99/101, Warszawa",
+		"zdj": "w035.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -883,7 +911,8 @@
         "other": [],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "wysoki",
-        "address": "ul. Piękna 44, Warszawa"
+        "address": "ul. Piękna 44, Warszawa",
+		"zdj": "w047.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -911,7 +940,8 @@
         "other": ["dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
-        "address": "ul. Warszawska 52, Mszczonów"
+        "address": "ul. Warszawska 52, Mszczonów",
+		"zdj": "w050.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -941,7 +971,8 @@
         "other": ["dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "niski",
-        "address": "Plac Defilad 1, Warszawa"
+        "address": "Plac Defilad 1, Warszawa",
+		"zdj": "w001.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -971,7 +1002,8 @@
         "other": ["dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
-        "address": "ul. Grzybowska 79, Warszawa"
+        "address": "ul. Grzybowska 79, Warszawa",
+		"zdj": "w005.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1001,7 +1033,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
-        "address": "ul. Nowogrodzka 18A, Warszawa"
+        "address": "ul. Nowogrodzka 18A, Warszawa",
+		"zdj": "w009.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1032,7 +1065,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],  
         "budget": "bezpłatny",
-        "address": "ul. Jeziorna, Warszawa"
+        "address": "ul. Jeziorna, Warszawa",
+		"zdj": "w012.jpeg"
       },
       "geometry": {
         "coordinates": [
@@ -1064,7 +1098,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],  
         "budget": "bezpłatny",
-        "address": "Las Kabacki, Ursynów, Warszawa"
+        "address": "Las Kabacki, Ursynów, Warszawa",
+		"zdj": "w014.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1096,7 +1131,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],  
         "budget": "niski",
-        "address": "Pole Mokotowskie, Warszawa"
+        "address": "Pole Mokotowskie, Warszawa",
+		"zdj": "w015.png"
       },
       "geometry": {
         "coordinates": [
@@ -1128,7 +1164,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
-        "address": "al. Księcia Józefa Poniatowskiego 1, Warszawa"
+        "address": "al. Księcia Józefa Poniatowskiego 1, Warszawa",
+		"zdj": "w016.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1160,7 +1197,8 @@
         "other": ["dla dzieci"],
         "weather": ["słonecznie", "śnieżnie"],  
         "budget": "niski",
-        "address": "ul. Inspektowa 1, Warszawa"
+        "address": "ul. Inspektowa 1, Warszawa",
+		"zdj": "w019.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1190,7 +1228,8 @@
         "other": ["ze zwierzętami", "dla dzieci"],
         "weather": ["słonecznie", "śnieżnie"],  
         "budget": "bezpłatny",
-        "address": "ul. Drawska 22, Warszawa"
+        "address": "ul. Drawska 22, Warszawa",
+		"zdj": "w020.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1219,7 +1258,8 @@
         "other": ["dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
-        "address": "ul. Żelazna 51/53, Warszawa"
+        "address": "ul. Żelazna 51/53, Warszawa",
+		"zdj": "w025.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1250,7 +1290,8 @@
         "other": [],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "wysoki",
-        "address": "Al. Jerozolimskie 123A, Warszawa"
+        "address": "Al. Jerozolimskie 123A, Warszawa",
+		"zdj": "w031.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1280,7 +1321,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],  
         "budget": "średni",
-        "address": "Julinek 1, Leszno k. Warszawy"
+        "address": "Julinek 1, Leszno k. Warszawy",
+		"zdj": "w037.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1310,7 +1352,8 @@
         "other": ["dla dzieci"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "niski",
-        "address": "ul. Merliniego 2, Warszawa"
+        "address": "ul. Merliniego 2, Warszawa",
+		"zdj": "w038.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1340,7 +1383,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie"],  
         "budget": "bezpłatny",
-        "address": "Park Ujazdowski, Warszawa"
+        "address": "Park Ujazdowski, Warszawa",
+		"zdj": "w040.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1372,7 +1416,8 @@
         "other": ["ze zwierzętami", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "niski",
-        "address": "ul. Ogrodowa 31/35, Warszawa"
+        "address": "ul. Ogrodowa 31/35, Warszawa",
+		"zdj": "w043.jpeg"
       },
       "geometry": {
         "coordinates": [
@@ -1403,7 +1448,8 @@
         "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "bezpłatny",
-        "address": "Prosta 3, 05-430 Celestynów"
+        "address": "Prosta 3, 05-430 Celestynów",
+		"zdj": "w044.jpeg"
       },
       "geometry": {
         "coordinates": [
