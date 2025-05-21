@@ -4,64 +4,25 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w001",
-        "name": "Pałac Kultury i Nauki",
-        "description": "Ikoniczny wieżowiec z tarasem widokowym.",
-        "category": "kulturowe",
-        "mood": [
-          "happy"
-        ],
-        "budget": "niski",
-        "address": "Plac Defilad 1, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.00618,
-          52.231766
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w002",
-        "name": "Multimedialny Park Fontann",
-        "description": "Spektakularne pokazy światła, dźwięku i wody nad Wisłą.",
-        "category": "spokojne",
-        "mood": [
-          "relaksujący",
-          "romantyczny"
-        ],
-        "budget": "niski",
-        "address": "Skwer I Dywizji Pancernej, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.011296118319137,
-          52.254079317201914
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w003",
+        "id": "w021",
         "name": "Centrum Nauki Kopernik",
-        "description": "Interaktywne centrum nauki dla dzieci i dorosłych.",
-        "category": "kreatywne",
+        "description": "Nowoczesne, interaktywne centrum nauki dla dzieci i dorosłych.",
+        "category": "kreatywna",
         "mood": [
-          "ciekawski",
-          "rodzinny"
+          "wesoły",
+          "ciekawski"
         ],
+        "open": "8:00", 
+        "closed": "20:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "średni",
         "address": "Wybrzeże Kościuszkowskie 20, Warszawa"
       },
       "geometry": {
         "coordinates": [
-          21.0303,
-          52.2416
+          21.02859249641263,
+          52.24176306558811
         ],
         "type": "Point"
       }
@@ -69,21 +30,26 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w004",
-        "name": "Łazienki Królewskie",
-        "description": "Zabytkowy park z pałacami, pomnikami i pawilonami.",
-        "category": "spokojne",
+        "id": "w034",
+        "name": "Sen",
+        "description": "Stylowy klub nad Wisłą z imprezami i klimatem beach clubu.",
+        "category": "imprezowa",
         "mood": [
-          "relaksujący",
+          "wesoły",
+          "towarzyski", 
           "romantyczny"
         ],
-        "budget": "niski",
-        "address": "ul. Agrykola 1, Warszawa"
+        "open": "19:00", 
+        "closed": "6:00",
+        "other": [],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],
+        "budget": "wysoki",
+        "address": "ul. Wioślarska 6, Warszawa"
       },
       "geometry": {
         "coordinates": [
-          21.034542821227777,
-          52.21398296869705
+          21.0375,
+          52.2428
         ],
         "type": "Point"
       }
@@ -91,21 +57,28 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w005",
-        "name": "Muzeum Powstania Warszawskiego",
-        "description": "Nowoczesne muzeum upamiętniające Powstanie Warszawskie.",
-        "category": "kreatywne",
+        "id": "w041",
+        "name": "Bulwary Wiślane",
+        "description": "Popularne miejsce spotkań nad Wisłą z food truckami, barami i strefami relaksu.",
+        "category": "towarzyska",
         "mood": [
-          "historyczny",
-          "refleksyjny"
+          "wesoły",
+          "smutny", 
+          "romantyczny", 
+          "głodny", 
+          "towarzyski"
         ],
-        "budget": "średni",
-        "address": "ul. Grzybowska 79, Warszawa"
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],
+        "budget": "bezpłatny",
+        "address": "Bulwar gen. Pattona, Warszawa"
       },
       "geometry": {
         "coordinates": [
-          20.9831,
-          52.2328
+          21.0302,
+          52.2419
         ],
         "type": "Point"
       }
@@ -113,21 +86,59 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w006",
-        "name": "Restauracja Ale Wino",
-        "description": "Nowoczesna restauracja z ogrodem, serwująca dania kuchni europejskiej.",
-        "category": "imprezowe",
+        "id": "w045",
+        "name": "Cud nad Wisłą",
+        "description": "Letni bar nad Wisłą z leżakami, muzyką i atmosferą chilloutu.",
+        "category": "towarzyska",
+        "mood": [
+          "wesoły",
+          "romantyczny",
+          "głodny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],
+        "budget": "niski",
+        "address": "Bulwar Flotylli Wiślanej, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0369,
+          52.2405
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w013",
+        "name": "Park Skaryszewski",
+        "description": "Jeden z najpiękniejszych parków Warszawy z jeziorkiem, rzeźbami i dużą ilością zieleni.",
+        "category": "blisko natury",
         "mood": [
           "towarzyski",
-          "kulinarne"
+          "romantyczny",
+          "wesoły",
+          "smutny",
+          "zestresowany",
+          "ciekawski",
+          "sportowy"
         ],
-        "budget": "wysoki",
-        "address": "ul. Mokotowska 48, Warszawa"
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],
+        "budget": "bezpłatny",
+        "address": "al. Zieleniecka, Warszawa"
       },
       "geometry": {
         "coordinates": [
-          21.021821190177537,
-          52.22507277586055
+          21.05517944946097,
+          52.242077733239725
         ],
         "type": "Point"
       }
@@ -135,65 +146,31 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w007",
-        "name": "Restauracja Bibenda",
-        "description": "Klimatyczne miejsce z sezonowym menu i szerokim wyborem win.",
-        "category": "spokojne",
+        "id": "w049",
+        "name": "Warsztaty Jogi w Parku Skaryszewskim",
+        "description": "Weekendowe zajęcia jogi na świeżym powietrzu dla każdego poziomu zaawansowania.",
+        "category": "aktywny relaks",
         "mood": [
-          "relaksujący",
-          "kulinarne"
+          "wesoły",
+          "smutny",
+          "zły",
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy"
         ],
-        "budget": "średni",
-        "address": "ul. Nowogrodzka 10, Warszawa"
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci"],
+        "weather": ["słonecznie"],
+        "budget": "bezpłatny",
+        "address": "Park Skaryszewski, Warszawa"
       },
       "geometry": {
         "coordinates": [
-          21.0125,
-          52.2291
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w008",
-        "name": "Restauracja Nolita",
-        "description": "Ekskluzywna restauracja oferująca nowoczesną kuchnię europejską.",
-        "category": "imprezowe",
-        "mood": [
-          "elegancki",
-          "kulinarne"
-        ],
-        "budget": "wysoki",
-        "address": "ul. Wilcza 46, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.012515341873222,
-          52.22431768234764
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w009",
-        "name": "Restauracja Soul Kitchen",
-        "description": "Nowoczesna kuchnia polska z akcentami międzynarodowymi.",
-        "category": "spokojne",
-        "mood": [
-          "relaksujący",
-          "kulinarne"
-        ],
-        "budget": "średni",
-        "address": "ul. Nowogrodzka 18A, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.013,
-          52.2285
+          21.052428439114557,
+          52.24206777378552
         ],
         "type": "Point"
       }
@@ -206,8 +183,16 @@
         "description": "Restauracja Mateusza Gesslera z otwartą kuchnią i industrialnym wnętrzem.",
         "category": "imprezowe",
         "mood": [
-			"towarzyski",
-			"kulinarne"],
+        "towarzyski",
+        "wesoły",
+        "romantyczny",
+        "zestresowany",
+        "głodny"
+      ],
+        "open": "12:00", 
+        "closed": "23:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather":  ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "wysoki",
         "address": "Soho Factory, Mińska 29A/bud. 46, 03-808 Warszawa"
       },
@@ -222,15 +207,434 @@
     {
       "type": "Feature",
       "properties": {
+        "id": "w036",
+        "name": "Zoo Warszawskie",
+        "description": "Duży ogród zoologiczny z egzotycznymi zwierzętami, idealny dla rodzin z dziećmi.",
+        "category": "rodzinne",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski"
+        ],
+        "open": "9:00", 
+        "closed": "19:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather":  ["słonecznie"],
+        "budget": "średni",
+        "address": "ul. Ratuszowa 1/3, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.021684155387877,
+          52.25882496033085
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w029",
+        "name": "Muzeum Historii Żydów Polskich POLIN",
+        "description": "Nowoczesne muzeum ukazujące dzieje społeczności żydowskiej w Polsce.",
+        "category": "kulturowa",
+        "mood": [
+          "smutny",
+          "ciekawski",
+          "kulturalny"
+        ],
+        "open": "10:00", 
+        "closed": "18:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],        
+        "budget": "średni",
+        "address": "ul. Anielewicza 6, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          20.99315923759937,
+          52.24936429336751
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w002",
+        "name": "Multimedialny Park Fontann",
+        "description": "Spektakularne pokazy światła, dźwięku i wody nad Wisłą.",
+        "category": "spokojne",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],        
+        "budget": "bezpłatny",
+        "address": "Skwer I Dywizji Pancernej, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.011296118319137,
+          52.254079317201914
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w023",
+        "name": "Muzeum Iluzji",
+        "description": "Interaktywna wystawa iluzji optycznych i sztuki percepcji.",
+        "category": "kreatywna",
+         "mood": [
+          "wesoły",
+          "smutny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "9:00", 
+        "closed": "20:00",
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
+        "budget": "średni",
+        "address": "Rynek Starego Miasta 21, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.011853221648828,
+          52.24951141407889
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w027",
+        "name": "Zamek Królewski w Warszawie",
+        "description": "Historyczna siedziba królów Polski, dziś muzeum i symbol miasta.",
+        "category": "kulturowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "10:00", 
+        "closed": "17:00",
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
+        "budget": "średni",
+        "address": "Plac Zamkowy 4, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.01525475439593,
+          52.24787075488579
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w026",
+        "name": "Teatr Wielki - Opera Narodowa",
+        "description": "Monumentalna opera z bogatym repertuarem baletu i klasyki.",
+        "category": "kulturowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "17:00", 
+        "closed": "23:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
+        "budget": "wysoki",
+        "address": "Plac Teatralny 1, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.010362401275337,
+          52.243628989320335
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w022",
+        "name": "Dom Spotkań z Historią",
+        "description": "Galeria i miejsce spotkań promujące historię poprzez wystawy i projekcje.",
+        "category": "kreatywna",
+         "mood": [
+          "wesoły",
+          "smutny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "10:00", 
+        "closed": "20:00",
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
+        "budget": "bezpłatny",
+        "address": "ul. Karowa 20, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.016706205642162,
+          52.24240609741004
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w030",
+        "name": "Muzeum Fryderyka Chopina",
+        "description": "Interaktywne muzeum poświęcone życiu i twórczości kompozytora.",
+        "category": "kulturowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "10:00", 
+        "closed": "18:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
+        "budget": "średni",
+        "address": "ul. Okólnik 1, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.02293336554511,
+          52.236463453865
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w028",
+        "name": "Muzeum Narodowe w Warszawie",
+        "description": "Jedno z największych muzeów w Polsce, z bogatą kolekcją sztuki.",
+        "category": "kulturowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "10:00", 
+        "closed": "18:00",
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
+        "budget": "średni",
+        "address": "al. Jerozolimskie 3, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.024788655557646,
+          52.231679386228556
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w018",
+        "name": "Hala Torwar",
+        "description": "Wielofunkcyjna hala sportowa, miejsce zawodów i wydarzeń masowych.",
+        "category": "sportowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy",
+          "kulturalny"
+        ],
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
+        "budget": "średni",
+        "address": "ul. Łazienkowska 6a, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.042214871079192,
+          52.2224584824537
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w017",
+        "name": "Stadion Legii Warszawa",
+        "description": "Siedziba klubu Legia Warszawa, z bogatą historią sportową.",
+        "category": "sportowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "zły", 
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy",
+          "kulturalny"
+        ],
+        "open": "8:00", 
+        "closed": "18:00",
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
+        "budget": "średni",
+        "address": "ul. Łazienkowska 3, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.04075582204876,
+          52.22043697937266
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w004",
+        "name": "Łazienki Królewskie",
+        "description": "Zabytkowy park z pałacami, pomnikami i pawilonami.",
+        "category": "spokojne",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "6:00", 
+        "closed": "22:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],    
+        "budget": "bezpłatny",
+        "address": "ul. Agrykola 1, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.034542821227777,
+          52.21398296869705
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w024",
+        "name": "Zamek Ujazdowski",
+        "description": "Przestrzeń współczesnej sztuki i twórczości interdyscyplinarnej.",
+        "category": "kreatywna",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "11:00", 
+        "closed": "19:00",
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
+        "budget": "średni",
+        "address": "ul. Jazdów 2, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.03104654699719,
+          52.21949851463525
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": "w011",
         "name": "Ogród Botaniczny UW",
         "description": "Zielona oaza z setkami gatunków roślin w samym centrum Warszawy.",
         "category": "blisko natury",
         "mood": [
-          "relaksujący",
-          "spokojny"
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski"
         ],
-        "budget": "niski",
+        "open": "10:00", 
+        "closed": "20:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],    
+        "budget": "bezpłatny",
         "address": "Aleje Ujazdowskie 4, Warszawa"
       },
       "geometry": {
@@ -244,15 +648,390 @@
     {
       "type": "Feature",
       "properties": {
+        "id": "w032",
+        "name": "Hala Koszyki",
+        "description": "Stylowa hala gastronomiczna z barami, restauracjami i muzyką na żywo.",
+        "category": "imprezowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "ciekawski",
+          "towarzyski",
+          "głodny"
+        ],
+        "open": "9:00", 
+        "closed": "1:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
+        "budget": "średni",
+        "address": "ul. Koszykowa 63, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.010988331054094,
+          52.222218365092964
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w042",
+        "name": "Plac Zbawiciela",
+        "description": "Stylowe miejsce z kawiarniami i restauracjami, chętnie odwiedzane przez mieszkańców.",
+        "category": "towarzyska",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "kulturalny",
+          "głodny"
+        ],
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],    
+        "budget": "średni",
+        "address": "Plac Zbawiciela, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.01793995360535,
+          52.219836485849
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w006",
+        "name": "Restauracja Ale Wino",
+        "description": "Nowoczesna restauracja z ogrodem, serwująca dania kuchni europejskiej.",
+        "category": "imprezowe",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "głodny"
+        ],
+        "open": "12:00", 
+        "closed": "23:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
+        "budget": "wysoki",
+        "address": "ul. Mokotowska 48, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.021821190177537,
+          52.22507277586055
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w008",
+        "name": "Restauracja Nolita",
+        "description": "Ekskluzywna restauracja oferująca nowoczesną kuchnię europejską.",
+        "category": "imprezowe",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "głodny"
+        ],
+        "open": "18:00", 
+        "closed": "22:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
+        "budget": "wysoki",
+        "address": "ul. Wilcza 46, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.012515341873222,
+          52.22431768234764
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w007",
+        "name": "Restauracja Bibenda",
+        "description": "Klimatyczne miejsce z sezonowym menu i szerokim wyborem win.",
+        "category": "spokojne",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "głodny"
+        ],
+        "open": "13:00", 
+        "closed": "24:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
+        "budget": "średni",
+        "address": "ul. Nowogrodzka 10, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0125,
+          52.2291
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w033",
+        "name": "Pawilony Nowy Świat",
+        "description": "Kompleks małych barów w podwórku przy Nowym Świecie – popularne miejsce nocnego życia.",
+        "category": "imprezowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "głodny"
+        ],
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
+        "budget": "niski",
+        "address": "ul. Nowy Świat 22/28, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0167,
+          52.2314
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w035",
+        "name": "Czarna Perła",
+        "description": "Legendarny klub rockowy z taneczną atmosferą i karaoke.",
+        "category": "imprezowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "zły", 
+          "towarzyski",
+          "głodny"
+        ],
+        "open": "16:00", 
+        "closed": "22:00",
+        "other": ["dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
+        "budget": "średni",
+        "address": "ul. Marszałkowska 99/101, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0079,
+          52.2311
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w047",
+        "name": "Floating Spa",
+        "description": "Sesje floatingu w kapsułach z solanką, które pomagają się wyciszyć i zregenerować.",
+        "category": "wellness",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "zestresowany",
+          "ciekawski"
+        ],
+        "open": "9:00", 
+        "closed": "20:00",
+        "other": [],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "wysoki",
+        "address": "ul. Piękna 44, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0159,
+          52.2322
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w050",
+        "name": "Saunarium – Termy Mszczonów (niedaleko Warszawy)",
+        "description": "Kompleks saun, jacuzzi i basenów z wodami termalnymi dla pełnego relaksu.",
+        "category": "wellness",
+        "mood": [
+          "wesoły",
+          "romantyczny",
+          "zestresowany",
+          "towarzyski"
+        ],
+        "open": "9:00", 
+        "closed": "21:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "średni",
+        "address": "ul. Warszawska 52, Mszczonów"
+      },
+      "geometry": {
+        "coordinates": [
+          20.5079,
+          51.9782
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w001",
+        "name": "Pałac Kultury i Nauki",
+        "description": "Ikoniczny wieżowiec z tarasem widokowym.",
+        "category": "kulturowe",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "ciekawski",
+          "kreatywny",
+          "kulturalny"
+        ],
+        "open": "10:00", 
+        "closed": "20:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "niski",
+        "address": "Plac Defilad 1, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.00618,
+          52.231766
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w005",
+        "name": "Muzeum Powstania Warszawskiego",
+        "description": "Nowoczesne muzeum upamiętniające Powstanie Warszawskie.",
+        "category": "kreatywne",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "open": "8:00", 
+        "closed": "18:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "średni",
+        "address": "ul. Grzybowska 79, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          20.9831,
+          52.2328
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w009",
+        "name": "Restauracja Soul Kitchen",
+        "description": "Nowoczesna kuchnia polska z akcentami międzynarodowymi.",
+        "category": "spokojne",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "ciekawski",
+          "towarzyski",
+          "głodny"
+        ],
+        "open": "17:00", 
+        "closed": "22:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "średni",
+        "address": "ul. Nowogrodzka 18A, Warszawa"
+      },
+      "geometry": {
+        "coordinates": [
+          21.013,
+          52.2285
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "id": "w012",
         "name": "Rezerwat Przyrody Jeziorko Czerniakowskie",
         "description": "Naturalny rezerwat wodno-leśny z kąpieliskiem i ścieżkami spacerowymi.",
         "category": "blisko natury",
         "mood": [
-          "aktywny",
-          "spokojny"
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski"
         ],
-        "budget": "niski",
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
+        "budget": "bezpłatny",
         "address": "ul. Jeziorna, Warszawa"
       },
       "geometry": {
@@ -266,36 +1045,24 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w013",
-        "name": "Park Skaryszewski",
-        "description": "Jeden z najpiękniejszych parków Warszawy z jeziorkiem, rzeźbami i dużą ilością zieleni.",
-        "category": "blisko natury",
-        "mood": [
-          "relaksujący",
-          "romantyczny"
-        ],
-        "budget": "niski",
-        "address": "al. Zieleniecka, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.05517944946097,
-          52.242077733239725
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w014",
         "name": "Las Kabacki",
         "description": "Duży kompleks leśny idealny na spacery, rower czy jogging.",
         "category": "blisko natury",
         "mood": [
-          "aktywny",
-          "relaksujący"
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "sportowy"
         ],
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
         "budget": "bezpłatny",
         "address": "Las Kabacki, Ursynów, Warszawa"
       },
@@ -315,9 +1082,19 @@
         "description": "Popularny park z alejkami, knajpkami i stawem.",
         "category": "blisko natury",
         "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
           "towarzyski",
-          "relaksujący"
+          "sportowy"
         ],
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
         "budget": "niski",
         "address": "Pole Mokotowskie, Warszawa"
       },
@@ -337,9 +1114,19 @@
         "description": "Największy stadion w Polsce, miejsce wydarzeń sportowych i koncertów.",
         "category": "sportowa",
         "mood": [
-          "ekscytujący",
-          "towarzyski"
+          "wesoły",
+          "smutny",
+          "zły", 
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy",
+          "kulturalny"
         ],
+        "open": "6:00", 
+        "closed": "22:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
         "address": "al. Księcia Józefa Poniatowskiego 1, Warszawa"
       },
@@ -354,56 +1141,24 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w017",
-        "name": "Stadion Legii Warszawa",
-        "description": "Siedziba klubu Legia Warszawa, z bogatą historią sportową.",
-        "category": "sportowa",
-        "mood": [
-          "ekscytujący",
-          "towarzyski"
-        ],
-        "budget": "średni",
-        "address": "ul. Łazienkowska 3, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.04075582204876,
-          52.22043697937266
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w018",
-        "name": "Hala Torwar",
-        "description": "Wielofunkcyjna hala sportowa, miejsce zawodów i wydarzeń masowych.",
-        "category": "sportowa",
-        "mood": [
-          "ekscytujący"
-        ],
-        "budget": "średni",
-        "address": "ul. Łazienkowska 6a, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.042214871079192,
-          52.2224584824537
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w019",
         "name": "Ośrodek Stegny",
         "description": "Tor łyżwiarski oraz obiekty sportowe dostępne dla mieszkańców.",
         "category": "sportowa",
         "mood": [
-          "aktywny"
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "sportowy"
         ],
+        "open": "12:00", 
+        "closed": "20:00",
+        "other": ["dla dzieci"],
+        "weather": ["słonecznie", "śnieżnie"],  
         "budget": "niski",
         "address": "ul. Inspektowa 1, Warszawa"
       },
@@ -423,10 +1178,18 @@
         "description": "Całoroczny stok narciarski i miejsce rekreacyjne.",
         "category": "sportowa",
         "mood": [
-          "aktywny",
-          "rodzinny"
+          "wesoły",
+          "smutny",
+          "zły", 
+          "zestresowany",
+          "towarzyski",
+          "sportowy"
         ],
-        "budget": "niski",
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci"],
+        "weather": ["słonecznie", "śnieżnie"],  
+        "budget": "bezpłatny",
         "address": "ul. Drawska 22, Warszawa"
       },
       "geometry": {
@@ -440,99 +1203,21 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w021",
-        "name": "Centrum Nauki Kopernik",
-        "description": "Nowoczesne, interaktywne centrum nauki dla dzieci i dorosłych.",
-        "category": "kreatywna",
-        "mood": [
-          "ciekawski",
-          "rodzinny"
-        ],
-        "budget": "średni",
-        "address": "Wybrzeże Kościuszkowskie 20, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.02859249641263,
-          52.24176306558811
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w022",
-        "name": "Dom Spotkań z Historią",
-        "description": "Galeria i miejsce spotkań promujące historię poprzez wystawy i projekcje.",
-        "category": "kreatywna",
-        "mood": [
-          "refleksyjny",
-          "ciekawski"
-        ],
-        "budget": "bezpłatny",
-        "address": "ul. Karowa 20, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.016706205642162,
-          52.24240609741004
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w023",
-        "name": "Muzeum Iluzji",
-        "description": "Interaktywna wystawa iluzji optycznych i sztuki percepcji.",
-        "category": "kreatywna",
-        "mood": [
-          "zaskoczony",
-          "zabawny"
-        ],
-        "budget": "średni",
-        "address": "Rynek Starego Miasta 21, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.011853221648828,
-          52.24951141407889
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w024",
-        "name": "Zamek Ujazdowski",
-        "description": "Przestrzeń współczesnej sztuki i twórczości interdyscyplinarnej.",
-        "category": "kreatywna",
-        "mood": "[\"inspirujący\",\"artystyczny\"]",
-        "budget": "średni",
-        "address": "ul. Jazdów 2, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.03104654699719,
-          52.21949851463525
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w025",
         "name": "Fabryka Norblina",
         "description": "Kreatywny kompleks z galeriami, sklepami z designem i muzeum.",
         "category": "kreatywna",
         "mood": [
-          "nowoczesny",
-          "twórczy"
+          "wesoły",
+          "smutny",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
         ],
+        "open": "9:00", 
+        "closed": "22:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
         "address": "ul. Żelazna 51/53, Warszawa"
       },
@@ -547,124 +1232,23 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w026",
-        "name": "Teatr Wielki - Opera Narodowa",
-        "description": "Monumentalna opera z bogatym repertuarem baletu i klasyki.",
-        "category": "kulturowa",
-        "mood": [
-          "elegancki",
-          "refleksyjny"
-        ],
-        "budget": "wysoki",
-        "address": "Plac Teatralny 1, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.010362401275337,
-          52.243628989320335
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w027",
-        "name": "Zamek Królewski w Warszawie",
-        "description": "Historyczna siedziba królów Polski, dziś muzeum i symbol miasta.",
-        "category": "kulturowa",
-        "mood": [
-          "historyczny",
-          "refleksyjny"
-        ],
-        "budget": "średni",
-        "address": "Plac Zamkowy 4, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.01525475439593,
-          52.24787075488579
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w028",
-        "name": "Muzeum Narodowe w Warszawie",
-        "description": "Jedno z największych muzeów w Polsce, z bogatą kolekcją sztuki.",
-        "category": "kulturowa",
-        "mood": [
-          "refleksyjny",
-          "ciekawski"
-        ],
-        "budget": "średni",
-        "address": "al. Jerozolimskie 3, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.024788655557646,
-          52.231679386228556
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w029",
-        "name": "Muzeum Historii Żydów Polskich POLIN",
-        "description": "Nowoczesne muzeum ukazujące dzieje społeczności żydowskiej w Polsce.",
-        "category": "kulturowa",
-        "mood": [
-          "refleksyjny",
-          "historyczny"
-        ],
-        "budget": "średni",
-        "address": "ul. Anielewicza 6, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          20.99315923759937,
-          52.24936429336751
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w030",
-        "name": "Muzeum Fryderyka Chopina",
-        "description": "Interaktywne muzeum poświęcone życiu i twórczości kompozytora.",
-        "category": "kulturowa",
-        "mood": [
-          "artystyczny",
-          "refleksyjny"
-        ],
-        "budget": "średni",
-        "address": "ul. Okólnik 1, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.02293336554511,
-          52.236463453865
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w031",
         "name": "Level 27",
         "description": "Ekskluzywny rooftop club z panoramicznym widokiem na Warszawę.",
         "category": "imprezowa",
         "mood": [
-          "elegancki",
-          "towarzyski"
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "ciekawski",
+          "towarzyski",
+          "kulturalny",
+          "głodny"
         ],
+        "open": "23:00", 
+        "closed": "5:00",
+        "other": [],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "wysoki",
         "address": "Al. Jerozolimskie 123A, Warszawa"
       },
@@ -679,124 +1263,22 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w032",
-        "name": "Hala Koszyki",
-        "description": "Stylowa hala gastronomiczna z barami, restauracjami i muzyką na żywo.",
-        "category": "imprezowa",
-        "mood": [
-          "towarzyski",
-          "kulinarne"
-        ],
-        "budget": "średni",
-        "address": "ul. Koszykowa 63, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.010988331054094,
-          52.222218365092964
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w033",
-        "name": "Pawilony Nowy Świat",
-        "description": "Kompleks małych barów w podwórku przy Nowym Świecie – popularne miejsce nocnego życia.",
-        "category": "imprezowa",
-        "mood": [
-          "imprezowy",
-          "luźny"
-        ],
-        "budget": "niski",
-        "address": "ul. Nowy Świat 22/28, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0167,
-          52.2314
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w034",
-        "name": "Sen",
-        "description": "Stylowy klub nad Wisłą z imprezami i klimatem beach clubu.",
-        "category": "imprezowa",
-        "mood": [
-          "modny",
-          "towarzyski"
-        ],
-        "budget": "wysoki",
-        "address": "ul. Wioślarska 6, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0375,
-          52.2428
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w035",
-        "name": "Czarna Perła",
-        "description": "Legendarny klub rockowy z taneczną atmosferą i karaoke.",
-        "category": "imprezowa",
-        "mood": [
-          "rockowy",
-          "zabawny"
-        ],
-        "budget": "średni",
-        "address": "ul. Marszałkowska 99/101, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0079,
-          52.2311
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w036",
-        "name": "Zoo Warszawskie",
-        "description": "Duży ogród zoologiczny z egzotycznymi zwierzętami, idealny dla rodzin z dziećmi.",
-        "category": "rodzinne",
-        "mood": [
-          "rodzinny",
-          "ciekawski"
-        ],
-        "budget": "średni",
-        "address": "ul. Ratuszowa 1/3, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.021684155387877,
-          52.25882496033085
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w037",
         "name": "Park Rozrywki Julinek",
         "description": "Tematyczny park rozrywki z atrakcjami dla dzieci i dorosłych, niedaleko Warszawy.",
         "category": "rodzinne",
         "mood": [
           "wesoły",
-          "aktywny"
+          "smutny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy"
         ],
+        "open": "10:00", 
+        "closed": "18:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
         "budget": "średni",
         "address": "Julinek 1, Leszno k. Warszawy"
       },
@@ -817,8 +1299,16 @@
         "category": "rodzinne",
         "mood": [
           "wesoły",
-          "dziecięcy"
+          "smutny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy"
         ],
+        "open": "10:00", 
+        "closed": "20:00",
+        "other": ["dla dzieci"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "niski",
         "address": "ul. Merliniego 2, Warszawa"
       },
@@ -833,36 +1323,22 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w039",
-        "name": "Muzeum dla Dzieci",
-        "description": "Specjalnie zaprojektowane muzeum z wystawami interaktywnymi dla najmłodszych.",
-        "category": "kreatywne",
-        "mood": [
-          "ciekawski",
-          "rodzinny"
-        ],
-        "budget": "niski",
-        "address": "ul. Kredytowa 1, Warszawa (Państwowe Muzeum Etnograficzne)"
-      },
-      "geometry": {
-        "coordinates": [
-          21.00683438880482,
-          52.23191005342059
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w040",
         "name": "Plac Zabaw w Parku Ujazdowskim",
         "description": "Bezpieczny plac zabaw z nowoczesnymi urządzeniami w zielonym otoczeniu.",
         "category": "spokojne",
         "mood": [
-          "relaksujący",
-          "rodzinny"
+          "wesoły",
+          "smutny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy"
         ],
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
         "budget": "bezpłatny",
         "address": "Park Ujazdowski, Warszawa"
       },
@@ -877,58 +1353,24 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w041",
-        "name": "Bulwary Wiślane",
-        "description": "Popularne miejsce spotkań nad Wisłą z food truckami, barami i strefami relaksu.",
-        "category": "towarzyska",
-        "mood": [
-          "luźny",
-          "towarzyski"
-        ],
-        "budget": "niski",
-        "address": "Bulwar gen. Pattona, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0302,
-          52.2419
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w042",
-        "name": "Plac Zbawiciela",
-        "description": "Stylowe miejsce z kawiarniami i restauracjami, chętnie odwiedzane przez mieszkańców.",
-        "category": "towarzyska",
-        "mood": [
-          "towarzyski",
-          "modny"
-        ],
-        "budget": "średni",
-        "address": "Plac Zbawiciela, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.01793995360535,
-          52.219836485849
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w043",
         "name": "Miejsce Chwila",
         "description": "Kawiarnia z klimatem bohemy, z planszówkami i wydarzeniami artystycznymi.",
         "category": "towarzyska",
         "mood": [
-          "relaksujący",
-          "artystyczny"
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny",
+          "głodny"
         ],
+        "open": "12:00", 
+        "closed": "24:00",
+        "other": ["ze zwierzętami", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "niski",
         "address": "ul. Ogrodowa 31/35, Warszawa"
       },
@@ -940,7 +1382,7 @@
         "type": "Point"
       }
     },
-    {
+{
       "type": "Feature",
       "properties": {
         "id": "w044",
@@ -948,104 +1390,25 @@
         "description": "Weekendowe spacery z psami z schroniska.",
         "category": "",
         "mood": [
-          "relaksujący",
+          "wesoły",
+          "smutny",
+          "zestresowany",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
           "sportowy"
         ],
-        "budget": "niski",
+        "open": "8:00", 
+        "closed": "16:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "bezpłatny",
         "address": "Prosta 3, 05-430 Celestynów"
       },
       "geometry": {
         "coordinates": [
           21.370247167271632,
           52.06773027696676
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w045",
-        "name": "Cud nad Wisłą",
-        "description": "Letni bar nad Wisłą z leżakami, muzyką i atmosferą chilloutu.",
-        "category": "towarzyska",
-        "mood": [
-          "luźny",
-          "relaksujący"
-        ],
-        "budget": "niski",
-        "address": "Bulwar Flotylli Wiślanej, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0369,
-          52.2405
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w047",
-        "name": "Floating Spa",
-        "description": "Sesje floatingu w kapsułach z solanką, które pomagają się wyciszyć i zregenerować.",
-        "category": "wellness",
-        "mood": [
-          "relaksujący",
-          "regenerujący"
-        ],
-        "budget": "wysoki",
-        "address": "ul. Piękna 44, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.0159,
-          52.2322
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w049",
-        "name": "Warsztaty Jogi w Parku Skaryszewskim",
-        "description": "Weekendowe zajęcia jogi na świeżym powietrzu dla każdego poziomu zaawansowania.",
-        "category": "aktywny relaks",
-        "mood": [
-          "relaksujący",
-          "zdrowy"
-        ],
-        "budget": "dobrowolna opłata",
-        "address": "Park Skaryszewski, Warszawa"
-      },
-      "geometry": {
-        "coordinates": [
-          21.052428439114557,
-          52.24206777378552
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w050",
-        "name": "Saunarium – Termy Mszczonów (niedaleko Warszawy)",
-        "description": "Kompleks saun, jacuzzi i basenów z wodami termalnymi dla pełnego relaksu.",
-        "category": "wellness",
-        "mood": [
-          "relaksujący",
-          "regenerujący"
-        ],
-        "budget": "średni",
-        "address": "ul. Warszawska 52, Mszczonów"
-      },
-      "geometry": {
-        "coordinates": [
-          20.5079,
-          51.9782
         ],
         "type": "Point"
       }
