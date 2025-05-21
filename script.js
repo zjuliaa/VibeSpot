@@ -27,39 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let userLocationMarker = null;
 
-  // function fetchWeather(lat, lon) {
-//   const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
-//   const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
-
-//   fetch(url)
-//     .then(response => {
-//       if (!response.ok) throw new Error("Nie udało się pobrać danych pogodowych");
-//       return response.json();
-//     })
-//     .then(data => {
-//       const weatherDiv = document.getElementById('weather-info');
-//       const forecast = data.list[0]; 
-
-//       const temp = forecast.main.temp;
-//       const description = forecast.weather[0].description;
-//       const icon = forecast.weather[0].icon;
-
-//       weatherDiv.innerHTML = `
-//         <div style="display: flex; align-items: center; gap: 10px;">
-//           <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}">
-//           <div>
-//             <strong>${temp.toFixed(1)}°C</strong><br>
-//             ${description.charAt(0).toUpperCase() + description.slice(1)}
-//           </div>
-//         </div>
-//       `;
-//       weatherDiv.style.display = 'block';
-//     })
-//     .catch(err => {
-//       console.error("Błąd pobierania pogody:", err);
-//     });
-// }
-
 function fetchWeather(lat, lon) {
   const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
   const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
@@ -93,9 +60,9 @@ function fetchWeather(lat, lon) {
     });
 }
 
-function checkRainInTimeRange(lat, lon, startHour, endHour) {
-  if (!lat || !lon) {
-    console.error("Nieprawidłowe współrzędne:", lat, lon);
+function checkRainInTimeRange(lat, lon, startHour, endHour, callback) {
+  if (typeof callback !== "function") {
+    console.error("❌ Błąd: callback nie jest funkcją");
     return;
   }
 
@@ -107,11 +74,12 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
     .then(data => {
       if (!data.list || !Array.isArray(data.list)) {
         console.error("Brak listy prognoz pogody:", data);
+        callback("słonecznie"); // domyślnie
         return;
       }
 
       const now = new Date();
-      const todayDateStr = now.toISOString().split('T')[0]; // 'YYYY-MM-DD'
+      const todayDateStr = now.toISOString().split('T')[0];
 
       let willRain = false;
       let willSnow = false;
@@ -123,29 +91,23 @@ function checkRainInTimeRange(lat, lon, startHour, endHour) {
 
         if (entryDateStr === todayDateStr && entryHour >= startHour && entryHour < endHour) {
           const weatherMain = entry.weather.map(w => w.main.toLowerCase());
-
-          if (weatherMain.includes('rain')) {
-            willRain = true;
-          }
-
-          if (weatherMain.includes('snow')) {
-            willSnow = true;
-          }
+          if (weatherMain.includes('rain')) willRain = true;
+          if (weatherMain.includes('snow')) willSnow = true;
         }
       });
 
-      if (willRain) {
-        console.log("🌧 Będzie padać deszcz w wybranym przedziale godzinowym.");
-      } else if (willSnow) {
-        console.log("❄️ Będzie padać śnieg w wybranym przedziale godzinowym.");
-      } else {
-        console.log("✅ Brak opadów w wybranym przedziale godzinowym.");
-      }
+      if (willRain) callback("deszczowo");
+      else if (willSnow) callback("śnieżnie");
+      else callback("słonecznie");
     })
     .catch(err => {
       console.error("Błąd pobierania pogody:", err);
+      callback("słonecznie"); // fallback
     });
 }
+
+
+
 
 function showUserLocation(lat, lon) {
     console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);  
@@ -444,7 +406,7 @@ timeSlider.noUiSlider.on("update", function (values) {
           navigator.geolocation.getCurrentPosition(function (position) {
             userLat = position.coords.latitude;
             userLon = position.coords.longitude;
-            checkRainInTimeRange(userLat, userLon, startHour, endHour);
+            // checkRainInTimeRange(userLat, userLon, startHour, endHour);
           }, function (error) {
             console.error("Błąd geolokalizacji:", error);
           });
@@ -536,7 +498,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function displayAttractionsInRange(userLat, userLon, maxDistanceKm) {
+function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondition) {
   if (!attractionsData) {
     console.error("Dane atrakcji nie są jeszcze załadowane.");
     return;
@@ -569,13 +531,17 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm) {
     const otherMatch = selectedOthers.length === 0 || selectedOthers.every(tag => other.includes(tag));
     const { open = "brak", closed = "brak" } = feature.properties;
     const timeMatch = doTimeRangesOverlap(userStartHour, userEndHour, open, closed);
+    const { weather = [] } = feature.properties;
+    const weatherMatch = !weatherCondition || weather.includes(weatherCondition);
+
 
     return (
       distance <= maxDistanceKm &&
       budgetMatch &&
       moodMatch &&
       otherMatch &&
-      timeMatch
+      timeMatch&&
+      weatherMatch
     );
   });
 
@@ -597,11 +563,6 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm) {
 
   // 🔁 Pokaż karuzelę
   displayAttractionsInCarousel(filteredAttractions);
-
-  // Debug log
-  filteredAttractions.forEach(a => {
-    console.log(a.properties.name, a.properties.address || a.properties.vicinity);
-  });
 }
 
 // Obsługa kliknięcia w przycisk WYSZUKAJ
@@ -618,7 +579,13 @@ if (searchBtn) {
 
       showUserLocation(userLat, userLon);
       const distance = parseInt(distanceInput.value);
-      displayAttractionsInRange(userLat, userLon, distance);
+      // displayAttractionsInRange(userLat, userLon, distance);
+      const [startHourStr, endHourStr] = timeSlider.noUiSlider.get();
+      const userStartHour = parseInt(startHourStr.split(":")[0]);
+      const userEndHour = parseInt(endHourStr.split(":")[0]);
+      checkRainInTimeRange(userLat, userLon, userStartHour, userEndHour, (weatherCondition) => {
+        displayAttractionsInRange(userLat, userLon, distance, weatherCondition);
+      });
     }, error => {
       console.error("Błąd pobierania lokalizacji:", error);
     });
@@ -627,147 +594,5 @@ if (searchBtn) {
   console.error("Nie znaleziono przycisku 'search-button'");
 }
 
-//dodane 1
-
-
-// function doTimeRangesOverlap(userStartHour, userEndHour, openStr, closeStr) {
-//   // Atrakcje całodobowe
-//   if (openStr === "brak" || closeStr === "brak") {
-//     return true;
-//   }
-
-//   const parseHour = str => parseInt(str.split(":")[0]);
-//   const openHour = parseHour(openStr);
-//   const closeHour = parseHour(closeStr);
-
-//   // Sprawdź, czy przedziały się pokrywają
-//   return !(userEndHour <= openHour || userStartHour >= closeHour);
-// }
-
-
-
-//   // Główna funkcja do filtrowania i pokazywania atrakcji
-//   function displayAttractionsInRange(userLat, userLon, maxDistanceKm) {
-//     if (!attractionsData) {
-//       console.error("Dane atrakcji nie są jeszcze załadowane.");
-//       return;
-//     }
-
-//     const userBudget = parseInt(budgetInput.value);
-//     const selectedOthers = getSelectedOthers();
-
-
-//     const budgetOrder = [
-//       { name: "bezpłatny", min: 0, max: 0 },
-//       { name: "niski", min: 1, max: 50 },
-//       { name: "średni", min: 51, max: 120 },
-//       { name: "wysoki", min: 121, max: Infinity }
-//     ];
-
-//     const allowedBudgetLevels = budgetOrder
-//     .filter(level => userBudget >= level.min)
-//     .map(level => level.name);
-
-//     // Pobierz zakres godzin z suwaka
-//     const [startHourStr, endHourStr] = timeSlider.noUiSlider.get(); // ["08:00", "18:00"]
-//     const userStartHour = parseInt(startHourStr.split(":")[0]);
-//     const userEndHour = parseInt(endHourStr.split(":")[0]);
-
-
-
-//     const filteredAttractions = attractionsData.features.filter(feature => {
-//       const { budget, mood, other = [] } = feature.properties;
-//       const [lon, lat] = feature.geometry.coordinates;
-//       const distance = getDistanceInKm(userLat, userLon, lat, lon);
-//       const moodMatch = !selectedMood || (Array.isArray(mood) && mood.includes(selectedMood));
-//       const budgetMatch = allowedBudgetLevels.includes(budget);
-//       const otherMatch = selectedOthers.length === 0 || selectedOthers.every(tag => other.includes(tag));
-//       const { open = "brak", closed = "brak" } = feature.properties;
-//       const timeMatch = doTimeRangesOverlap(userStartHour, userEndHour, open, closed);
-
-//     return (
-//     distance <= maxDistanceKm &&
-//     budgetMatch  && // ✅ atrakcja tańsza lub równa od budżetu
-//     moodMatch&&
-//     otherMatch&&
-//     timeMatch);
-//     });
-
-//     console.log(`Znaleziono ${filteredAttractions.length} atrakcji w promieniu ${maxDistanceKm} km.`);
-
-//     // Usuń poprzednie markery
-//     if (markersLayer) {
-//       map.removeLayer(markersLayer);
-//     }
-
-//     const markers = filteredAttractions.map(feature => {
-//       const [lon, lat] = feature.geometry.coordinates;
-//       const name = feature.properties.name;
-//       const desc = feature.properties.description;
-//       return L.marker([lat, lon]).bindPopup(`<strong>${name}</strong><br>${desc}`);
-//     });
-
-//     markersLayer = L.layerGroup(markers).addTo(map);
-//   }
-
-//   //dodane0
-
-// function displayAttractionsInCarousel(features) {
-//   const carousel = document.getElementById('attraction-carousel');
-//   if (!carousel) return;
-
-//   if (!features || features.length === 0) {
-//     carousel.style.display = 'none';
-//     return;
-//   }
-
-//   carousel.innerHTML = ''; // wyczyść poprzednie
-
-//   features.forEach(feature => {
-//     const props = feature.properties || {};
-//     const name = props.name || "Brak nazwy";
-//     const address = props.address || props.vicinity || "Brak adresu";
-
-//     const card = document.createElement('div');
-//     card.className = 'carousel-card';
-//     card.innerHTML = `
-//       <strong>${name}</strong><br>
-//       <span>${address}</span>
-//     `;
-//     carousel.appendChild(card);
-//   });
-
-//   carousel.style.display = 'flex'; // pokaż karuzelę
-// }
-
-
-  
-
-
-
-//   //dodane1
-
-//   // Obsługa kliknięcia w przycisk WYSZUKAJ
-//   if (searchBtn) {
-//     searchBtn.addEventListener('click', () => {
-//       if (!navigator.geolocation) {
-//         console.error("Geolokalizacja nie jest obsługiwana.");
-//         return;
-//       }
-
-//       navigator.geolocation.getCurrentPosition(position => {
-//         const userLat = position.coords.latitude;
-//         const userLon = position.coords.longitude;
-
-//         showUserLocation(userLat, userLon); // pokaż marker użytkownika
-//         const distance = parseInt(distanceInput.value);
-//         displayAttractionsInRange(userLat, userLon, distance); // pokaż atrakcje
-//       }, error => {
-//         console.error("Błąd pobierania lokalizacji:", error);
-//       });
-//     });
-//   } else {
-//     console.error("Nie znaleziono przycisku 'search-button'");
-//   }
 });
 
