@@ -1458,6 +1458,36 @@
         ],
         "type": "Point"
       }
-    }
+    },
+{
+	"type": "Feature",
+  "properties": {
+    "id": "w003",
+    "name": "Dom Kultury Śródmieście",
+    "description": "Warsztaty artystyczne, koncerty, wystawy i zajęcia dla dzieci i dorosłych.",
+    "category": "",
+    "mood": [
+      "kreatywny",
+      "towarzyski",
+      "zestresowany",
+      "wesoły",
+      "energiczny"
+    ],
+    "open": "10:00",
+    "closed": "20:00",
+    "other": ["dla dzieci", "dla niepełnosprawnych"],
+    "weather": ["słonecznie", "deszczowo"],
+    "budget": "różny",
+    "address": "ul. Smolna 9, 00-375 Warszawa",
+    "zdj": "w003.jpeg"
+  },
+  "geometry": {
+    "coordinates": [
+      21.025954,
+      52.232226
+    ],
+    "type": "Point"
+  }
+  }
   ]
 }
