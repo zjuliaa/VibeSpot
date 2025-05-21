@@ -96,9 +96,15 @@ function checkRainInTimeRange(lat, lon, startHour, endHour, callback) {
         }
       });
 
-      if (willRain) callback("deszczowo");
-      else if (willSnow) callback("śnieżnie");
-      else callback("słonecznie");
+      if (willRain) {
+        callback("deszczowo");
+        console.log("Prognoza: będzie padać.");
+      }else if (willSnow){
+        console.log("Prognoza: będzie śnieżyć.");
+      callback("śnieżnie");
+      } else {
+        console.log("Prognoza: będzie słonecznie.");
+        callback("słonecznie");}
     })
     .catch(err => {
       console.error("Błąd pobierania pogody:", err);
