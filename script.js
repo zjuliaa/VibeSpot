@@ -398,12 +398,12 @@ document.querySelectorAll('.mood_btn').forEach(btn => {
   });
 });
 
-document.querySelectorAll('.other-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('active'); 
-    updateAttractions(); 
-  });
-});
+// document.querySelectorAll('.other-btn').forEach(button => {
+//   button.addEventListener('click', () => {
+//     button.classList.toggle('active'); 
+//     updateAttractions(); 
+//   });
+// });
 
 document.querySelectorAll('#filter-panel > div:last-of-type .filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {

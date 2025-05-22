@@ -23,7 +23,7 @@ body, html {
     width: 280px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    border: 8px solid #e99b25;;
+    border: 8px solid #e99b25;
   }
   
   
@@ -117,6 +117,19 @@ body, html {
     display: none;  /* Na początku panel jest ukryty */
   }
 
+  .filter-label {
+    width: 78px;
+    position: relative;
+    font-size: 20px;
+    font-family: Mogra;
+    color: #563b29;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12px;
+  }
+
   /* Pasek do rozwijania filtrów */
   #filter-toggle-bar {
     position: fixed;
@@ -131,15 +144,17 @@ body, html {
   }
 
   .filter-btn {
-    background: #ccc;
-    border: none;
+    margin: 10px;
+    background: transparent;
+    border: 2px solid #e99b25;
     border-radius: 20px;
     padding: 8px 16px;
-    font-family: 'Lato';
+    font-family: Mogra;
+    color: #563b29;
     cursor: pointer;
   }
   .filter-btn:hover {
-    background: #bbb;
+    background: #e99b25;
   }
 
   .other-btn.active {
@@ -147,11 +162,22 @@ body, html {
   color: white;
 }
 
+.other-btn-group {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+}
+
+.other-btn {
+  flex: 1; 
+  min-width: 90px;
+  text-align: center;
+} 
+
 
   .mood_btn {
-  /* display: grid; */
-  /* grid-template-columns: repeat(6, 1fr); 6 kolumn */
-  flex-direction: column; /* układ pionowy */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   gap: 6px;
@@ -165,6 +191,8 @@ body, html {
   font-size: 10px;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: Mogra;
+  color: rgba(86, 59, 41, 0.68);
 }
 
 /* .mood_btn:nth-child(n+7) {
@@ -224,11 +252,46 @@ body, html {
   }
     
   .selected {
-  background-color: #4a90e2;
-  color: white;
+  background-color: #e99b25;
+  color: #563b29;
 }
 
+#search-button {
+    display: block;
+    margin: 30px auto 10px auto;
+    padding: 12px 30px;
+    background-color: #e99b25;
+    color: #563b29;
+    font-family: Mogra;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+/* 
+.button {
+width: 100%;
+position: relative;
+border-radius: 10px;
+background-color: #e99b25;
+height: 24px;
+overflow: hidden;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 5px 30px 3px;
+box-sizing: border-box;
+text-align: center;
+font-size: 18px;
+
+} */
+
+/* #search-button:hover {
+    background-color: #357ABD;
+} */
 .carousel {
   display: none; /* ukryta na starcie */
   position: fixed;

@@ -159,7 +159,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff3d4;
+  background-color: #fff2cf;
   border-radius: 30px;
   padding: 20px 40px;
   max-width: 80vw;
@@ -167,10 +167,12 @@
   overflow-y: auto;
   z-index: 999;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 8px solid #e99b25;
   ">
 
   <h2 style="text-align: center; font-family:'Mogra';">Filtry</h2>
-  <p style="margin-top: 20px;">Nastrój:</p>
+  <!-- <p style="margin-top: 20px;">Nastrój:</p> -->
+  <p class="filter-label">Nastrój:</p>
   <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-left: 7%; margin-right: 7%;">
     <button class="mood_btn" data-mood="wesoły">
       <img src="icon/icon_wesoly.svg" alt="wesoły" width="24" height="24">
@@ -220,43 +222,31 @@
     </button>
     </div>
 
-  <p style="margin-top: 20px;">Dystans:</p>
+  <p class="filter-label">Dystans:</p>
   <div class="range-labels">
     <span>0</span>
     <span>50 km</span>
   </div>
   <input type="range" id="distance" class="full-width" min="0" max="50" />
-  <p style="margin-top: 20px;">Budżet:</p>
+  <p class="filter-label">Budżet:</p>
   <div class="range-labels">
     <span>0</span>
     <span>200 zł</span>
   </div>
   <input type="range" id="budget" class="full-width" min="0" max="200" />
 
-  <p style="margin-top: 20px;">Przedział godzinowy:</p>
+  <p class="filter-label">Przedział godzinowy:</p>
   <div id="time-slider" style="margin: 20px 0;"></div>
   <p id="time-range-output" style="text-align: center; font-weight: bold;">08:00 – 18:00</p>
 
 
-  <p style="margin-top: 20px;">Inne:</p>
+  <p class="filter-label">Inne:</p>
   <div style="display: flex; flex-wrap: wrap; gap: 10px;">
     <button class="filter-btn other-btn" data-value="ze zwierzętami">ze zwierzętami</button>
     <button class="filter-btn other-btn" data-value="dla dzieci">dla dzieci</button>
     <button class="filter-btn other-btn" data-value="dla niepełnosprawnych">dla niepełnosprawnych</button>
   </div>
-  <button id="search-button" style="
-    display: block;
-    margin: 30px auto 10px auto;
-    padding: 12px 30px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-  ">
-    Wyszukaj
-  </button>
+ <button id="search-button">szukaj</button>
 
   </div>
 
