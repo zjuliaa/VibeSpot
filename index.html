@@ -143,8 +143,8 @@
   background-color: #fff3d4;
   border-radius: 30px;
   padding: 20px 40px;
-  max-width: 600px;
-  max-height: 40vh;
+  max-width: 80vw;
+  max-height: 50vh;
   overflow-y: auto;
   z-index: 999;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -152,18 +152,53 @@
 
   <h2 style="text-align: center; font-family:'Mogra';">Filtry</h2>
   <p style="margin-top: 20px;">Nastrój:</p>
-  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <button class="mood_btn">wesoły</button>
-    <button class="mood_btn">smutny</button>
-    <button class="mood_btn">romantyczny</button>
-    <button class="mood_btn">zły</button>
-    <button class="mood_btn">zestresowany</button>
-    <button class="mood_btn">ciekawski</button>
-    <button class="mood_btn">kreatywny</button>
-    <button class="mood_btn">głodny</button>
-    <button class="mood_btn">towarzyski</button>
-    <button class="mood_btn">sportowy</button>
-    <button class="mood_btn">kulturalny</button>
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-left: 7%; margin-right: 7%;">
+    <button class="mood_btn" data-mood="wesoły">
+      <img src="icon/icon_wesoly.svg" alt="wesoły" width="24" height="24">
+      <span>wesoły</span>
+    </button>
+        <button class="mood_btn" data-mood="smutny">
+      <img src="icon/icon_smutny.svg" alt="smutny" width="24" height="24">
+      <span>smutny</span>
+    </button>
+        <button class="mood_btn" data-mood="romantyczny">
+      <img src="icon/icon_romantyczny.svg" alt="romantyczny" width="24" height="24">
+      <span>romantyczny</span>
+    </button>
+        <button class="mood_btn" data-mood="zdenerwowany">
+      <img src="icon/icon_zly.svg" alt="zdenerwowany" width="24" height="24">
+      <span>zdenerwowany</span>
+    </button>
+        <button class="mood_btn" data-mood="zestresowany">
+      <img src="icon/icon_zestresowany.svg" alt="zestresowany" width="24" height="24">
+      <span>zestresowany</span>
+    </button>
+        <button class="mood_btn" data-mood="ciekawski">
+      <img src="icon/icon_ciekawski.svg" alt="ciekawski" width="24" height="24">
+      <span>ciekawski</span>
+    </button>
+        <button class="mood_btn" data-mood="kreatywny">
+      <img src="icon/icon_kreatywny.svg" alt="kreatywny" width="24" height="24">
+      <span>kreatywny</span>
+    </button>
+        <button class="mood_btn" data-mood="głodny">
+      <img src="icon/icon_glodny.svg" alt="głodny" width="24" height="24">
+      <span>głodny</span>
+    </button>
+        <button class="mood_btn" data-mood="towarzyski">
+      <img src="icon/icon_towarzyski.svg" alt="towarzyski" width="24" height="24">
+      <span>towarzyski</span>
+    </button>
+    </button>
+        <button class="mood_btn" data-mood="sportowy">
+      <img src="icon/icon_sportowy.svg" alt="sportowy" width="24" height="24">
+      <span>sportowy</span>
+    </button>
+        </button>
+        <button class="mood_btn" data-mood="kulturalny">
+      <img src="icon/icon_kulturalny.svg" alt="kulturalny" width="24" height="24">
+      <span>kulturalny</span>
+    </button>
     </div>
 
   <p style="margin-top: 20px;">Dystans:</p>
