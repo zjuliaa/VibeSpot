@@ -1,6 +1,40 @@
 let map;
 let customIcon;
 let selectedIcon;
+
+function updateSliderDistance(slider_d, tooltip_d) {
+  const value = slider_d.value;
+  tooltip_d.textContent = `${value} km`;
+
+  const percent = (value - slider_d.min) / (slider_d.max - slider_d.min);
+  const offset = percent * (slider_d.offsetWidth - 20) + 10;
+  tooltip_d.style.left = `${offset}px`;
+
+  slider_d.style.background = `linear-gradient(to right, #E35225 ${percent * 100}%, #E99B25 ${percent * 100}%)`;
+}
+
+function updateSliderBudget(slider_b, tooltip_b) {
+  const value = slider_b.value;
+  tooltip_b.textContent = `${value} zł`;
+
+  const percent = (value - slider_b.min) / (slider_b.max - slider_b.min);
+  const offset = percent * (slider_b.offsetWidth - 20) + 10;
+  tooltip_b.style.left = `${offset}px`;
+
+  slider_b.style.background = `linear-gradient(to right, #E35225 ${percent * 100}%, #E99B25 ${percent * 100}%)`;
+}
+
+const slider_d = document.getElementById("distance");
+const tooltip_d = document.getElementById("distance-tooltip_d");
+slider_d.addEventListener("input", () => updateSliderDistance(slider_d, tooltip_d));
+window.addEventListener("load", () => updateSliderDistance(slider_d, tooltip_d));
+
+const slider_b = document.getElementById("budget");
+const tooltip_b = document.getElementById("budget-tooltip_b");
+slider_b.addEventListener("input", () => updateSliderBudget(slider_b, tooltip_b));
+window.addEventListener("load", () => updateSliderBudget(slider_b, tooltip_b));
+
+
 document.addEventListener('DOMContentLoaded', function () {
   function initMapWithStyle(styleJson) {
     map = new google.maps.Map(document.getElementById("map"), {
