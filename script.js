@@ -7,6 +7,22 @@ document.addEventListener('DOMContentLoaded', function () {
   let userLat = null;
   let userLon = null;
 
+  const customIcon = L.icon({
+  iconUrl: 'Vector.svg',  
+  iconSize: [32, 32],             
+  iconAnchor: [16, 32],           
+  popupAnchor: [0, -32]           
+});
+
+const selectedIcon = L.icon({
+  iconUrl: 'Vector-selected.svg',  
+  iconSize: [60, 40],             
+  iconAnchor: [30,40],           
+  popupAnchor: [0, 0]           
+});
+
+let activeMarker = null;
+
   const searchBtn = document.getElementById('search-button');
   const filterToggleBar = document.getElementById('filter-toggle-bar');
 
@@ -120,7 +136,7 @@ function showUserLocation(lat, lon) {
     if (userLocationMarker) {
       userLocationMarker.setLatLng([lat, lon]);
     } else {
-      userLocationMarker = L.marker([lat, lon]).addTo(map);
+      userLocationMarker = L.marker([lat, lon], { icon: customIcon }).addTo(map);
     }
     map.setView([lat, lon], 13);
     fetchWeather(lat, lon);
@@ -577,10 +593,17 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
     const name = feature.properties.name;
     const desc = feature.properties.description;
     const featureId = feature.properties.id || `feature-${index}`;
-    const marker = L.marker([lat, lon]).bindPopup(`<strong>${name}</strong><br>${desc}`);
+    const marker = L.marker([lat, lon], { icon: customIcon }).bindPopup(`<strong>${name}</strong><br>${desc}`);
     marker.on('click', () => {
       const card = document.getElementById(`carousel-card-${featureId}`);
       const carousel = document.getElementById('attraction-carousel');
+      if (activeMarker) {
+        activeMarker.setIcon(customIcon);
+      }
+
+       marker.setIcon(selectedIcon);
+      activeMarker = marker;
+
       if (card&& carousel) {
         document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight')); // usuń stare podświetlenia
         card.classList.add('highlight'); // dodaj podświetlenie
@@ -645,4 +668,3 @@ if (searchBtn) {
 }
 
 });
-
