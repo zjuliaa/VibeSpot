@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<title>VibeSpot</title>
+
+  <!-- Fonts and styles -->	
+  	<link rel="stylesheet"  href="./index.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mogra:wght@400&display=swap" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet" />
+
+  	
+  <!-- Google Maps -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfVidfERnXo6CBHoJRsH27g4fvO5rLyEI&callback=initMap"
+    async defer
+  ></script>
+
+    <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
+  	
+</head>
+<body>
+  	<div class="home-page">
+    		<div class="konto-panel">
+      			<img class="help-icon" alt="" src="help_icon.svg">
+      			
+      			<img class="settings-icon" alt="" src="settings_icon.svg">
+      			
+      			<img class="person-icon" alt="" src="person_icon.svg">
+      			
+    		</div>
+    		<div class="okienko-start">
+      			<div class="okienko-start-child">
+      			</div>
+      			<div class="okienko-start-item">
+      			</div>
+      			<div class="odkrywaj-wydarzenia-dopasowane">Odkrywaj wydarzenia dopasowane do Twojego nastroju, zainteresowań i lokalizacji. Skorzystaj z filtrów, aby znaleźć idealne miejsce lub aktywność!</div>
+      			<div class="heading">
+        				<div class="button-text">VibeSpot</div>
+      			</div>
+      			<div class="button">
+        				<div class="button-text">zaloguj</div>
+      			</div>
+    		</div>
+			<div class="okienko-login">
+      			<div class="okienko-login-child">
+      			</div>
+      			<div class="okienko-login-item">
+      			</div>
+      			<div class="albo">albo</div>
+      			<div class="button-google">
+        				<div class="button-text">zaloguj się przez Google</div>
+      			</div>
+      			<div class="button-inne-opcje">
+        				<div class="button-text">zobacz inne opcje</div>
+      			</div>
+      			<div class="button-rejestr">
+        				<div class="button-text">rejestracja</div>
+      			</div>
+      			<div class="login-heading">
+        				<div class="button-text">Witamy!</div>
+      			</div>
+    		</div>
+			<div class="okienko-rejestr">
+      			<div class="okienko-login-child">
+      			</div>
+      			<div class="okienko-login-item">
+      			</div>
+      			<div class="button-zatwierdz">
+        				<div class="button-text">zatwierdź</div>
+      			</div>
+      			<div class="pola-rejestr">
+        				<div class="e-mail">e-mail:</div>
+        				<div class="pole-mail">
+        				</div>
+        				<div class="e-mail">login:</div>
+        				<div class="pole-mail">
+        				</div>
+        				<div class="e-mail">
+          					<span>hasło</span>
+          					<span class="span">:</span>
+        				</div>
+        				<div class="pole-mail">
+        				</div>
+        				<div class="e-mail">powtórz hasło:</div>
+        				<div class="pole-mail">
+        				</div>
+      			</div>
+    		</div>			
+  	</div>
+	<div id="map"></div>
+  	<div id="screen-home" class="screen" style="display:none;">...</div>
+	<div id="screen-settings" class="screen" style="display:none;">...</div>
+  	
+  	
+
+  	<script src="index.js"></script>
+</body>
+</html>
