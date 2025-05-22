@@ -1,27 +1,53 @@
+let map;
+let customIcon;
+let selectedIcon;
 document.addEventListener('DOMContentLoaded', function () {
-  const map = L.map('map').setView([52.2297, 21.0122], 13);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+  function initMapWithStyle(styleJson) {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 52.2297, lng: 21.0122 },
+      zoom: 13,
+      styles: styleJson,
+      disableDefaultUI: true
+    });
+    const customIcon = {
+      url: 'Vector.svg',  // ścieżka do ikony
+      scaledSize: new google.maps.Size(32, 32),   // rozmiar ikony
+      anchor: new google.maps.Point(16, 32),      // punkt zaczepienia ikony (tam gdzie "stoi" na mapie)
+      // popupAnchor nie jest obsługiwany bezpośrednio, Google Maps ma własne infoWindow
+    };
+
+
+    const selectedIcon = {
+      url: 'Vector-selected.svg',
+      scaledSize: new google.maps.Size(60, 40),
+      anchor: new google.maps.Point(30, 40),
+    };
+
+    // Możesz teraz tu dodać inne rzeczy do mapy, np. markery, eventy itd.
+  }
+
+  function initMap() {
+    fetch('googlemaps.json')
+      .then(res => res.json())
+      .then(style => initMapWithStyle(style))
+      .catch(err => {
+        console.error('Failed to load map style:', err);
+      });
+  }
+
+  window.initMap = initMap;
+  
+
+
+  // const map = L.map('map').setView([52.2297, 21.0122], 13);
+  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  //   attribution: '&copy; OpenStreetMap contributors'
+  // }).addTo(map);
 
   let userLat = null;
   let userLon = null;
 
-  const customIcon = L.icon({
-  iconUrl: 'Vector.svg',  
-  iconSize: [32, 32],             
-  iconAnchor: [16, 32],           
-  popupAnchor: [0, -32]           
-});
-
-const selectedIcon = L.icon({
-  iconUrl: 'Vector-selected.svg',  
-  iconSize: [60, 40],             
-  iconAnchor: [30,40],           
-  popupAnchor: [0, 0]           
-});
-
-let activeMarker = null;
+  let activeMarker = null;
 
   const searchBtn = document.getElementById('search-button');
   const filterToggleBar = document.getElementById('filter-toggle-bar');
@@ -130,15 +156,26 @@ function checkRainInTimeRange(lat, lon, startHour, endHour, callback) {
 
 
 function showUserLocation(lat, lon) {
-    console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);  
-    if (userLocationMarker) {
-      userLocationMarker.setLatLng([lat, lon]);
-    } else {
-      userLocationMarker = L.marker([lat, lon], { icon: customIcon }).addTo(map);
-    }
-    map.setView([lat, lon], 13);
-    fetchWeather(lat, lon);
+  console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);
+
+  const position = { lat: lat, lng: lon };
+
+  if (userLocationMarker) {
+    userLocationMarker.setPosition(position);
+  } else {
+    userLocationMarker = new google.maps.Marker({
+      position: position,
+      map: map,
+      icon: customIcon // tutaj musi być odpowiedni format ikony dla Google Maps
+    });
   }
+
+  map.setCenter(position);
+  map.setZoom(13);
+
+  fetchWeather(lat, lon);
+}
+
 
   function getUserLocation() {
     console.log("Wywołano getUserLocation()"); 
@@ -290,6 +327,7 @@ if (logoutButtonMenu) {
       document.querySelector('.login-box').style.display = 'none';
       document.getElementById('user-initials').style.display = 'none';
       document.getElementById('user-menu').style.display = 'none';
+      document.getElementById('filter-toggle-bar').style.display = 'none';
       const filterPanel = document.getElementById('filter-panel');
       if (filterPanel) {
         filterPanel.style.display = 'none';
@@ -299,14 +337,17 @@ if (logoutButtonMenu) {
         carousel.style.display = 'none';
         carousel.innerHTML = '';
       }
-       if (markersLayer) {
-        map.removeLayer(markersLayer);
+      if (markersLayer && Array.isArray(markersLayer)) {
+        markersLayer.forEach(marker => marker.setMap(null));
         markersLayer = null;
       }
       const weatherInfo = document.getElementById('weather-info');
       if (weatherInfo) {
         weatherInfo.style.display = 'none';
       }
+      document.querySelectorAll('.mood_btn.active').forEach(btn => {
+        btn.classList.remove('active');
+      });
 
     }).catch(error => {
       console.error("Błąd wylogowywania:", error);
@@ -472,9 +513,9 @@ timeSlider.noUiSlider.on("update", function (values) {
   if (carousel) {
     carousel.style.display = 'none';
   }
-  if (markersLayer) {
-    map.removeLayer(markersLayer);
-    markersLayer = null; // opcjonalnie wyczyść referencję, żeby mieć pewność, że są usunięte
+  if (markersLayer && Array.isArray(markersLayer)) {
+    markersLayer.forEach(marker => marker.setMap(null));
+    markersLayer = null;
   }
 });
 
@@ -491,7 +532,8 @@ timeSlider.noUiSlider.on("update", function (values) {
     return R * c;
   }
 
-  let markersLayer = null;
+  // let markersLayer = null;
+  let markersLayer = [];
 
   function getSelectedOthers() {
   return Array.from(document.querySelectorAll('.other-btn.active'))
@@ -611,8 +653,8 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
   console.log(`Znaleziono ${filteredAttractions.length} atrakcji w promieniu ${maxDistanceKm} km.`);
 
   // Markery na mapie
-  if (markersLayer) {
-    map.removeLayer(markersLayer);
+  if (markersLayer && Array.isArray(markersLayer)) {
+    markersLayer.forEach(marker => marker.setMap(null)); 
   }
 
   const markers = filteredAttractions.map(feature => {
@@ -620,8 +662,19 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
     const name = feature.properties.name;
     const desc = feature.properties.description;
     const featureId = feature.properties.id || `feature-${index}`;
-    const marker = L.marker([lat, lon], { icon: customIcon }).bindPopup(`<strong>${name}</strong><br>${desc}`);
-    marker.on('click', () => {
+    // const marker = L.marker([lat, lon], { icon: customIcon }).bindPopup(`<strong>${name}</strong><br>${desc}`);
+    const marker = new google.maps.Marker({
+      position: { lat, lng: lon },
+      title: name,
+      icon: customIcon 
+    });
+    const infoWindow = new google.maps.InfoWindow({
+      content: `<strong>${name}</strong><br>${desc}`
+    });
+    marker.addListener('click', () => {
+      infoWindow.open(map, marker);
+    });
+    marker.addListener('click', () => {
       const card = document.getElementById(`carousel-card-${featureId}`);
       const carousel = document.getElementById('attraction-carousel');
       if (activeMarker) {
@@ -660,7 +713,8 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
   return marker;
   });
 
-  markersLayer = L.layerGroup(markers).addTo(map);
+  markersLayer = markers;
+  markersLayer.forEach(marker => marker.setMap(map));
 
   // 🔁 Pokaż karuzelę
   displayAttractionsInCarousel(filteredAttractions);
