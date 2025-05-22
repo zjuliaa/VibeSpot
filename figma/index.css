@@ -1,0 +1,290 @@
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.help-icon {
+width: 30px;
+position: relative;
+max-height: 100%;
+overflow: hidden;
+flex-shrink: 0;
+}
+.settings-icon {
+width: 25px;
+position: relative;
+height: 26px;
+}
+.person-icon {
+width: 22px;
+position: relative;
+height: 27px;
+}
+.konto-panel {
+position: absolute;
+top: 21px;
+left: 1332px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+border-radius: 20px;
+background-color: #e99b25;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+padding: 3px 24px 2px 13px;
+gap: 20px;
+}
+.okienko-start-child {
+position: absolute;
+top: 0px;
+left: 0px;
+border-radius: 20px;
+background-color: #e99b25;
+width: 651px;
+height: 301px;
+}
+.okienko-start-item {
+position: absolute;
+top: 7px;
+left: 11px;
+border-radius: 20px;
+background-color: #fff2cf;
+width: 629px;
+height: 287px;
+}
+.odkrywaj-wydarzenia-dopasowane {
+position: absolute;
+top: 151px;
+left: 50px;
+font-family: Lato;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 552px;
+height: 50px;
+}
+.heading {
+position: absolute;
+top: 51px;
+left: 198px;
+width: 255.8px;
+height: 65.4px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+font-size: 48px;
+}
+.button-text {
+position: relative;
+}
+.button {
+position: absolute;
+top: 236px;
+left: 487px;
+border-radius: 10px;
+background-color: #e99b25;
+overflow: hidden;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 5px 30px 3px;
+}
+.okienko-start {
+position: absolute;
+top: 204px;
+left: 429px;
+width: 651px;
+height: 301px;
+}
+.home-page {
+  	width: 1510;
+  	position: relative;
+  	height: 710px;
+  	overflow: hidden;
+  	text-align: center;
+  	font-size: 18px;
+  	color: #563b29;
+  	font-family: Mogra;
+	z-index: 1;
+}
+.okienko-login-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 20px;
+  	background-color: #e99b25;
+  	width: 430px;
+  	height: 514px;
+}
+.okienko-login-item {
+  	position: absolute;
+  	top: 13px;
+  	left: 17px;
+  	border-radius: 20px;
+  	background-color: #fff2cf;
+  	width: 397px;
+  	height: 488px;
+}
+.albo {
+  	position: absolute;
+  	top: 341px;
+  	left: 62px;
+  	font-size: 19px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	width: 306px;
+  	height: 36.6px;
+}
+.button-text {
+  	position: relative;
+}
+.button-google {
+  	position: absolute;
+  	top: 201px;
+  	left: 62px;
+  	border-radius: 10px;
+  	background-color: #e99b25;
+  	width: 306px;
+  	height: 28px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 5px 30px 3px;
+  	box-sizing: border-box;
+}
+.button-inne-opcje {
+  	position: absolute;
+  	top: 267.63px;
+  	left: 62.22px;
+  	border-radius: 10px;
+  	background-color: #e99b25;
+  	width: 306px;
+  	height: 27.9px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 5px 30px 3px;
+  	box-sizing: border-box;
+}
+.button-rejestr {
+  	position: absolute;
+  	top: 397px;
+  	left: 62px;
+  	border-radius: 10px;
+  	background-color: #e99b25;
+  	width: 306px;
+  	height: 27.9px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 5px 30px 3px;
+  	box-sizing: border-box;
+}
+.login-heading {
+  	position: absolute;
+  	top: 78.6px;
+  	left: 94.61px;
+  	width: 242.1px;
+  	height: 54px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	font-size: 48px;
+}
+.okienko-login {
+  	width: 100%;
+  	position: relative;
+  	height: 514px;
+  	text-align: center;
+  	font-size: 18px;
+  	color: #563b29;
+  	font-family: Mogra;
+}
+.okienko-rejestr-child {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 20px;
+  	background-color: #e99b25;
+  	width: 430px;
+  	height: 514px;
+}
+.okienko-rejestr-item {
+  	position: absolute;
+  	top: 13px;
+  	left: 17px;
+  	border-radius: 20px;
+  	background-color: #fff2cf;
+  	width: 397px;
+  	height: 488px;
+}
+.button-text {
+  	position: relative;
+}
+.button-zatwierdz {
+  	position: absolute;
+  	top: 452px;
+  	left: 237px;
+  	border-radius: 10px;
+  	background-color: #e99b25;
+  	width: 157.5px;
+  	height: 28.1px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 5px 30px 3px;
+  	box-sizing: border-box;
+}
+.e-mail {
+  	align-self: stretch;
+  	position: relative;
+}
+.pole-mail {
+  	align-self: stretch;
+  	position: relative;
+  	border-radius: 10px;
+  	background-color: rgba(233, 155, 37, 0.4);
+  	height: 34px;
+}
+.span {
+  	font-size: 25px;
+}
+.pola-rejestr {
+  	position: absolute;
+  	top: 61px;
+  	left: 49px;
+  	width: 305.7px;
+  	height: 372.4px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 18px;
+  	text-align: left;
+}
+.okienko-rejestr {
+  	width: 100%;
+  	position: relative;
+  	height: 514px;
+  	text-align: center;
+  	font-size: 18px;
+  	color: #563b29;
+  	font-family: Mogra;
+}
+
+
