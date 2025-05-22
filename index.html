@@ -222,27 +222,18 @@
     </button>
     </div>
 
-<p style="margin-top: 20px;">Dystans:</p>
-<div class="range-labels">
-  <span>0</span>
-  <span>50 km</span>
-</div>
-
-<div class="slider-wrapper">
-  <input type="range" id="distance" min="0" max="50" value="25" />
-  <span id="slider-tooltip" class="slider-tooltip">25 km</span>
-</div>
-
-<p style="margin-top: 20px;">Budżet:</p>
-<div class="range-labels">
-  <span>0</span>
-  <span>200 zł</span>
-</div>
-
-<div class="slider-wrapper">
-  <input type="range" id="distance" min="0" max="200" value="75" />
-  <span id="slider-tooltip" class="slider-tooltip">75 zł</span>
-</div>
+  <p class="filter-label">Dystans:</p>
+  <div class="range-labels">
+    <span>0</span>
+    <span>50 km</span>
+  </div>
+  <input type="range" id="distance" class="full-width" min="0" max="50" />
+  <p class="filter-label">Budżet:</p>
+  <div class="range-labels">
+    <span>0</span>
+    <span>200 zł</span>
+  </div>
+  <input type="range" id="budget" class="full-width" min="0" max="200" />
 
   <p class="filter-label">Przedział godzinowy:</p>
   <div id="time-slider" style="margin: 20px 0;"></div>
