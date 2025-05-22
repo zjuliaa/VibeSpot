@@ -23,6 +23,7 @@ body, html {
     width: 280px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    border: 8px solid #e99b25;;
   }
   
   
@@ -58,7 +59,12 @@ body, html {
   .google-btn {
     background-color: #e99b25;
   }
-  
+  .google-icon {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
   .separator {
     text-align: center;
     margin: 10px 0;
