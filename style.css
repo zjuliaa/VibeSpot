@@ -92,7 +92,7 @@ body, html {
     z-index: 1002;  /* Filtry na najwyższej warstwie */
     background: white;
     padding: 20px;
-    width: 300px;
+    width: 50vw;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: none;  /* Na początku panel jest ukryty */
   }
@@ -129,18 +129,41 @@ body, html {
 
 
   .mood_btn {
-    font-size: 32px;
-    background: none;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: transform 0.2s;
-  }
+  /* display: grid; */
+  /* grid-template-columns: repeat(6, 1fr); 6 kolumn */
+  flex-direction: column; /* układ pionowy */
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
-  .mood_btn:hover {
-    transform: scale(1.2);
-  }
+/* .mood_btn:nth-child(n+7) {
+  grid-column: span 1;
+}
+
+.mood_btn:nth-child(n+7) {
+  grid-column-start: 2; 
+} */
+
+.mood_btn:hover {
+  background-color: #e0e0e0;
+}
+
+.mood_btn img {
+  width: 32px;
+  height: 32px;
+}
+
 
   #filter-panel::-webkit-scrollbar {
     width: 8px;
@@ -245,5 +268,4 @@ body, html {
   box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
   border: 2px solid orange;
 }
-
 
