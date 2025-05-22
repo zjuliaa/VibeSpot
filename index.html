@@ -30,7 +30,7 @@
     <button>kontynuuj</button>
   </div>
 
-  <div class="user-panel" style="display: none;">
+  <div class="user-panel" style="display: none; color: E99B25;">
     <img id="user-photo" src="" alt="Zdjęcie profilowe" />
     <span id="user-name"></span>
     <button id="logout-btn">Wyloguj</button>
@@ -65,7 +65,7 @@
   </div>
 
   <div id="user-initials" style="display: none; position: absolute; top: 20px; right: 20px; z-index: 1000;
-    background-color: #4a90e2; color: white; border-radius: 50%; width: 40px; height: 40px;
+    background-color: #E99B25; color: #563B29; border-radius: 50%; width: 40px; height: 40px;
     display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; cursor: pointer;">
   </div>
   <div id="user-menu" style="
@@ -73,7 +73,7 @@
     position: absolute;
     top: 65px;
     right: 20px;
-    background-color: white;
+    background-color: #FFF2CF;
     border: 1px solid #ccc;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -87,6 +87,7 @@
       border: none;
       cursor: pointer;
       text-align: left;
+      color: #563B29;
     ">Wyloguj się</button>
   </div>
 
@@ -103,7 +104,7 @@
     z-index: 1000;
   "></div>
   
-  <div id="info-panel" style="
+  <!-- <div id="info-panel" style="
   display: block;
   position: fixed;
   top: 50%;
@@ -130,7 +131,25 @@
     font-size: 16px;
     cursor: pointer;
   ">Zaczynamy!</button>
+</div> -->
+
+<div id="info-panel" class="okienko-start">
+  <div class="okienko-start-child"></div>
+  <div class="okienko-start-item"></div>
+  
+  <div class="heading">
+    <div class="button-text">VibeSpot</div>
+  </div>
+
+  <div class="odkrywaj-wydarzenia-dopasowane">
+    Odkrywaj wydarzenia dopasowane do Twojego nastroju, zainteresowań i lokalizacji. Skorzystaj z filtrów, aby znaleźć idealne miejsce lub aktywność!  
+  </div>
+
+  <button id="close-info-btn" class="button">
+    <div class="button-text">Zaczynamy!</div>
+  </button>
 </div>
+
 
 
 
