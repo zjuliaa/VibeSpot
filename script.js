@@ -1,3 +1,40 @@
+  const slider = document.getElementById("my-slider");
+
+  function updateSliderBackground(slider) {
+    const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+    slider.style.background = `linear-gradient(to right, #E35225 ${value}%, #E99B25 ${value}%)`;
+  }
+
+  slider.addEventListener("input", () => updateSliderBackground(slider));
+  window.addEventListener("load", () => updateSliderBackground(slider));
+
+
+  // const slider = document.getElementById("my-slider");
+  const tooltip = document.getElementById("slider-tooltip");
+
+  function updateSlider() {
+    const value = slider.value;
+    tooltip.textContent = `${value} km`;
+
+    // Calculate the position
+    const percent = (value - slider.min) / (slider.max - slider.min);
+    const sliderWidth = slider.offsetWidth;
+    const tooltipWidth = tooltip.offsetWidth;
+
+    // Subtract half the thumb width (10px) to center the tooltip
+    const offset = percent * (sliderWidth - 20) + 10;
+
+    tooltip.style.left = `${offset}px`;
+  }
+
+  slider.addEventListener("input", updateSlider);
+  window.addEventListener("load", updateSlider);
+  
+  window.addEventListener("load", () => {
+  updateSlider(slider);
+  updateSliderBackground(slider);
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   const map = L.map('map').setView([52.2297, 21.0122], 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
