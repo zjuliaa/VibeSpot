@@ -223,31 +223,44 @@ if (searchBtn) {
 
   function onUserLogin(user) {
     document.querySelector('.login-box').style.display = 'none';
-    document.getElementById('info-panel').style.display = 'block';
-    document.getElementById('filter-panel').style.display = 'none';
+    document.getElementById('info-panel').style.display = 'none';
+    document.getElementById('filter-panel').style.display = 'block';
   }
-  document.getElementById('close-info-btn').addEventListener('click', () => {
+document.getElementById('close-info-btn').addEventListener('click', () => {
   document.getElementById('info-panel').style.display = 'none';
-  
-  const user = firebase.auth().currentUser;
-    if (user) {
-      document.getElementById('filter-panel').style.display = 'block';
-    } else {
-      document.querySelector('.login-box').style.display = 'block';
-    }
-  });
 
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      // po zalogowaniu ukrywamy login i pokazujemy filtry
-      document.querySelector('.login-box').style.display = 'none';
-      document.getElementById('filter-panel').style.display = 'block';
-    } else {
-      // jeśli wylogowany, pokaz login, ukryj filtry
-      document.querySelector('.login-box').style.display = 'block';
-      document.getElementById('filter-panel').style.display = 'none';
-    }
-  });
+  const user = firebase.auth().currentUser;
+  if (user) {
+    document.getElementById('filter-panel').style.display = 'block';
+  } else {
+    document.querySelector('.login-box').style.display = 'block';
+  }
+});
+
+firebase.auth().onAuthStateChanged(user => {
+  const loginBox = document.querySelector('.login-box');
+  const filterPanel = document.getElementById('filter-panel');
+  const userInitials = document.getElementById('user-initials');
+  const userMenu = document.getElementById('user-menu');
+  const infoPanel = document.getElementById('info-panel');
+
+  if (infoPanel) {
+    infoPanel.style.display = 'block';
+  }
+
+  if (user) {
+    showUserPanel(user);
+    if (loginBox) loginBox.style.display = 'none';
+    if (filterPanel) filterPanel.style.display = 'none';
+  } else {
+    if (loginBox) loginBox.style.display = 'none';
+    if (filterPanel) filterPanel.style.display = 'none';
+    if (userInitials) userInitials.style.display = 'none';
+    if (userMenu) userMenu.style.display = 'none';
+  }
+
+});
+
 
  function showUserPanel(user) {
     const initialsDiv = document.getElementById('user-initials');
@@ -266,26 +279,6 @@ if (searchBtn) {
     }
   }
   
-  const infoPanel = document.getElementById('info-panel');
-  const filterPanel = document.getElementById('filter-panel');
-    firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      document.querySelector('.login-box').style.display = 'none';
-      showUserPanel(user);
-    } else {
-      document.querySelector('.login-box').style.display = 'block';
-      document.getElementById('user-initials').style.display = 'none';
-      document.getElementById('user-menu').style.display = 'none';
-      if (userLocationMarker){
-        map.removeLayer(userLocationMarker);
-        userLocationMarker=null;
-      }
-    }
-    if (filterToggleBar) filterToggleBar.style.display = 'none';
-    if (infoPanel) infoPanel.style.display = 'none';
-  });
-
-
   const logoutButtonMenu = document.getElementById('logout-btn-menu');
 if (logoutButtonMenu) {
   console.log("Przycisk wylogowania (menu) załadowany!");
@@ -294,7 +287,7 @@ if (logoutButtonMenu) {
     firebase.auth().signOut().then(() => {
       console.log("Użytkownik został wylogowany");
       document.querySelector('.user-panel').style.display = 'none';
-      document.querySelector('.login-box').style.display = 'block';
+      document.querySelector('.login-box').style.display = 'none';
       document.getElementById('user-initials').style.display = 'none';
       document.getElementById('user-menu').style.display = 'none';
       const filterPanel = document.getElementById('filter-panel');
@@ -407,11 +400,10 @@ document.querySelectorAll('.mood_btn').forEach(btn => {
 
 document.querySelectorAll('.other-btn').forEach(button => {
   button.addEventListener('click', () => {
-    button.classList.toggle('active'); // Zmienia zaznaczenie
-    updateAttractions(); // Funkcja, która ponownie wywołuje displayAttractionsInRange
+    button.classList.toggle('active'); 
+    updateAttractions(); 
   });
 });
-
 
 document.querySelectorAll('#filter-panel > div:last-of-type .filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
