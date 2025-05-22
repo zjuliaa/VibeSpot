@@ -168,7 +168,7 @@ if (searchBtn) {
     };
 
     console.table(filters);
-    alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
+    // alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
 
     document.getElementById('filter-panel').style.display = 'none';
     document.getElementById('filter-toggle-bar').style.display = 'block';
@@ -198,7 +198,7 @@ if (searchBtn) {
     firebase.auth().signInWithPopup(provider)
       .then(result => {
         const user = result.user;
-        alert("Zalogowano jako: " + user.displayName);
+        // alert("Zalogowano jako: " + user.displayName);
         onUserLogin(user); 
       })
       .catch(error => {
@@ -457,7 +457,7 @@ timeSlider.noUiSlider.on("update", function (values) {
 
     console.log("Wybrane filtry:");
     console.table(filters);
-    alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
+    // alert("Wybrane filtry:\n" + Object.entries(filters).map(([k, v]) => `${k}: ${v}`).join("\n"));
     
     document.getElementById('filter-panel').style.display = 'none';
     document.getElementById('filter-toggle-bar').style.display = 'block';
