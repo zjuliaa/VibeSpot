@@ -555,6 +555,10 @@ input[type=range]::-moz-range-thumb {
   background: #E35225; /* filled range color (red) */
 }
 
+#time-slider .noUi-connects {
+  background: #E99B25; /* filled range color (red) */
+}
+
 /* thumbs */
 #time-slider .noUi-handle {
   width: 20px;

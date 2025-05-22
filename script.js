@@ -1,6 +1,7 @@
 let map;
 let customIcon;
 let selectedIcon;
+let activeInfoWindow = null;
 
 function updateSliderDistance(slider_d, tooltip_d) {
   const value = slider_d.value;
@@ -702,47 +703,90 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
       title: name,
       icon: customIcon 
     });
+    
     const infoWindow = new google.maps.InfoWindow({
       content: `<strong>${name}</strong><br>${desc}`
     });
+
     marker.addListener('click', () => {
-      infoWindow.open(map, marker);
-    });
-    marker.addListener('click', () => {
+      if (activeInfoWindow) {
+        activeInfoWindow.close(); // zamyka poprzednie
+      }
+
+      infoWindow.open(map, marker); // otwiera nowe
+      activeInfoWindow = infoWindow; // zapamiętuje to jako aktualnie otwarte
+
+      // reszta twojego kodu: highlight, scroll, zmiana ikon
       const card = document.getElementById(`carousel-card-${featureId}`);
       const carousel = document.getElementById('attraction-carousel');
       if (activeMarker) {
         activeMarker.setIcon(customIcon);
       }
 
-       marker.setIcon(selectedIcon);
+      marker.setIcon(selectedIcon);
       activeMarker = marker;
 
-      if (card&& carousel) {
-        document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight')); // usuń stare podświetlenia
-        card.classList.add('highlight'); // dodaj podświetlenie
+      if (card && carousel) {
+        document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight'));
+        card.classList.add('highlight');
         carousel.style.display = 'flex';
-        // card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      // const carouselRect = carousel.getBoundingClientRect();
-      // const cardRect = card.getBoundingClientRect();
-      // const offset = cardRect.left - carouselRect.left - (carouselRect.width / 2) + (cardRect.width / 2);
 
-      // carousel.scrollBy({
-      //   left: offset,
-      //   behavior: 'smooth'
-      // });
-      const cardOffsetLeft = card.offsetLeft;
-      const cardWidth = card.offsetWidth;
-      const carouselWidth = carousel.offsetWidth;
+        const cardOffsetLeft = card.offsetLeft;
+        const cardWidth = card.offsetWidth;
+        const carouselWidth = carousel.offsetWidth;
 
-      const scrollTo = cardOffsetLeft - (carouselWidth / 2) + (cardWidth / 2);
+        const scrollTo = cardOffsetLeft - (carouselWidth / 2) + (cardWidth / 2);
 
-      carousel.scrollTo({
-        left: scrollTo,
-        behavior: 'smooth'
-      });
+        carousel.scrollTo({
+          left: scrollTo,
+          behavior: 'smooth'
+        });
       }
     });
+    
+    // const infoWindow = new google.maps.InfoWindow({
+    //   content: `<strong>${name}</strong><br>${desc}`
+    // });
+    // marker.addListener('click', () => {
+    //   infoWindow.open(map, marker);
+    // });
+
+
+    // marker.addListener('click', () => {
+    //   const card = document.getElementById(`carousel-card-${featureId}`);
+    //   const carousel = document.getElementById('attraction-carousel');
+    //   if (activeMarker) {
+    //     activeMarker.setIcon(customIcon);
+    //   }
+
+    //    marker.setIcon(selectedIcon);
+    //   activeMarker = marker;
+
+    //   if (card&& carousel) {
+    //     document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight')); // usuń stare podświetlenia
+    //     card.classList.add('highlight'); // dodaj podświetlenie
+    //     carousel.style.display = 'flex';
+    //     // card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    //   // const carouselRect = carousel.getBoundingClientRect();
+    //   // const cardRect = card.getBoundingClientRect();
+    //   // const offset = cardRect.left - carouselRect.left - (carouselRect.width / 2) + (cardRect.width / 2);
+
+    //   // carousel.scrollBy({
+    //   //   left: offset,
+    //   //   behavior: 'smooth'
+    //   // });
+    //   const cardOffsetLeft = card.offsetLeft;
+    //   const cardWidth = card.offsetWidth;
+    //   const carouselWidth = carousel.offsetWidth;
+
+    //   const scrollTo = cardOffsetLeft - (carouselWidth / 2) + (cardWidth / 2);
+
+    //   carousel.scrollTo({
+    //     left: scrollTo,
+    //     behavior: 'smooth'
+    //   });
+    //   }
+    // });
 
   return marker;
   });
