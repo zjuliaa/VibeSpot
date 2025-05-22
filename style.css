@@ -11,6 +11,91 @@ body, html {
     z-index: 1;
     position: relative;
   }
+
+#my-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 10px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+#my-slider::-webkit-slider-runnable-track {
+  height: 10px;
+  background: transparent;
+  border-radius: 5px;
+}
+
+/* linear-gradient(to right, #E35225 50%, #E99B25 50%); */
+#my-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #E35225;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-top: -5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+#my-slider::-moz-range-track {
+  height: 10px;
+  background: transparent;
+}
+#my-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #e35225;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-tooltip {
+  position: absolute;
+  top: -35px;
+  background-color: #e35225;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 4;
+}
+
+
+
+#time-slider .noUi-target {
+  background: #e99b25;
+  border-radius: 10px;
+  height: 10px;
+  border: 2px solid #e99b25;
+}
+
+#time-slider .noUi-connect {
+  background: #563b29;
+}
+
+#time-slider .noUi-handle {
+  width: 20px;
+  height: 20px;
+  background: #563b29;
+  border: 2px solid white;
+  border-radius: 50%;
+  top: -2px;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+#time-slider .noUi-handle:after,
+#time-slider .noUi-handle:before {
+  display: none;
+}
   
   .login-box {
     position: absolute;
