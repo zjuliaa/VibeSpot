@@ -129,8 +129,6 @@ function checkRainInTimeRange(lat, lon, startHour, endHour, callback) {
 }
 
 
-
-
 function showUserLocation(lat, lon) {
     console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);  
     if (userLocationMarker) {
@@ -196,6 +194,7 @@ if (searchBtn) {
 
    document.querySelector('.google-btn').addEventListener('click', () => {
     const provider = new firebase.auth.GoogleAuthProvider();
+    // firebase.auth().signInWithRedirect(provider)
     firebase.auth().signInWithPopup(provider)
       .then(result => {
         const user = result.user;
@@ -237,6 +236,19 @@ if (searchBtn) {
       document.querySelector('.login-box').style.display = 'block';
     }
   });
+
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      // po zalogowaniu ukrywamy login i pokazujemy filtry
+      document.querySelector('.login-box').style.display = 'none';
+      document.getElementById('filter-panel').style.display = 'block';
+    } else {
+      // jeśli wylogowany, pokaz login, ukryj filtry
+      document.querySelector('.login-box').style.display = 'block';
+      document.getElementById('filter-panel').style.display = 'none';
+    }
+  });
+
  function showUserPanel(user) {
     const initialsDiv = document.getElementById('user-initials');
   
@@ -289,6 +301,20 @@ if (logoutButtonMenu) {
       if (filterPanel) {
         filterPanel.style.display = 'none';
       }
+      const carousel = document.getElementById('attraction-carousel');
+      if (carousel) {
+        carousel.style.display = 'none';
+        carousel.innerHTML = '';
+      }
+       if (markersLayer) {
+        map.removeLayer(markersLayer);
+        markersLayer = null;
+      }
+      const weatherInfo = document.getElementById('weather-info');
+      if (weatherInfo) {
+        weatherInfo.style.display = 'none';
+      }
+
     }).catch(error => {
       console.error("Błąd wylogowywania:", error);
     });
@@ -449,6 +475,15 @@ timeSlider.noUiSlider.on("update", function (values) {
   document.getElementById('filter-toggle-bar').addEventListener('click', () => {
   document.getElementById('filter-panel').style.display = 'block';
   document.getElementById('filter-toggle-bar').style.display = 'none';
+
+  const carousel = document.getElementById('attraction-carousel');
+  if (carousel) {
+    carousel.style.display = 'none';
+  }
+  if (markersLayer) {
+    map.removeLayer(markersLayer);
+    markersLayer = null; // opcjonalnie wyczyść referencję, żeby mieć pewność, że są usunięte
+  }
 });
 
   
