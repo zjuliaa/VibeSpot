@@ -1,27 +1,88 @@
+let map;
+let customIcon;
+let selectedIcon;
+let activeInfoWindow = null;
+
+function updateSliderDistance(slider_d, tooltip_d) {
+  const value = slider_d.value;
+  tooltip_d.textContent = `${value} km`;
+
+  const percent = (value - slider_d.min) / (slider_d.max - slider_d.min);
+  const offset = percent * (slider_d.offsetWidth - 20) + 10;
+  tooltip_d.style.left = `${offset}px`;
+
+  slider_d.style.background = `linear-gradient(to right, #E35225 ${percent * 100}%, #E99B25 ${percent * 100}%)`;
+}
+
+function updateSliderBudget(slider_b, tooltip_b) {
+  const value = slider_b.value;
+  tooltip_b.textContent = `${value} zł`;
+
+  const percent = (value - slider_b.min) / (slider_b.max - slider_b.min);
+  const offset = percent * (slider_b.offsetWidth - 20) + 10;
+  tooltip_b.style.left = `${offset}px`;
+
+  slider_b.style.background = `linear-gradient(to right, #E35225 ${percent * 100}%, #E99B25 ${percent * 100}%)`;
+}
+
+const slider_d = document.getElementById("distance");
+const tooltip_d = document.getElementById("distance-tooltip_d");
+slider_d.addEventListener("input", () => updateSliderDistance(slider_d, tooltip_d));
+window.addEventListener("load", () => updateSliderDistance(slider_d, tooltip_d));
+
+const slider_b = document.getElementById("budget");
+const tooltip_b = document.getElementById("budget-tooltip_b");
+slider_b.addEventListener("input", () => updateSliderBudget(slider_b, tooltip_b));
+window.addEventListener("load", () => updateSliderBudget(slider_b, tooltip_b));
+
+
 document.addEventListener('DOMContentLoaded', function () {
-  const map = L.map('map').setView([52.2297, 21.0122], 13);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+  function initMapWithStyle(styleJson) {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 52.2297, lng: 21.0122 },
+      zoom: 13,
+      styles: styleJson,
+      disableDefaultUI: true
+    });
+    const customIcon = {
+      url: 'Vector.svg',  // ścieżka do ikony
+      scaledSize: new google.maps.Size(32, 32),   // rozmiar ikony
+      anchor: new google.maps.Point(16, 32),      // punkt zaczepienia ikony (tam gdzie "stoi" na mapie)
+      // popupAnchor nie jest obsługiwany bezpośrednio, Google Maps ma własne infoWindow
+    };
+
+
+    const selectedIcon = {
+      url: 'Vector-selected.svg',
+      scaledSize: new google.maps.Size(60, 40),
+      anchor: new google.maps.Point(30, 40),
+    };
+
+    // Możesz teraz tu dodać inne rzeczy do mapy, np. markery, eventy itd.
+  }
+
+  function initMap() {
+    fetch('googlemaps.json')
+      .then(res => res.json())
+      .then(style => initMapWithStyle(style))
+      .catch(err => {
+        console.error('Failed to load map style:', err);
+      });
+  }
+
+  window.initMap = initMap;
+  
+
+
+  // const map = L.map('map').setView([52.2297, 21.0122], 13);
+  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  //   attribution: '&copy; OpenStreetMap contributors'
+  // }).addTo(map);
 
   let userLat = null;
   let userLon = null;
 
-  const customIcon = L.icon({
-  iconUrl: 'Vector.svg',  
-  iconSize: [32, 32],             
-  iconAnchor: [16, 32],           
-  popupAnchor: [0, -32]           
-});
-
-const selectedIcon = L.icon({
-  iconUrl: 'Vector-selected.svg',  
-  iconSize: [60, 40],             
-  iconAnchor: [30,40],           
-  popupAnchor: [0, 0]           
-});
-
-let activeMarker = null;
+  let activeMarker = null;
 
   const searchBtn = document.getElementById('search-button');
   const filterToggleBar = document.getElementById('filter-toggle-bar');
@@ -130,15 +191,26 @@ function checkRainInTimeRange(lat, lon, startHour, endHour, callback) {
 
 
 function showUserLocation(lat, lon) {
-    console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);  
-    if (userLocationMarker) {
-      userLocationMarker.setLatLng([lat, lon]);
-    } else {
-      userLocationMarker = L.marker([lat, lon], { icon: customIcon }).addTo(map);
-    }
-    map.setView([lat, lon], 13);
-    fetchWeather(lat, lon);
+  console.log("Pokazuję lokalizację użytkownika na mapie:", lat, lon);
+
+  const position = { lat: lat, lng: lon };
+
+  if (userLocationMarker) {
+    userLocationMarker.setPosition(position);
+  } else {
+    userLocationMarker = new google.maps.Marker({
+      position: position,
+      map: map,
+      icon: customIcon // tutaj musi być odpowiedni format ikony dla Google Maps
+    });
   }
+
+  map.setCenter(position);
+  map.setZoom(13);
+
+  fetchWeather(lat, lon);
+}
+
 
   function getUserLocation() {
     console.log("Wywołano getUserLocation()"); 
@@ -290,6 +362,7 @@ if (logoutButtonMenu) {
       document.querySelector('.login-box').style.display = 'none';
       document.getElementById('user-initials').style.display = 'none';
       document.getElementById('user-menu').style.display = 'none';
+      document.getElementById('filter-toggle-bar').style.display = 'none';
       const filterPanel = document.getElementById('filter-panel');
       if (filterPanel) {
         filterPanel.style.display = 'none';
@@ -299,14 +372,17 @@ if (logoutButtonMenu) {
         carousel.style.display = 'none';
         carousel.innerHTML = '';
       }
-       if (markersLayer) {
-        map.removeLayer(markersLayer);
+      if (markersLayer && Array.isArray(markersLayer)) {
+        markersLayer.forEach(marker => marker.setMap(null));
         markersLayer = null;
       }
       const weatherInfo = document.getElementById('weather-info');
       if (weatherInfo) {
         weatherInfo.style.display = 'none';
       }
+      document.querySelectorAll('.mood_btn.active').forEach(btn => {
+        btn.classList.remove('active');
+      });
 
     }).catch(error => {
       console.error("Błąd wylogowywania:", error);
@@ -472,9 +548,9 @@ timeSlider.noUiSlider.on("update", function (values) {
   if (carousel) {
     carousel.style.display = 'none';
   }
-  if (markersLayer) {
-    map.removeLayer(markersLayer);
-    markersLayer = null; // opcjonalnie wyczyść referencję, żeby mieć pewność, że są usunięte
+  if (markersLayer && Array.isArray(markersLayer)) {
+    markersLayer.forEach(marker => marker.setMap(null));
+    markersLayer = null;
   }
 });
 
@@ -491,7 +567,8 @@ timeSlider.noUiSlider.on("update", function (values) {
     return R * c;
   }
 
-  let markersLayer = null;
+  // let markersLayer = null;
+  let markersLayer = [];
 
   function getSelectedOthers() {
   return Array.from(document.querySelectorAll('.other-btn.active'))
@@ -514,20 +591,25 @@ function doTimeRangesOverlap(userStartHour, userEndHour, openStr, closeStr) {
 function displayAttractionsInCarousel(features) {
   const carousel = document.getElementById('attraction-carousel');
   if (!carousel) return;
- 
+
   if (!features || features.length === 0) {
     carousel.style.display = 'none';
     return;
   }
- 
-  carousel.innerHTML = ''; // Wyczyść poprzednie
- 
-  features.forEach(feature => {
+
+  carousel.innerHTML = '';
+
+  features.forEach((feature, index) => {
     const props = feature.properties || {};
     const name = props.name || "Brak nazwy";
     const address = props.address || props.vicinity || "Brak adresu";
-    const imageName = props.zdj || "default.jpg"; // jeśli brak zdjęcia, użyj domyślnego
-    const imagePath = `zdj/${imageName}`; // ścieżka do zdjęcia
+    const open = props.open?.toLowerCase() === "brak" ? null : props.open;
+    const closed = props.closed?.toLowerCase() === "brak" ? null : props.closed;
+
+    const godziny = (open && closed) ? `${open} – ${closed}` : "brak godzin";
+
+    const imageName = props.zdj || "default.jpg";
+    const imagePath = `zdj/${imageName}`;
     const featureId = props.id || `feature-${index}`;
 
     const card = document.createElement('div');
@@ -536,13 +618,53 @@ function displayAttractionsInCarousel(features) {
     card.innerHTML = `
       <img src="${imagePath}" alt="${name}" class="carousel-image">
       <strong>${name}</strong><br>
-      <span>${address}</span>
+      <span>${address}</span><br>
     `;
+
+    card.addEventListener('click', () => {
+      showAttractionInfoPanel(feature);
+    });
+
     carousel.appendChild(card);
   });
- 
+
   carousel.style.display = 'flex';
 }
+
+
+
+// function displayAttractionsInCarousel(features) {
+//   const carousel = document.getElementById('attraction-carousel');
+//   if (!carousel) return;
+ 
+//   if (!features || features.length === 0) {
+//     carousel.style.display = 'none';
+//     return;
+//   }
+ 
+//   carousel.innerHTML = ''; // Wyczyść poprzednie
+ 
+//   features.forEach(feature => {
+//     const props = feature.properties || {};
+//     const name = props.name || "Brak nazwy";
+//     const address = props.address || props.vicinity || "Brak adresu";
+//     const imageName = props.zdj || "default.jpg"; // jeśli brak zdjęcia, użyj domyślnego
+//     const imagePath = `zdj/${imageName}`; // ścieżka do zdjęcia
+//     const featureId = props.id || `feature-${index}`;
+
+//     const card = document.createElement('div');
+//     card.className = 'carousel-card';
+//     card.id = `carousel-card-${featureId}`;
+//     card.innerHTML = `
+//       <img src="${imagePath}" alt="${name}" class="carousel-image">
+//       <strong>${name}</strong><br>
+//       <span>${address}</span>
+//     `;
+//     carousel.appendChild(card);
+//   });
+ 
+//   carousel.style.display = 'flex';
+// }
  
  
 window.addEventListener('DOMContentLoaded', () => {
@@ -559,6 +681,62 @@ window.addEventListener('DOMContentLoaded', () => {
     carousel.style.display = 'none'; // ukryj po odświeżeniu
   }
 });
+
+function showAttractionInfoPanel(feature) {
+  const panel = document.getElementById('attraction-info-panel');
+  const title = document.getElementById('info-title');
+  const image = document.getElementById('info-image');
+  const desc = document.getElementById('info-description');
+  const address = document.getElementById('info-address');
+  const hours = document.getElementById('info-hours');
+  const ratingDiv = document.getElementById('info-rating'); // ⬅️ dodane
+
+  const props = feature.properties || {};
+
+  title.textContent = props.name || "Brak nazwy";
+  image.src = `zdj/${props.zdj || 'default.jpg'}`;
+  desc.textContent = props.description || "Brak opisu.";
+  address.textContent = "Adres: " + (props.address || props.vicinity || "brak danych");
+
+  const open = props.open?.toLowerCase() === "brak" ? null : props.open;
+  const closed = props.closed?.toLowerCase() === "brak" ? null : props.closed;
+
+  if (open && closed) {
+    hours.textContent = `Godziny otwarcia: ${open} – ${closed}`;
+  } else {
+    hours.textContent = `Godziny otwarcia: brak danych`;
+  }
+
+  const rating = parseFloat(props.rating || 0);
+  const fullStars = Math.floor(rating);
+  const maxStars = 5;
+
+  ratingDiv.innerHTML = ''; // Wyczyść stare gwiazdki
+
+  // Dodaj gwiazdki
+  for (let i = 0; i < maxStars; i++) {
+    const star = document.createElement('span');
+    star.classList.add('star');
+    if (i < fullStars) {
+      star.classList.add('filled');
+    }
+    star.innerHTML = '★';
+    ratingDiv.appendChild(star);
+  }
+
+  // Dodaj wartość liczbową
+  const ratingValue = document.createElement('span');
+  ratingValue.classList.add('rating-value');
+  ratingValue.textContent = rating.toFixed(1); // np. 4.3
+  ratingDiv.appendChild(ratingValue);
+  panel.style.display = 'block';
+}
+
+
+document.getElementById('close-info-panel').addEventListener('click', () => {
+  document.getElementById('attraction-info-panel').style.display = 'none';
+});
+
 
 
 function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondition) {
@@ -611,8 +789,8 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
   console.log(`Znaleziono ${filteredAttractions.length} atrakcji w promieniu ${maxDistanceKm} km.`);
 
   // Markery na mapie
-  if (markersLayer) {
-    map.removeLayer(markersLayer);
+  if (markersLayer && Array.isArray(markersLayer)) {
+    markersLayer.forEach(marker => marker.setMap(null)); 
   }
 
   const markers = filteredAttractions.map(feature => {
@@ -620,47 +798,102 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
     const name = feature.properties.name;
     const desc = feature.properties.description;
     const featureId = feature.properties.id || `feature-${index}`;
-    const marker = L.marker([lat, lon], { icon: customIcon }).bindPopup(`<strong>${name}</strong><br>${desc}`);
-    marker.on('click', () => {
+    // const marker = L.marker([lat, lon], { icon: customIcon }).bindPopup(`<strong>${name}</strong><br>${desc}`);
+    const marker = new google.maps.Marker({
+      position: { lat, lng: lon },
+      title: name,
+      icon: customIcon 
+    });
+    
+    const infoWindow = new google.maps.InfoWindow({
+      content: `<strong>${name}</strong><br>${desc}`
+    });
+
+    marker.addListener('click', () => {
+      if (activeInfoWindow) {
+        activeInfoWindow.close(); // zamyka poprzednie
+      }
+
+      infoWindow.open(map, marker); // otwiera nowe
+      activeInfoWindow = infoWindow; // zapamiętuje to jako aktualnie otwarte
+
+      // reszta twojego kodu: highlight, scroll, zmiana ikon
       const card = document.getElementById(`carousel-card-${featureId}`);
       const carousel = document.getElementById('attraction-carousel');
       if (activeMarker) {
         activeMarker.setIcon(customIcon);
       }
 
-       marker.setIcon(selectedIcon);
+      marker.setIcon(selectedIcon);
       activeMarker = marker;
 
-      if (card&& carousel) {
-        document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight')); // usuń stare podświetlenia
-        card.classList.add('highlight'); // dodaj podświetlenie
+      if (card && carousel) {
+        document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight'));
+        card.classList.add('highlight');
         carousel.style.display = 'flex';
-        // card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      // const carouselRect = carousel.getBoundingClientRect();
-      // const cardRect = card.getBoundingClientRect();
-      // const offset = cardRect.left - carouselRect.left - (carouselRect.width / 2) + (cardRect.width / 2);
 
-      // carousel.scrollBy({
-      //   left: offset,
-      //   behavior: 'smooth'
-      // });
-      const cardOffsetLeft = card.offsetLeft;
-      const cardWidth = card.offsetWidth;
-      const carouselWidth = carousel.offsetWidth;
+        const cardOffsetLeft = card.offsetLeft;
+        const cardWidth = card.offsetWidth;
+        const carouselWidth = carousel.offsetWidth;
 
-      const scrollTo = cardOffsetLeft - (carouselWidth / 2) + (cardWidth / 2);
+        const scrollTo = cardOffsetLeft - (carouselWidth / 2) + (cardWidth / 2);
 
-      carousel.scrollTo({
-        left: scrollTo,
-        behavior: 'smooth'
-      });
+        carousel.scrollTo({
+          left: scrollTo,
+          behavior: 'smooth'
+        });
       }
     });
+    
+    // const infoWindow = new google.maps.InfoWindow({
+    //   content: `<strong>${name}</strong><br>${desc}`
+    // });
+    // marker.addListener('click', () => {
+    //   infoWindow.open(map, marker);
+    // });
+
+
+    // marker.addListener('click', () => {
+    //   const card = document.getElementById(`carousel-card-${featureId}`);
+    //   const carousel = document.getElementById('attraction-carousel');
+    //   if (activeMarker) {
+    //     activeMarker.setIcon(customIcon);
+    //   }
+
+    //    marker.setIcon(selectedIcon);
+    //   activeMarker = marker;
+
+    //   if (card&& carousel) {
+    //     document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight')); // usuń stare podświetlenia
+    //     card.classList.add('highlight'); // dodaj podświetlenie
+    //     carousel.style.display = 'flex';
+    //     // card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    //   // const carouselRect = carousel.getBoundingClientRect();
+    //   // const cardRect = card.getBoundingClientRect();
+    //   // const offset = cardRect.left - carouselRect.left - (carouselRect.width / 2) + (cardRect.width / 2);
+
+    //   // carousel.scrollBy({
+    //   //   left: offset,
+    //   //   behavior: 'smooth'
+    //   // });
+    //   const cardOffsetLeft = card.offsetLeft;
+    //   const cardWidth = card.offsetWidth;
+    //   const carouselWidth = carousel.offsetWidth;
+
+    //   const scrollTo = cardOffsetLeft - (carouselWidth / 2) + (cardWidth / 2);
+
+    //   carousel.scrollTo({
+    //     left: scrollTo,
+    //     behavior: 'smooth'
+    //   });
+    //   }
+    // });
 
   return marker;
   });
 
-  markersLayer = L.layerGroup(markers).addTo(map);
+  markersLayer = markers;
+  markersLayer.forEach(marker => marker.setMap(map));
 
   // 🔁 Pokaż karuzelę
   displayAttractionsInCarousel(filteredAttractions);
