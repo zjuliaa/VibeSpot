@@ -16,7 +16,11 @@
 
   <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
-
+  <!-- Google Maps -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfVidfERnXo6CBHoJRsH27g4fvO5rLyEI&callback=initMap"
+    async defer
+  ></script>
 
  </head>
 <body>
@@ -106,34 +110,6 @@
     z-index: 1000;
   "></div>
   
-  <!-- <div id="info-panel" style="
-  display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 30px 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  max-width: 600px;
-  z-index: 1002;
-  text-align: center;
-  font-family: 'Mogra', cursive;
-">
-  <h2>Witaj w VibeSpot!</h2>
-  <p>Odkrywaj wydarzenia dopasowane do Twojego nastroju, zainteresowań i lokalizacji. Skorzystaj z filtrów, aby znaleźć idealne miejsce lub aktywność!</p>
-  <button id="close-info-btn" style="
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4a90e2;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-  ">Zaczynamy!</button>
-</div> -->
 
 <div id="info-panel" class="okienko-start">
   <div class="okienko-start-child"></div>
@@ -172,7 +148,7 @@
   border: 8px solid #e99b25;
   ">
 
-  <h2 style="text-align: center; font-family:'Mogra';">Filtry</h2>
+  <h2 style="text-align: center; font-family:'Mogra';color:  #563b29;">Filtry</h2>
   <!-- <p style="margin-top: 20px;">Nastrój:</p> -->
   <p class="filter-label">Nastrój:</p>
   <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-left: 7%; margin-right: 7%;">
@@ -224,7 +200,7 @@
     </button>
     </div>
 
-  <p class="filter-label">Dystans:</p>
+  <!-- <p class="filter-label">Dystans:</p>
   <div class="range-labels">
     <span>0</span>
     <span>50 km</span>
@@ -240,6 +216,31 @@
   <p class="filter-label">Przedział godzinowy:</p>
   <div id="time-slider" style="margin: 20px 0;"></div>
   <p id="time-range-output" style="text-align: center; font-weight: bold;">08:00 – 18:00</p>
+ -->
+
+ <p class="filter-label">Dystans:</p>
+  <div class="range-labels">
+    <span>0</span>
+    <span>50 km</span>
+  </div>
+  <div class="slider-wrapper">
+    <input type="range" id="distance" min="0" max="50" value="0" />
+    <span id="distance-tooltip_d" class="slider-tooltip_d">0 km</span>
+  </div>
+    
+  <p class="filter-label">Budżet:</p>
+  <div class="range-labels">
+    <span>0</span>
+    <span>200 zł</span>
+  </div>
+  <div class="slider-wrapper">
+    <input type="range" id="budget" min="0" max="200" value="0" />
+    <span id="budget-tooltip_b" class="slider-tooltip_b">0 zł</span>
+  </div>
+
+  <p class="filter-label">Przedział godzinowy:</p>
+  <div id="time-slider" style="margin: 20px 0;"></div>
+  <p id="time-range-output" style="text-align: center; font-weight: bold; font-family: Mogra;color: #563b29;">08:00 – 18:00</p>
 
 
   <p class="filter-label">Inne:</p>
@@ -251,6 +252,20 @@
  <button id="search-button">szukaj</button>
 
   </div>
+
+<div id="attraction-info-panel" class="info-panel" style="display: none;">
+  <button id="close-info-panel" class="close-info-panel">×</button>
+  <img id="info-image" src="" alt="Zdjęcie atrakcji" class="info-image">
+  <div class="info-title-address">
+    <h2 id="info-title">Tytuł atrakcji</h2>
+    <span id="info-address">Adres: brak danych</span>
+  </div>
+  <p id="info-description">Opis atrakcji</p>
+  <p id="info-hours">Godziny otwarcia: brak danych</p>
+  <div id="info-rating" class="rating-stars"></div>
+
+</div>
+
 
   <script src="script.js"></script>
 </body>
