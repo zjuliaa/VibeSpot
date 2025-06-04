@@ -104,6 +104,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let userLocationMarker = null;
 
+
+  const commentsBtn = document.getElementById('comments-button');
+  const premiumToast = document.getElementById('premium-toast');
+
+  commentsBtn.addEventListener('click', () => {
+    // Pokaż toast
+    premiumToast.classList.add('visible');
+
+    // Po chwili rozpocznij znikanie
+    setTimeout(() => {
+      premiumToast.classList.remove('visible');
+    }, 1600); // 1.6s widoczne, 1s animacji daje ~2.6s całkowitego czasu
+  });
+
+
 function fetchWeather(lat, lon) {
   const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
   const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
@@ -730,12 +745,32 @@ function showAttractionInfoPanel(feature) {
   ratingValue.textContent = rating.toFixed(1); // np. 4.3
   ratingDiv.appendChild(ratingValue);
   panel.style.display = 'block';
+
+  // Ukryj karuzelę
+  const carousel = document.getElementById('attraction-carousel');
+  if (carousel) {
+    carousel.style.display = 'none';
+  }
+
 }
 
 
+// document.getElementById('close-info-panel').addEventListener('click', () => {
+//   document.getElementById('attraction-info-panel').style.display = 'none';
+// });
+
 document.getElementById('close-info-panel').addEventListener('click', () => {
-  document.getElementById('attraction-info-panel').style.display = 'none';
+  const panel = document.getElementById('attraction-info-panel');
+  const carousel = document.getElementById('attraction-carousel');
+
+  panel.style.display = 'none';
+
+  // Pokaż karuzelę z powrotem
+  if (carousel && carousel.children.length > 0) {
+    carousel.style.display = 'flex';
+  }
 });
+
 
 
 
