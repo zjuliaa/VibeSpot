@@ -23,7 +23,7 @@ body, html {
     width: 280px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    border: 8px solid #e99b25;
+    border: 8px solid #563B29;
   }
   
   
@@ -51,13 +51,13 @@ body, html {
     border-radius: 8px;
     font-size: 14px;
     cursor: pointer;
-    background-color: #e99b25;
+    background-color: #563B29;
     font-family: Mogra;
 }
 
   
   .google-btn {
-    background-color: #e99b25;
+    background-color: #563B29;
   }
   .google-icon {
     height: 20px;
@@ -146,7 +146,7 @@ body, html {
   .filter-btn {
     margin: 10px;
     background: transparent;
-    border: 2px solid #e99b25;
+    border: 2px solid #563B29;
     border-radius: 20px;
     padding: 8px 16px;
     font-family: Mogra;
@@ -154,7 +154,7 @@ body, html {
     cursor: pointer;
   }
   .filter-btn:hover {
-    background: #e99b25;
+    background: #563B29;
   }
 
   .other-btn.active {
@@ -252,7 +252,7 @@ body, html {
   }
     
   .selected {
-  background-color: #e99b25;
+  background-color: #563B29;
   color: #563b29;
 }
 
@@ -260,7 +260,7 @@ body, html {
     display: block;
     margin: 30px auto 10px auto;
     padding: 12px 30px;
-    background-color: #e99b25;
+    background-color: #563B29;
     color: #563b29;
     font-family: Mogra;
     border: none;
@@ -275,7 +275,7 @@ body, html {
 width: 100%;
 position: relative;
 border-radius: 10px;
-background-color: #e99b25;
+background-color: #563B29;
 height: 24px;
 overflow: hidden;
 display: flex;
@@ -313,7 +313,7 @@ font-size: 18px;
   left: 0;
   right: 0;
   height: 220px; /* zwiększamy wysokość by zmieścić obraz + tekst */
-  background-color: #E99B25;
+  background-color: #563B29;
   display: flex;
   overflow-x: auto;
   padding: 10px;
@@ -362,8 +362,8 @@ font-size: 18px;
 /* Podświetlenie klikniętej karty */
 .carousel-card.highlight {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #E35225;
-  border: 6px solid #E35225;
+  box-shadow: 0 0 10px #563B29;
+  border: 6px solid #563B29;
 }
 
 
@@ -387,7 +387,7 @@ font-size: 18px;
   top: 0px;
   left: 0px;
   border-radius: 20px;
-  background-color: #e99b25;
+  background-color: #563B29;
   width: 651px;
   height: 301px;
 }
@@ -436,7 +436,7 @@ font-size: 18px;
   top: 236px;
   left: 450px;
   border-radius: 10px;
-  background-color: #e99b25;
+  background-color: #563B29;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -462,7 +462,7 @@ input[type=range] {
   -webkit-appearance: none;
   width: 100%;
   height: 10px;
-  background: linear-gradient(to right, #E35225 50%, #E99B25 50%);
+  background: linear-gradient(to right, #563B29 50%, #563B29 50%);
   border-radius: 5px;
   margin-top: 10px;
   position: relative;
@@ -485,7 +485,7 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  background: #E35225;
+  background: #563B29;
   border-radius: 50%;
   border: 2px solid white;
   margin-top: -5px;
@@ -497,7 +497,7 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #E35225;
+  background: #563B29;
   border-radius: 50%;
   border: 2px solid white;
   cursor: pointer;
@@ -506,7 +506,7 @@ input[type=range]::-moz-range-thumb {
 .slider-tooltip_d {
   position: absolute;
   top: -20px;
-  background-color: #E35225;
+  background-color: #563B29;
   color: white;
   padding: 3px 8px;
   border-radius: 6px;
@@ -531,7 +531,7 @@ input[type=range]::-moz-range-thumb {
 .slider-tooltip_b {
   position: absolute;
   top: -20px;
-  background-color: #E35225;
+  background-color: #563B29;
   color: white;
   padding: 3px 8px;
   border-radius: 6px;
@@ -544,7 +544,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 #time-slider .noUi-target {
-  background: #E99B25; /* base track color (orange) */
+  background: #563B29; /* base track color (orange) */
   border-radius: 10px;
   height: 10px;
   border: none;
@@ -552,18 +552,18 @@ input[type=range]::-moz-range-thumb {
 }
 
 #time-slider .noUi-connect {
-  background: #E35225; /* filled range color (red) */
+  background: #563B29; /* filled range color (red) */
 }
 
 #time-slider .noUi-connects {
-  background: #E99B25; /* filled range color (red) */
+  background: #563B29; /* filled range color (red) */
 }
 
 /* thumbs */
 #time-slider .noUi-handle {
   width: 20px;
   height: 20px;
-  background: #E35225;
+  background: #563B29;
   border: 2px solid white;
   border-radius: 50%;
   top: -2px;
@@ -592,7 +592,7 @@ input[type=range]::-moz-range-thumb {
   max-height: 80vh;
   overflow-y: auto;
   background: #fff2cf;
-  border: 6px solid #e99b25;
+  border: 6px solid #563B29;
   border-radius: 20px;
   padding: 20px;
   z-index: 1002;
@@ -638,7 +638,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .star.filled {
-  color: #E99B25;
+  color: #563B29;
 }
 
 .rating-value {
@@ -671,4 +671,68 @@ input[type=range]::-moz-range-thumb {
   font-style: italic;
   max-width: 50%;
   text-align: right;
+}
+
+
+.comments-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 10px 20px;
+  background-color: #563B29;
+  color: #563b29;
+  font-family: 'Mogra', cursive;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comments-button:hover {
+  background-color: #563B29;
+}
+
+.premium-message {
+  display: none;
+  background-color: #fff2cf;
+  color: #563b29;
+  font-family: 'Mogra', cursive;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: 2px dashed #563B29;
+  border-radius: 12px;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0%   { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+.premium-toast {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff2cf;
+  color: #563b29;
+  font-family: 'Mogra', cursive;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: 2px dashed #563B29;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out; /* płynne znikanie */
+  z-index: 9999;
+}
+
+.premium-toast.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
