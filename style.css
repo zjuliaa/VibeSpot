@@ -154,13 +154,25 @@ body, html {
     position: fixed;
     left: 0;
     top: 50%;
-    z-index: 1002;  /* Zapewniamy, że pasek nie będzie zasłonięty przez mapę */
-    background-color: #333;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: left top;
+    background-color: #563b29;
     color: white;
-    padding: 10px;
+    padding: 8px 100px; 
+    border-radius: 0 0 20px 20px;
+    font-family: 'Mogra', cursive;
+    font-size: 20px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    z-index: 1002;
     cursor: pointer;
-    transform: rotate(-90deg);  /* Obrócenie paska */
+
+    display: flex;           /* flex box */
+    justify-content: center; /* wyśrodkuj w poziomie */
+    align-items: center;     /* wyśrodkuj w pionie */
   }
+
+
+
 
   .filter-btn {
     margin: 10px;
@@ -280,7 +292,7 @@ body, html {
     margin: 30px auto 10px auto;
     padding: 12px 30px;
     background-color: #563B29;
-    color: #563b29;
+    color: #fffaed;
     font-family: Mogra;
     border: none;
     border-radius: 20px;
@@ -386,7 +398,8 @@ font-size: 18px;
 }
 
 
-/* Dodałam info panel */
+/* #info-panel */
+
 .okienko-start {
   position: fixed;
   top: 50%;
@@ -401,24 +414,34 @@ font-size: 18px;
   z-index: 1002;
 }
 
+/* Tło "pod spodem" jako cień */
 .okienko-start-child {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 10px; /* przesunięcie w dół */
+  left: 10px; /* przesunięcie w prawo */
   border-radius: 20px;
-  background-color: #563B29;
+  background-color: #563b29; /* ciemniejszy brąz jako cień */
   width: 651px;
   height: 301px;
+  z-index: 1;
 }
 
+/* Właściwa karta z ramką */
 .okienko-start-item {
   position: absolute;
-  top: 7px;
-  left: 11px;
+  top: 0;
+  left: 0;
   border-radius: 20px;
-  background-color: #fff2cf;
-  width: 629px;
-  height: 287px;
+  background-color: #fffaed;
+  border: 3px solid #563b29;
+  width: 651px;
+  height: 301px;
+  z-index: 2;
+}
+
+.okienko-content {
+  position: relative;
+  z-index: 3;
 }
 
 .odkrywaj-wydarzenia-dopasowane {
@@ -462,7 +485,7 @@ font-size: 18px;
   align-items: center;
   justify-content: center;
   padding: 5px 30px 3px;
-  color: #563b29;
+  color: #fffaed;
   font-family: 'Mogra', cursive;
   font-size: 18px;
   cursor: pointer;
@@ -504,7 +527,7 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  background: #563B29;
+  background: #C9461E;
   border-radius: 50%;
   border: 2px solid white;
   margin-top: -5px;
@@ -516,7 +539,7 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #563B29;
+  background: #C9461E;
   border-radius: 50%;
   border: 2px solid white;
   cursor: pointer;
@@ -525,7 +548,7 @@ input[type=range]::-moz-range-thumb {
 .slider-tooltip_d {
   position: absolute;
   top: -20px;
-  background-color: #563B29;
+  background-color: #C9461E;
   color: white;
   padding: 3px 8px;
   border-radius: 6px;
@@ -550,7 +573,7 @@ input[type=range]::-moz-range-thumb {
 .slider-tooltip_b {
   position: absolute;
   top: -20px;
-  background-color: #563B29;
+  background-color: #C9461E;
   color: white;
   padding: 3px 8px;
   border-radius: 6px;
@@ -563,7 +586,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 #time-slider .noUi-target {
-  background: #563B29; /* base track color (orange) */
+  background: #C9461E; /* base track color (orange) */
   border-radius: 10px;
   height: 10px;
   border: none;
@@ -571,18 +594,18 @@ input[type=range]::-moz-range-thumb {
 }
 
 #time-slider .noUi-connect {
-  background: #563B29; /* filled range color (red) */
+  background: #C9461E; /* filled range color (red) */
 }
 
 #time-slider .noUi-connects {
-  background: #563B29; /* filled range color (red) */
+  background: #DFD2AE; /* filled range color (red) */
 }
 
 /* thumbs */
 #time-slider .noUi-handle {
   width: 20px;
   height: 20px;
-  background: #563B29;
+  background: #C9461E;
   border: 2px solid white;
   border-radius: 50%;
   top: -2px;
@@ -610,7 +633,7 @@ input[type=range]::-moz-range-thumb {
   width: 1000px;
   max-height: 80vh;
   overflow-y: auto;
-  background: #fff2cf;
+  background: #fffaed;
   border: 6px solid #563B29;
   border-radius: 20px;
   padding: 20px;
@@ -618,7 +641,32 @@ input[type=range]::-moz-range-thumb {
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   font-family: 'Mogra', sans-serif;
   color: #563b29;
+  padding-right: 20px;
 }
+
+/* WebKit-based (Chrome, Safari, Edge) */
+.info-panel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.info-panel::-webkit-scrollbar-thumb {
+  background-color: #563B29;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.info-panel::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Firefox */
+.info-panel {
+  scrollbar-width: thin;
+  scrollbar-color: #563B29 transparent;
+}
+
+
 
 .close-info-panel {
   position: absolute;
@@ -653,7 +701,7 @@ input[type=range]::-moz-range-thumb {
 
 .star {
   font-size: 24px;
-  color: #ccc;
+  color: #DFD2AE;
 }
 
 .star.filled {
@@ -687,7 +735,6 @@ input[type=range]::-moz-range-thumb {
 #info-address {
   font-size: 16px;
   color: #7a5c48;
-  font-style: italic;
   max-width: 50%;
   text-align: right;
 }
@@ -698,7 +745,7 @@ input[type=range]::-moz-range-thumb {
   margin: 20px auto 0 auto;
   padding: 10px 20px;
   background-color: #563B29;
-  color: #563b29;
+  color: #fffaed;
   font-family: 'Mogra', cursive;
   font-size: 16px;
   border: none;
@@ -713,7 +760,7 @@ input[type=range]::-moz-range-thumb {
 
 .premium-message {
   display: none;
-  background-color: #fff2cf;
+  background-color: #fffaed;
   color: #563b29;
   font-family: 'Mogra', cursive;
   font-size: 16px;
@@ -737,7 +784,7 @@ input[type=range]::-moz-range-thumb {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff2cf;
+  background-color: #fffaed;
   color: #563b29;
   font-family: 'Mogra', cursive;
   font-size: 16px;

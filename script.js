@@ -11,7 +11,7 @@ function updateSliderDistance(slider_d, tooltip_d) {
   const offset = percent * (slider_d.offsetWidth - 20) + 10;
   tooltip_d.style.left = `${offset}px`;
 
-  slider_d.style.background = `linear-gradient(to right, #E35225 ${percent * 100}%, #E99B25 ${percent * 100}%)`;
+  slider_d.style.background = `linear-gradient(to right, #C9461E ${percent * 100}%, #dfd2ae ${percent * 100}%)`;
 }
 
 function updateSliderBudget(slider_b, tooltip_b) {
@@ -22,7 +22,7 @@ function updateSliderBudget(slider_b, tooltip_b) {
   const offset = percent * (slider_b.offsetWidth - 20) + 10;
   tooltip_b.style.left = `${offset}px`;
 
-  slider_b.style.background = `linear-gradient(to right, #E35225 ${percent * 100}%, #E99B25 ${percent * 100}%)`;
+  slider_b.style.background = `linear-gradient(to right, #C9461E ${percent * 100}%, #dfd2ae ${percent * 100}%)`;
 }
 
 const slider_d = document.getElementById("distance");

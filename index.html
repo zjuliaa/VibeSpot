@@ -64,7 +64,7 @@
     firebase.initializeApp(firebaseConfig);
   </script>
   
-  <div id="filter-toggle-bar" style="display: none; position: fixed; top: 50%; left: 0; background: #333; color: white; padding: 10px; cursor: pointer; transform: rotate(-90deg); transform-origin: left top;">
+  <div id="filter-toggle-bar">
     Filtry
   </div>
 
@@ -110,22 +110,23 @@
     z-index: 1000;
   "></div>
   
-
 <div id="info-panel" class="okienko-start">
   <div class="okienko-start-child"></div>
   <div class="okienko-start-item"></div>
-  
-  <div class="heading">
-    <div class="button-text">VibeSpot</div>
-  </div>
 
-  <div class="odkrywaj-wydarzenia-dopasowane">
-    Odkrywaj wydarzenia dopasowane do Twojego nastroju, zainteresowań i lokalizacji. Skorzystaj z filtrów, aby znaleźć idealne miejsce lub aktywność!  
-  </div>
+  <div class="okienko-content">
+    <div class="heading">
+      <div class="button-text">VibeSpot</div>
+    </div>
 
-  <button id="close-info-btn" class="button">
-    <div class="button-text">Zaczynamy!</div>
-  </button>
+    <div class="odkrywaj-wydarzenia-dopasowane">
+      Odkrywaj wydarzenia dopasowane do Twojego nastroju, zainteresowań i lokalizacji...
+    </div>
+
+    <button id="close-info-btn" class="button">
+      <div class="button-text">Zaczynamy!</div>
+    </button>
+  </div>
 </div>
 
 
@@ -185,23 +186,6 @@
     </button>
     </div>
 
-  <!-- <p class="filter-label">Dystans:</p>
-  <div class="range-labels">
-    <span>0</span>
-    <span>50 km</span>
-  </div>
-  <input type="range" id="distance" class="full-width" min="0" max="50" />
-  <p class="filter-label">Budżet:</p>
-  <div class="range-labels">
-    <span>0</span>
-    <span>200 zł</span>
-  </div>
-  <input type="range" id="budget" class="full-width" min="0" max="200" />
-
-  <p class="filter-label">Przedział godzinowy:</p>
-  <div id="time-slider" style="margin: 20px 0;"></div>
-  <p id="time-range-output" style="text-align: center; font-weight: bold;">08:00 – 18:00</p>
- -->
 
  <p class="filter-label">Dystans:</p>
   <div class="range-labels">
