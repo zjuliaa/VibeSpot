@@ -1503,7 +1503,7 @@
     "weather": ["słonecznie", "deszczowo", "śnieżnie"],
     "budget": "różny",
     "address": "ul. Smolna 9, 00-375 Warszawa",
-    ["zdj": "w003_1.jpg", "w003_2.jpg", "w003_3.jpg"]
+    "zdj": ["w003_1.jpg", "w003_2.jpg", "w003_3.jpg"]
   },
   "geometry": {
     "coordinates": [
