@@ -48,7 +48,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "wysoki",
         "address": "ul. Wioślarska 6, Warszawa",
-		"zdj": ["w034_1.jpg", w034_2.jpeg, "w034_3.jpg"]
+		"zdj": ["w034_1.jpg", "w034_2.jpeg", "w034_3.jpg"]
       },
       "geometry": {
         "coordinates": [
