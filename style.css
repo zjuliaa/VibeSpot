@@ -107,15 +107,34 @@ body, html {
   }
 
   /* Panel filtrów */
-  #filter-panel {
-    position: absolute;  /* Ustawiamy absolutnie, żeby mieć pełną kontrolę */
-    z-index: 1002;  /* Filtry na najwyższej warstwie */
+  /* #filter-panel {
+    position: absolute; 
     background: white;
     padding: 20px;
     width: 50vw;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: none;  /* Na początku panel jest ukryty */
-  }
+    display: none; 
+  } */
+
+  #filter-panel {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background-color: #fffaed; 
+  border-radius: 20px;
+  border: 2px solid #563b29; 
+  padding: 30px 40px;
+  
+  max-width: 80vw;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 1002;
+  
+  box-shadow: 10px 10px 0px #3a2516; 
+}
 
   /* .filter-label {
     width: 78px;
