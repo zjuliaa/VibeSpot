@@ -4,463 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "w037",
-        "name": "Park Rozrywki Julinek",
-        "description": "Tematyczny park rozrywki z atrakcjami dla dzieci i dorosłych, niedaleko Warszawy.",
-        "category": "rodzinne",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "ciekawski",
-          "kreatywny",
-          "towarzyski",
-          "sportowy"
-        ],
-        "open": "10:00",
-        "closed": "18:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
-        "budget": "średni",
-        "address": "Julinek 1, Leszno k. Warszawy",
-        "zdj": "w037.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          20.59301144863334,
-          52.275730767319
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w050",
-        "name": "Saunarium – Termy Mszczonów (niedaleko Warszawy)",
-        "description": "Kompleks saun, jacuzzi i basenów z wodami termalnymi dla pełnego relaksu.",
-        "category": "wellness",
-        "mood": [
-          "wesoły",
-          "romantyczny",
-          "zestresowany",
-          "towarzyski"
-        ],
-        "open": "9:00",
-        "closed": "21:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
-        "budget": "średni",
-        "address": "ul. Warszawska 52, Mszczonów",
-        "zdj": "w050.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          20.52588936985108,
-          51.97802710253758
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w046",
-        "name": "Gucin Gaj",
-        "description": "Dziki zagajnik kryjący katakumby Potockich.",
-        "category": "miejskie odkrywanie",
-        "mood": "[\"spokojny\",\"romantyczny\",\"wesoły\",\"ciekawski\"]",
-        "open": "6:00",
-        "closed": "22:00",
-        "other": "[\"ze zwierzętami\",\"dla dzieci\",\"dla niepełnosprawnych\",\"z psami\"]",
-        "weather": "[\"słonecznie\",\"pochmurno\"]",
-        "budget": "bezpłatny",
-        "address": "ul. Przy Grobli 3, 02-749 Warszawa",
-        "zdj": "w046.jpeg"
-      },
-      "geometry": {
-        "coordinates": [
-          21.048335344750736,
-          52.17115255180191
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w047",
-        "name": "Floating Aura Spokoju",
-        "description": "Sesje floatingu w kapsułach z solanką, które pomagają się wyciszyć i zregenerować.",
-        "category": "wellness",
-        "mood": "[\"wesoły\",\"smutny\",\"zestresowany\",\"ciekawski\"]",
-        "open": "10:00",
-        "closed": "22:00",
-        "other": "[]",
-        "weather": "[\"słonecznie\",\"deszczowo\",\"śnieżnie\"]",
-        "budget": "wysoki",
-        "address": "Aleja Wilanowska 89/303C, 02-765 Warszawa",
-        "zdj": "w047.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          21.05214427938041,
-          52.172798385164946
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w031",
-        "name": "Level 27",
-        "description": "Ekskluzywny rooftop club z panoramicznym widokiem na Warszawę.",
-        "category": "imprezowa",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "romantyczny",
-          "ciekawski",
-          "towarzyski",
-          "kulturalny",
-          "głodny"
-        ],
-        "open": "23:00",
-        "closed": "5:00",
-        "other": [],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
-        "budget": "wysoki",
-        "address": "Al. Jerozolimskie 123A, Warszawa",
-        "zdj": "w031.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          20.991313828364742,
-          52.22479961962748
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w025",
-        "name": "Fabryka Norblina",
-        "description": "Kreatywny kompleks z galeriami, sklepami z designem i muzeum.",
-        "category": "kreatywna",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "kreatywny",
-          "towarzyski",
-          "kulturalny"
-        ],
-        "open": "9:00",
-        "closed": "22:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
-        "budget": "średni",
-        "address": "ul. Żelazna 51/53, Warszawa",
-        "zdj": "w025.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          20.990826105693607,
-          52.232283346382964
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w039",
-        "name": "Hangar 646",
-        "description": "Park trampolin z atrakcjami dla dzieci, młodzieży i dorosłych – świetne miejsce na aktywne spędzanie czasu.",
-        "category": "",
-        "mood": [
-          "sportowy",
-          "wesoły",
-          "zestresowany",
-          "towarzyski"
-        ],
-        "open": "10:00",
-        "closed": "21:00",
-        "other": [
-          "dla dzieci"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
-        "budget": "płatny",
-        "address": "Wał Miedzeszyński 646, 03-994 Warszawa",
-        "zdj": "w039.jpeg"
-      },
-      "geometry": {
-        "coordinates": [
-          21.08279129419675,
-          52.22206312090545
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w012",
-        "name": "Rezerwat Przyrody Jeziorko Czerniakowskie",
-        "description": "Naturalny rezerwat wodno-leśny z kąpieliskiem i ścieżkami spacerowymi.",
-        "category": "blisko natury",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "romantyczny",
-          "zły",
-          "zestresowany",
-          "ciekawski",
-          "towarzyski"
-        ],
-        "open": "brak",
-        "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
-        "budget": "bezpłatny",
-        "address": "ul. Jeziorna, Warszawa",
-        "zdj": "w012.jpeg"
-      },
-      "geometry": {
-        "coordinates": [
-          21.071694282152386,
-          52.19245825728133
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w015",
-        "name": "Pole Mokotowskie",
-        "description": "Popularny park z alejkami, knajpkami i stawem.",
-        "category": "blisko natury",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "romantyczny",
-          "zły",
-          "zestresowany",
-          "ciekawski",
-          "towarzyski",
-          "sportowy"
-        ],
-        "open": "brak",
-        "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
-        "budget": "niski",
-        "address": "Pole Mokotowskie, Warszawa",
-        "zdj": "w015.png"
-      },
-      "geometry": {
-        "coordinates": [
-          20.996406745118602,
-          52.21061579381458
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w020",
-        "name": "Górka Szczęśliwicka",
-        "description": "Całoroczny stok narciarski i miejsce rekreacyjne.",
-        "category": "sportowa",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "zły",
-          "zestresowany",
-          "towarzyski",
-          "sportowy"
-        ],
-        "open": "brak",
-        "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci"
-        ],
-        "weather": [
-          "słonecznie",
-          "śnieżnie"
-        ],
-        "budget": "bezpłatny",
-        "address": "ul. Drawska 22, Warszawa",
-        "zdj": "w020.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          20.957113769397985,
-          52.20509988699813
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w038",
-        "name": "FunPark Digiloo",
-        "description": "Kolorowe centrum zabaw z kulkami, zjeżdżalniami i atrakcjami dla najmłodszych.",
-        "category": "rodzinne",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "ciekawski",
-          "kreatywny",
-          "towarzyski",
-          "sportowy"
-        ],
-        "open": "10:00",
-        "closed": "20:00",
-        "other": [
-          "dla dzieci"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
-        "budget": "niski",
-        "address": "ul. Merliniego 2, Warszawa",
-        "zdj": "w038.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          21.026282879433023,
-          52.19639904411415
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w019",
-        "name": "Ośrodek Stegny",
-        "description": "Tor łyżwiarski oraz obiekty sportowe dostępne dla mieszkańców.",
-        "category": "sportowa",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "romantyczny",
-          "zły",
-          "zestresowany",
-          "ciekawski",
-          "towarzyski",
-          "sportowy"
-        ],
-        "open": "12:00",
-        "closed": "20:00",
-        "other": [
-          "dla dzieci"
-        ],
-        "weather": [
-          "słonecznie",
-          "śnieżnie"
-        ],
-        "budget": "niski",
-        "address": "ul. Inspektowa 1, Warszawa",
-        "zdj": "w019.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          21.043447319667745,
-          52.18677995147664
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w014",
-        "name": "Las Kabacki",
-        "description": "Duży kompleks leśny idealny na spacery, rower czy jogging.",
-        "category": "blisko natury",
-        "mood": [
-          "wesoły",
-          "smutny",
-          "romantyczny",
-          "zły",
-          "zestresowany",
-          "ciekawski",
-          "towarzyski",
-          "sportowy"
-        ],
-        "open": "brak",
-        "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
-        "budget": "bezpłatny",
-        "address": "Las Kabacki, Ursynów, Warszawa",
-        "zdj": "w014.jpg"
-      },
-      "geometry": {
-        "coordinates": [
-          21.055244065788145,
-          52.11837469152238
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "id": "w021",
         "name": "Centrum Nauki Kopernik",
         "description": "Nowoczesne, interaktywne centrum nauki dla dzieci i dorosłych.",
@@ -469,20 +12,14 @@
           "wesoły",
           "ciekawski"
         ],
-        "open": "8:00",
+        "rating":"5", 
+        "open": "8:00", 
         "closed": "20:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "średni",
         "address": "Wybrzeże Kościuszkowskie 20, Warszawa",
-        "zdj": "w021.jpg"
+		"zdj": "w021.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -501,20 +38,17 @@
         "category": "imprezowa",
         "mood": [
           "wesoły",
-          "towarzyski",
+          "towarzyski", 
           "romantyczny"
         ],
-        "open": "19:00",
+        "rating": "4.7", 
+        "open": "19:00", 
         "closed": "6:00",
         "other": [],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "wysoki",
         "address": "ul. Wioślarska 6, Warszawa",
-        "zdj": "w034.jpg"
+		"zdj": "w034.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -533,24 +67,19 @@
         "category": "towarzyska",
         "mood": [
           "wesoły",
-          "smutny",
-          "romantyczny",
-          "głodny",
+          "smutny", 
+          "romantyczny", 
+          "głodny", 
           "towarzyski"
         ],
-        "open": "brak",
+        "rating": "4.3", 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],
         "budget": "bezpłatny",
         "address": "Bulwar gen. Pattona, Warszawa",
-        "zdj": "w041.jpg"
+		"zdj": "w041.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -574,19 +103,14 @@
           "towarzyski",
           "kulturalny"
         ],
-        "open": "brak",
+        "rating":"3.7" , 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],
         "budget": "niski",
         "address": "Bulwar Flotylli Wiślanej, Warszawa",
-        "zdj": "w045.jpg"
+		"zdj": "w045.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -612,19 +136,14 @@
           "ciekawski",
           "sportowy"
         ],
-        "open": "brak",
+        "rating": "3.4", 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],
         "budget": "bezpłatny",
         "address": "al. Zieleniecka, Warszawa",
-        "zdj": "w013.jpg"
+		"zdj": "w013.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -651,18 +170,14 @@
           "towarzyski",
           "sportowy"
         ],
-        "open": "brak",
+        "rating": "5", 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci"],
+        "weather": ["słonecznie"],
         "budget": "bezpłatny",
         "address": "Park Skaryszewski, Warszawa",
-        "zdj": "w049.jpeg"
+		"zdj": "w049.jpeg"
       },
       "geometry": {
         "coordinates": [
@@ -680,27 +195,20 @@
         "description": "Restauracja Mateusza Gesslera z otwartą kuchnią i industrialnym wnętrzem.",
         "category": "imprezowe",
         "mood": [
-          "towarzyski",
-          "wesoły",
-          "romantyczny",
-          "zestresowany",
-          "głodny"
-        ],
-        "open": "12:00",
+        "towarzyski",
+        "wesoły",
+        "romantyczny",
+        "zestresowany",
+        "głodny"
+      ],
+        "rating": "4.7", 
+        "open": "12:00", 
         "closed": "23:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather":  ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "wysoki",
         "address": "Soho Factory, Mińska 29A/bud. 46, 03-808 Warszawa",
-        "zdj": "w010.jpg"
+		"zdj": "w010.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -726,19 +234,14 @@
           "kreatywny",
           "towarzyski"
         ],
-        "open": "9:00",
+        "rating": "3.5", 
+        "open": "9:00", 
         "closed": "19:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather":  ["słonecznie"],
         "budget": "średni",
         "address": "ul. Ratuszowa 1/3, Warszawa",
-        "zdj": "w036.jpg"
+		"zdj": "w036.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -760,21 +263,14 @@
           "ciekawski",
           "kulturalny"
         ],
-        "open": "10:00",
+        "rating": "4.2", 
+        "open": "10:00", 
         "closed": "18:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],        
         "budget": "średni",
         "address": "ul. Anielewicza 6, Warszawa",
-        "zdj": "w029.jpg"
+		"zdj": "w029.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -801,19 +297,14 @@
           "towarzyski",
           "kulturalny"
         ],
-        "open": "brak",
+        "rating": "3.4", 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],        
         "budget": "bezpłatny",
         "address": "Skwer I Dywizji Pancernej, Warszawa",
-        "zdj": "w002.jpg"
+		"zdj": "w002.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -830,7 +321,7 @@
         "name": "Muzeum Iluzji",
         "description": "Interaktywna wystawa iluzji optycznych i sztuki percepcji.",
         "category": "kreatywna",
-        "mood": [
+         "mood": [
           "wesoły",
           "smutny",
           "ciekawski",
@@ -838,20 +329,14 @@
           "towarzyski",
           "kulturalny"
         ],
-        "open": "9:00",
+        "rating": "3.5", 
+        "open": "9:00", 
         "closed": "20:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "Rynek Starego Miasta 21, Warszawa",
-        "zdj": "w023.jpg"
+		"zdj": "w023.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -877,20 +362,14 @@
           "towarzyski",
           "kulturalny"
         ],
-        "open": "10:00",
+        "rating": "3.7", 
+        "open": "10:00", 
         "closed": "17:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "Plac Zamkowy 4, Warszawa",
-        "zdj": "w027.jpg"
+		"zdj": "w027.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -911,27 +390,21 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "kreatywny",
           "towarzyski",
           "kulturalny"
         ],
-        "open": "17:00",
+        "rating": "4.1", 
+        "open": "17:00", 
         "closed": "23:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "wysoki",
         "address": "Plac Teatralny 1, Warszawa",
-        "zdj": "w026.jpg"
+		"zdj": "w026.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -948,7 +421,7 @@
         "name": "Dom Spotkań z Historią",
         "description": "Galeria i miejsce spotkań promujące historię poprzez wystawy i projekcje.",
         "category": "kreatywna",
-        "mood": [
+         "mood": [
           "wesoły",
           "smutny",
           "ciekawski",
@@ -956,20 +429,14 @@
           "towarzyski",
           "kulturalny"
         ],
-        "open": "10:00",
+        "rating": "2.4", 
+        "open": "10:00", 
         "closed": "20:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "bezpłatny",
         "address": "ul. Karowa 20, Warszawa",
-        "zdj": "w022.jpg"
+		"zdj": "w022.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -996,20 +463,14 @@
           "towarzyski",
           "kulturalny"
         ],
-        "open": "10:00",
+        "rating": "3.5", 
+        "open": "10:00", 
         "closed": "18:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "ul. Okólnik 1, Warszawa",
-        "zdj": "w030.jpg"
+		"zdj": "w030.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1030,27 +491,21 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "kreatywny",
           "towarzyski",
           "kulturalny"
         ],
-        "open": "10:00",
+        "rating": "4.7", 
+        "open": "10:00", 
         "closed": "18:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "al. Jerozolimskie 3, Warszawa",
-        "zdj": "w028.jpg"
+		"zdj": "w028.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1071,7 +526,7 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "kreatywny",
@@ -1079,21 +534,14 @@
           "sportowy",
           "kulturalny"
         ],
-        "open": "brak",
+        "rating": "3.5", 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "ul. Łazienkowska 6a, Warszawa",
-        "zdj": "w018.jpeg"
+		"zdj": "w018.jpeg"
       },
       "geometry": {
         "coordinates": [
@@ -1113,27 +561,21 @@
         "mood": [
           "wesoły",
           "smutny",
-          "zły",
+          "zły", 
           "ciekawski",
           "kreatywny",
           "towarzyski",
           "sportowy",
           "kulturalny"
         ],
-        "open": "8:00",
+        "rating":"3.6" , 
+        "open": "8:00", 
         "closed": "18:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Łazienkowska 3, Warszawa",
-        "zdj": "w017.jpg"
+		"zdj": "w017.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1154,25 +596,20 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "towarzyski",
           "kulturalny"
         ],
-        "open": "6:00",
+        "rating": "4.8", 
+        "open": "6:00", 
         "closed": "22:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],    
         "budget": "bezpłatny",
         "address": "ul. Agrykola 1, Warszawa",
-        "zdj": "w004.jpg"
+		"zdj": "w004.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1193,27 +630,21 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "kreatywny",
           "towarzyski",
           "kulturalny"
         ],
-        "open": "11:00",
+        "rating": "3.8", 
+        "open": "11:00", 
         "closed": "19:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": [ "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Jazdów 2, Warszawa",
-        "zdj": "w024.jpg"
+		"zdj": "w024.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1234,24 +665,19 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "towarzyski"
         ],
-        "open": "10:00",
+        "rating": "4.1", 
+        "open": "10:00", 
         "closed": "20:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],    
         "budget": "bezpłatny",
         "address": "Aleje Ujazdowskie 4, Warszawa",
-        "zdj": "w011.jpg"
+		"zdj": "w011.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1276,21 +702,14 @@
           "towarzyski",
           "głodny"
         ],
-        "open": "9:00",
+        "rating": "4", 
+        "open": "9:00", 
         "closed": "1:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Koszykowa 63, Warszawa",
-        "zdj": "w032.jpg"
+		"zdj": "w032.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1311,26 +730,21 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "towarzyski",
           "kulturalny",
           "głodny"
         ],
-        "open": "brak",
+        "rating":"3.6" , 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],    
         "budget": "średni",
         "address": "Plac Zbawiciela, Warszawa",
-        "zdj": "w042.jpg"
+		"zdj": "w042.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1351,27 +765,20 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "towarzyski",
           "głodny"
         ],
-        "open": "12:00",
+        "rating": "4.1", 
+        "open": "12:00", 
         "closed": "23:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "wysoki",
         "address": "ul. Mokotowska 48, Warszawa",
-        "zdj": "w006.jpg"
+		"zdj": "w006.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1392,27 +799,20 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "towarzyski",
           "głodny"
         ],
-        "open": "18:00",
+        "rating": "5", 
+        "open": "18:00", 
         "closed": "22:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "wysoki",
         "address": "ul. Wilcza 46, Warszawa",
-        "zdj": "w008.jpg"
+		"zdj": "w008.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1433,27 +833,20 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "towarzyski",
           "głodny"
         ],
-        "open": "13:00",
+        "rating": "4.3", 
+        "open": "13:00", 
         "closed": "24:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Nowogrodzka 10, Warszawa",
-        "zdj": "w007.jpg"
+		"zdj": "w007.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1474,27 +867,20 @@
           "wesoły",
           "smutny",
           "romantyczny",
-          "zły",
+          "zły", 
           "zestresowany",
           "ciekawski",
           "towarzyski",
           "głodny"
         ],
-        "open": "brak",
+        "rating": "4.6", 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "niski",
         "address": "ul. Nowy Świat 22/28, Warszawa",
-        "zdj": "w033.png"
+		"zdj": "w033.png"
       },
       "geometry": {
         "coordinates": [
@@ -1514,28 +900,83 @@
         "mood": [
           "wesoły",
           "smutny",
-          "zły",
+          "zły", 
           "towarzyski",
           "głodny"
         ],
-        "open": "16:00",
+        "rating": "4.3", 
+        "open": "16:00", 
         "closed": "22:00",
-        "other": [
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Marszałkowska 99/101, Warszawa",
-        "zdj": "w035.jpg"
+		"zdj": "w035.jpg"
       },
       "geometry": {
         "coordinates": [
           21.0079,
           52.2311
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w047",
+        "name": "Floating Spa",
+        "description": "Sesje floatingu w kapsułach z solanką, które pomagają się wyciszyć i zregenerować.",
+        "category": "wellness",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "zestresowany",
+          "ciekawski"
+        ],
+        "rating": "3.7", 
+        "open": "9:00", 
+        "closed": "20:00",
+        "other": [],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "wysoki",
+        "address": "ul. Piękna 44, Warszawa",
+		"zdj": "w047.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0159,
+          52.2322
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w050",
+        "name": "Saunarium – Termy Mszczonów (niedaleko Warszawy)",
+        "description": "Kompleks saun, jacuzzi i basenów z wodami termalnymi dla pełnego relaksu.",
+        "category": "wellness",
+        "mood": [
+          "wesoły",
+          "romantyczny",
+          "zestresowany",
+          "towarzyski"
+        ],
+        "rating": "4.3", 
+        "open": "9:00", 
+        "closed": "21:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "średni",
+        "address": "ul. Warszawska 52, Mszczonów",
+		"zdj": "w050.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          20.5079,
+          51.9782
         ],
         "type": "Point"
       }
@@ -1555,20 +996,14 @@
           "kreatywny",
           "kulturalny"
         ],
-        "open": "10:00",
+        "rating": "4.4", 
+        "open": "10:00", 
         "closed": "20:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "niski",
         "address": "Plac Defilad 1, Warszawa",
-        "zdj": "w001.jpg"
+		"zdj": "w001.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1593,20 +1028,14 @@
           "towarzyski",
           "kulturalny"
         ],
-        "open": "8:00",
+        "rating": "4.9", 
+        "open": "8:00", 
         "closed": "18:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
         "address": "ul. Grzybowska 79, Warszawa",
-        "zdj": "w005.jpg"
+		"zdj": "w005.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1631,26 +1060,120 @@
           "towarzyski",
           "głodny"
         ],
-        "open": "17:00",
+        "rating":"4.6" , 
+        "open": "17:00", 
         "closed": "22:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
         "address": "ul. Nowogrodzka 18A, Warszawa",
-        "zdj": "w009.jpg"
+		"zdj": "w009.jpg"
       },
       "geometry": {
         "coordinates": [
           21.013,
           52.2285
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w012",
+        "name": "Rezerwat Przyrody Jeziorko Czerniakowskie",
+        "description": "Naturalny rezerwat wodno-leśny z kąpieliskiem i ścieżkami spacerowymi.",
+        "category": "blisko natury",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski"
+        ],
+        "rating": "3.7", 
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
+        "budget": "bezpłatny",
+        "address": "ul. Jeziorna, Warszawa",
+		"zdj": "w012.jpeg"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0614,
+          52.1923
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w014",
+        "name": "Las Kabacki",
+        "description": "Duży kompleks leśny idealny na spacery, rower czy jogging.",
+        "category": "blisko natury",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "sportowy"
+        ],
+        "rating": "3.4", 
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
+        "budget": "bezpłatny",
+        "address": "Las Kabacki, Ursynów, Warszawa",
+		"zdj": "w014.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0625,
+          52.1215
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w015",
+        "name": "Pole Mokotowskie",
+        "description": "Popularny park z alejkami, knajpkami i stawem.",
+        "category": "blisko natury",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "sportowy"
+        ],
+        "rating":"3.6" , 
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
+        "budget": "niski",
+        "address": "Pole Mokotowskie, Warszawa",
+		"zdj": "w015.png"
+      },
+      "geometry": {
+        "coordinates": [
+          20.9933,
+          52.214
         ],
         "type": "Point"
       }
@@ -1665,33 +1188,220 @@
         "mood": [
           "wesoły",
           "smutny",
-          "zły",
+          "zły", 
           "ciekawski",
           "kreatywny",
           "towarzyski",
           "sportowy",
           "kulturalny"
         ],
-        "open": "6:00",
+        "rating": "4.1", 
+        "open": "6:00", 
         "closed": "22:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "średni",
         "address": "al. Księcia Józefa Poniatowskiego 1, Warszawa",
-        "zdj": "w016.jpg"
+		"zdj": "w016.jpg"
       },
       "geometry": {
         "coordinates": [
           21.0458,
           52.2394
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w019",
+        "name": "Ośrodek Stegny",
+        "description": "Tor łyżwiarski oraz obiekty sportowe dostępne dla mieszkańców.",
+        "category": "sportowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "zły", 
+          "zestresowany",
+          "ciekawski",
+          "towarzyski",
+          "sportowy"
+        ],
+        "rating": "4.8", 
+        "open": "12:00", 
+        "closed": "20:00",
+        "other": ["dla dzieci"],
+        "weather": ["słonecznie", "śnieżnie"],  
+        "budget": "niski",
+        "address": "ul. Inspektowa 1, Warszawa",
+		"zdj": "w019.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0408,
+          52.1807
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w020",
+        "name": "Górka Szczęśliwicka",
+        "description": "Całoroczny stok narciarski i miejsce rekreacyjne.",
+        "category": "sportowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "zły", 
+          "zestresowany",
+          "towarzyski",
+          "sportowy"
+        ],
+        "rating": "4.4", 
+        "open": "brak", 
+        "closed": "brak",
+        "other": ["ze zwierzętami", "dla dzieci"],
+        "weather": ["słonecznie", "śnieżnie"],  
+        "budget": "bezpłatny",
+        "address": "ul. Drawska 22, Warszawa",
+		"zdj": "w020.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          20.9587,
+          52.2041
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w025",
+        "name": "Fabryka Norblina",
+        "description": "Kreatywny kompleks z galeriami, sklepami z designem i muzeum.",
+        "category": "kreatywna",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny"
+        ],
+        "rating": "3.9", 
+        "open": "9:00", 
+        "closed": "22:00",
+        "other": ["dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "średni",
+        "address": "ul. Żelazna 51/53, Warszawa",
+		"zdj": "w025.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          20.9929,
+          52.2317
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w031",
+        "name": "Level 27",
+        "description": "Ekskluzywny rooftop club z panoramicznym widokiem na Warszawę.",
+        "category": "imprezowa",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "ciekawski",
+          "towarzyski",
+          "kulturalny",
+          "głodny"
+        ],
+        "rating": "4", 
+        "open": "23:00", 
+        "closed": "5:00",
+        "other": [],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "wysoki",
+        "address": "Al. Jerozolimskie 123A, Warszawa",
+		"zdj": "w031.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0037,
+          52.2309
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w037",
+        "name": "Park Rozrywki Julinek",
+        "description": "Tematyczny park rozrywki z atrakcjami dla dzieci i dorosłych, niedaleko Warszawy.",
+        "category": "rodzinne",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy"
+        ],
+        "rating": "4.1", 
+        "open": "10:00", 
+        "closed": "18:00",
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
+        "budget": "średni",
+        "address": "Julinek 1, Leszno k. Warszawy",
+		"zdj": "w037.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          20.5601,
+          52.2545
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "w038",
+        "name": "FunPark Digiloo",
+        "description": "Kolorowe centrum zabaw z kulkami, zjeżdżalniami i atrakcjami dla najmłodszych.",
+        "category": "rodzinne",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "sportowy"
+        ],
+        "rating": "3.9", 
+        "open": "10:00", 
+        "closed": "20:00",
+        "other": ["dla dzieci"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "niski",
+        "address": "ul. Merliniego 2, Warszawa",
+		"zdj": "w038.jpg"
+      },
+      "geometry": {
+        "coordinates": [
+          21.0134,
+          52.1821
         ],
         "type": "Point"
       }
@@ -1711,19 +1421,14 @@
           "towarzyski",
           "sportowy"
         ],
-        "open": "brak",
+        "rating": "3.2", 
+        "open": "brak", 
         "closed": "brak",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie"],  
         "budget": "bezpłatny",
         "address": "Park Ujazdowski, Warszawa",
-        "zdj": "w040.jpg"
+		"zdj": "w040.jpg"
       },
       "geometry": {
         "coordinates": [
@@ -1734,6 +1439,40 @@
       }
     },
     {
+      "type": "Feature",
+      "properties": {
+        "id": "w043",
+        "name": "Miejsce Chwila",
+        "description": "Kawiarnia z klimatem bohemy, z planszówkami i wydarzeniami artystycznymi.",
+        "category": "towarzyska",
+        "mood": [
+          "wesoły",
+          "smutny",
+          "romantyczny",
+          "ciekawski",
+          "kreatywny",
+          "towarzyski",
+          "kulturalny",
+          "głodny"
+        ],
+        "rating":"4.1" , 
+        "open": "12:00", 
+        "closed": "24:00",
+        "other": ["ze zwierzętami", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
+        "budget": "niski",
+        "address": "ul. Ogrodowa 31/35, Warszawa",
+		"zdj": "w043.jpeg"
+      },
+      "geometry": {
+        "coordinates": [
+          20.995,
+          52.2325
+        ],
+        "type": "Point"
+      }
+    },
+{
       "type": "Feature",
       "properties": {
         "id": "w044",
@@ -1749,66 +1488,84 @@
           "towarzyski",
           "sportowy"
         ],
-        "open": "8:00",
+        "rating": "2.9", 
+        "open": "8:00", 
         "closed": "16:00",
-        "other": [
-          "ze zwierzętami",
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
+        "other": ["ze zwierzętami", "dla dzieci", "dla niepełnosprawnych"],
+        "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "bezpłatny",
         "address": "Prosta 3, 05-430 Celestynów",
-        "zdj": "w044.jpeg"
+		"zdj": "w044.jpeg"
       },
       "geometry": {
         "coordinates": [
-          21.370042915861635,
-          52.06807556384809
+          21.370247167271632,
+          52.06773027696676
         ],
         "type": "Point"
       }
     },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "w003",
-        "name": "Dom Kultury Śródmieście",
-        "description": "Warsztaty artystyczne, koncerty, wystawy i zajęcia dla dzieci i dorosłych.",
-        "category": "",
-        "mood": [
-          "kreatywny",
-          "towarzyski",
-          "zestresowany",
-          "wesoły",
-          "energiczny"
-        ],
-        "open": "10:00",
-        "closed": "20:00",
-        "other": [
-          "dla dzieci",
-          "dla niepełnosprawnych"
-        ],
-        "weather": [
-          "słonecznie",
-          "deszczowo",
-          "śnieżnie"
-        ],
-        "budget": "różny",
-        "address": "ul. Smolna 9, 00-375 Warszawa",
-        "zdj": "w003.jpeg"
-      },
-      "geometry": {
-        "coordinates": [
-          21.025954,
-          52.232226
-        ],
-        "type": "Point"
-      }
-    }
+{
+	"type": "Feature",
+  "properties": {
+    "id": "w003",
+    "name": "Dom Kultury Śródmieście",
+    "description": "Warsztaty artystyczne, koncerty, wystawy i zajęcia dla dzieci i dorosłych.",
+    "category": "",
+    "mood": [
+      "kreatywny",
+      "towarzyski",
+      "zestresowany",
+      "wesoły",
+      "energiczny"
+    ],
+    "rating": "2.5", 
+    "open":"10:00",
+    "closed": "20:00",
+    "other": ["dla dzieci", "dla niepełnosprawnych"],
+    "weather": ["słonecznie", "deszczowo", "śnieżnie"],
+    "budget": "różny",
+    "address": "ul. Smolna 9, 00-375 Warszawa",
+    "zdj": "w003.jpeg"
+  },
+  "geometry": {
+    "coordinates": [
+      21.025954,
+      52.232226
+    ],
+    "type": "Point"
+  }
+  },
+{
+  "type": "Feature",
+  "properties": {
+    "id": "w039",
+    "name": "Hangar 646",
+    "description": "Park trampolin z atrakcjami dla dzieci, młodzieży i dorosłych – świetne miejsce na aktywne spędzanie czasu.",
+    "category": "",
+    "mood": [
+      "sportowy",
+      "wesoły",
+      "zestresowany",
+      "towarzyski"
+    ],
+    "rating": "2.9", 
+    "open":"10:00",
+    "closed": "21:00",
+    "other": ["dla dzieci"],
+    "weather": ["słonecznie", "deszczowo", "śnieżnie"],
+    "budget": "płatny",
+    "address": "Wał Miedzeszyński 646, 03-994 Warszawa",
+    "zdj": "w039.jpeg"
+  },
+  "geometry": {
+    "coordinates": [
+      21.0827,
+      52.2219
+    ],
+    "type": "Point"
+  }
+}
+
   ]
 }

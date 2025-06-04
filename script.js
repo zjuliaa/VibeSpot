@@ -104,6 +104,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let userLocationMarker = null;
 
+
+  const commentsBtn = document.getElementById('comments-button');
+  const premiumToast = document.getElementById('premium-toast');
+
+  commentsBtn.addEventListener('click', () => {
+    // Pokaż toast
+    premiumToast.classList.add('visible');
+
+    // Po chwili rozpocznij znikanie
+    setTimeout(() => {
+      premiumToast.classList.remove('visible');
+    }, 1600); // 1.6s widoczne, 1s animacji daje ~2.6s całkowitego czasu
+  });
+
+
 function fetchWeather(lat, lon) {
   const apiKey = '1f2079bdb83441c8a04d76290d15bd8a';
   const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=pl`;
@@ -591,20 +606,25 @@ function doTimeRangesOverlap(userStartHour, userEndHour, openStr, closeStr) {
 function displayAttractionsInCarousel(features) {
   const carousel = document.getElementById('attraction-carousel');
   if (!carousel) return;
- 
+
   if (!features || features.length === 0) {
     carousel.style.display = 'none';
     return;
   }
- 
-  carousel.innerHTML = ''; // Wyczyść poprzednie
- 
-  features.forEach(feature => {
+
+  carousel.innerHTML = '';
+
+  features.forEach((feature, index) => {
     const props = feature.properties || {};
     const name = props.name || "Brak nazwy";
     const address = props.address || props.vicinity || "Brak adresu";
-    const imageName = props.zdj || "default.jpg"; // jeśli brak zdjęcia, użyj domyślnego
-    const imagePath = `zdj/${imageName}`; // ścieżka do zdjęcia
+    const open = props.open?.toLowerCase() === "brak" ? null : props.open;
+    const closed = props.closed?.toLowerCase() === "brak" ? null : props.closed;
+
+    const godziny = (open && closed) ? `${open} – ${closed}` : "brak godzin";
+
+    const imageName = props.zdj || "default.jpg";
+    const imagePath = `zdj/${imageName}`;
     const featureId = props.id || `feature-${index}`;
 
     const card = document.createElement('div');
@@ -613,13 +633,53 @@ function displayAttractionsInCarousel(features) {
     card.innerHTML = `
       <img src="${imagePath}" alt="${name}" class="carousel-image">
       <strong>${name}</strong><br>
-      <span>${address}</span>
+      <span>${address}</span><br>
     `;
+
+    card.addEventListener('click', () => {
+      showAttractionInfoPanel(feature);
+    });
+
     carousel.appendChild(card);
   });
- 
+
   carousel.style.display = 'flex';
 }
+
+
+
+// function displayAttractionsInCarousel(features) {
+//   const carousel = document.getElementById('attraction-carousel');
+//   if (!carousel) return;
+ 
+//   if (!features || features.length === 0) {
+//     carousel.style.display = 'none';
+//     return;
+//   }
+ 
+//   carousel.innerHTML = ''; // Wyczyść poprzednie
+ 
+//   features.forEach(feature => {
+//     const props = feature.properties || {};
+//     const name = props.name || "Brak nazwy";
+//     const address = props.address || props.vicinity || "Brak adresu";
+//     const imageName = props.zdj || "default.jpg"; // jeśli brak zdjęcia, użyj domyślnego
+//     const imagePath = `zdj/${imageName}`; // ścieżka do zdjęcia
+//     const featureId = props.id || `feature-${index}`;
+
+//     const card = document.createElement('div');
+//     card.className = 'carousel-card';
+//     card.id = `carousel-card-${featureId}`;
+//     card.innerHTML = `
+//       <img src="${imagePath}" alt="${name}" class="carousel-image">
+//       <strong>${name}</strong><br>
+//       <span>${address}</span>
+//     `;
+//     carousel.appendChild(card);
+//   });
+ 
+//   carousel.style.display = 'flex';
+// }
  
  
 window.addEventListener('DOMContentLoaded', () => {
@@ -636,6 +696,82 @@ window.addEventListener('DOMContentLoaded', () => {
     carousel.style.display = 'none'; // ukryj po odświeżeniu
   }
 });
+
+function showAttractionInfoPanel(feature) {
+  const panel = document.getElementById('attraction-info-panel');
+  const title = document.getElementById('info-title');
+  const image = document.getElementById('info-image');
+  const desc = document.getElementById('info-description');
+  const address = document.getElementById('info-address');
+  const hours = document.getElementById('info-hours');
+  const ratingDiv = document.getElementById('info-rating'); // ⬅️ dodane
+
+  const props = feature.properties || {};
+
+  title.textContent = props.name || "Brak nazwy";
+  image.src = `zdj/${props.zdj || 'default.jpg'}`;
+  desc.textContent = props.description || "Brak opisu.";
+  address.textContent = "Adres: " + (props.address || props.vicinity || "brak danych");
+
+  const open = props.open?.toLowerCase() === "brak" ? null : props.open;
+  const closed = props.closed?.toLowerCase() === "brak" ? null : props.closed;
+
+  if (open && closed) {
+    hours.textContent = `Godziny otwarcia: ${open} – ${closed}`;
+  } else {
+    hours.textContent = `Godziny otwarcia: brak danych`;
+  }
+
+  const rating = parseFloat(props.rating || 0);
+  const fullStars = Math.floor(rating);
+  const maxStars = 5;
+
+  ratingDiv.innerHTML = ''; // Wyczyść stare gwiazdki
+
+  // Dodaj gwiazdki
+  for (let i = 0; i < maxStars; i++) {
+    const star = document.createElement('span');
+    star.classList.add('star');
+    if (i < fullStars) {
+      star.classList.add('filled');
+    }
+    star.innerHTML = '★';
+    ratingDiv.appendChild(star);
+  }
+
+  // Dodaj wartość liczbową
+  const ratingValue = document.createElement('span');
+  ratingValue.classList.add('rating-value');
+  ratingValue.textContent = rating.toFixed(1); // np. 4.3
+  ratingDiv.appendChild(ratingValue);
+  panel.style.display = 'block';
+
+  // Ukryj karuzelę
+  const carousel = document.getElementById('attraction-carousel');
+  if (carousel) {
+    carousel.style.display = 'none';
+  }
+
+}
+
+
+// document.getElementById('close-info-panel').addEventListener('click', () => {
+//   document.getElementById('attraction-info-panel').style.display = 'none';
+// });
+
+document.getElementById('close-info-panel').addEventListener('click', () => {
+  const panel = document.getElementById('attraction-info-panel');
+  const carousel = document.getElementById('attraction-carousel');
+
+  panel.style.display = 'none';
+
+  // Pokaż karuzelę z powrotem
+  if (carousel && carousel.children.length > 0) {
+    carousel.style.display = 'flex';
+  }
+});
+
+
 
 
 function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondition) {

@@ -131,22 +131,7 @@
 
 
 
-  <div id="filter-panel" style="
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff2cf;
-  border-radius: 30px;
-  padding: 20px 40px;
-  max-width: 80vw;
-  max-height: 50vh;
-  overflow-y: auto;
-  z-index: 999;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border: 8px solid #e99b25;
-  ">
+  <div id="filter-panel">
 
   <h2 style="text-align: center; font-family:'Mogra';color:  #563b29;">Filtry</h2>
   <!-- <p style="margin-top: 20px;">Nastrój:</p> -->
@@ -252,6 +237,24 @@
  <button id="search-button">szukaj</button>
 
   </div>
+
+<div id="attraction-info-panel" class="info-panel" style="display: none;">
+  <button id="close-info-panel" class="close-info-panel">×</button>
+  <img id="info-image" src="" alt="Zdjęcie atrakcji" class="info-image">
+  <div class="info-title-address">
+    <h2 id="info-title">Tytuł atrakcji</h2>
+    <span id="info-address">Adres: brak danych</span>
+  </div>
+  <p id="info-description">Opis atrakcji</p>
+  <p id="info-hours">Godziny otwarcia: brak danych</p>
+  <div id="info-rating" class="rating-stars"></div>
+  <button id="comments-button" class="comments-button">Komentarze</button>
+
+</div>
+
+<div id="premium-toast" class="premium-toast">Dostępne tylko w wersji premium 💎</div>
+
+
 
   <script src="script.js"></script>
 </body>
