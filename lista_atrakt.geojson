@@ -778,7 +778,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "wysoki",
         "address": "ul. Mokotowska 48, Warszawa",
-		"zdj": "w006.jpg"
+		"zdj": ["w006_1.jpg", "w006_2.jpg", "w006_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -812,7 +812,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "wysoki",
         "address": "ul. Wilcza 46, Warszawa",
-		"zdj": "w008.jpg"
+		"zdj": ["w008_1.jpg", "w008_2.jpg", "w008_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -846,7 +846,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Nowogrodzka 10, Warszawa",
-		"zdj": "w007.jpg"
+		"zdj": ["w007_1.jpg", "w007_2.jpg", "w007_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -880,7 +880,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "niski",
         "address": "ul. Nowy Świat 22/28, Warszawa",
-		"zdj": "w033.png"
+		"zdj": ["w033_1.png", "w033_2.jpg", "w033_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -911,7 +911,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Marszałkowska 99/101, Warszawa",
-		"zdj": "w035.jpg"
+		"zdj": ["w035_1.jpg", "w035_2.png", "w035_3.png"]
       },
       "geometry": {
         "coordinates": [
@@ -941,7 +941,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "wysoki",
         "address": "ul. Piękna 44, Warszawa",
-		"zdj": "w047.jpg"
+		"zdj": ["w047_1.jpg", "w047_2.jpg", "w047_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -1570,3 +1570,7 @@
 
   ]
 }
+
+
+
+    
