@@ -79,7 +79,7 @@
         "weather": ["słonecznie"],
         "budget": "bezpłatny",
         "address": "Bulwar gen. Pattona, Warszawa",
-		"zdj": ["w041_1.jpg", "w041_2.jpg", w041_3.jpg]
+	"zdj": ["w041_1.jpg", "w041_2.jpg", "w041_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -110,7 +110,7 @@
         "weather": ["słonecznie"],
         "budget": "niski",
         "address": "Bulwar Flotylli Wiślanej, Warszawa",
-		"zdj": ["w045_1.jpg", "w045_2.jpg", "w045_3.jpg"]
+	"zdj": ["w045_1.jpg", "w045_2.jpg", "w045_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -143,7 +143,7 @@
         "weather": ["słonecznie"],
         "budget": "bezpłatny",
         "address": "al. Zieleniecka, Warszawa",
-		"zdj": ["w013_1.jpg", "w013_2.jpg", "w013_3.jpg"]
+	"zdj": ["w013_1.jpg", "w013_2.jpg", "w013_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -177,7 +177,7 @@
         "weather": ["słonecznie"],
         "budget": "bezpłatny",
         "address": "Park Skaryszewski, Warszawa",
-		"zdj": ["w049_1.jpeg", "w049_2.jpg", "w049_3.jpg"]
+	"zdj": ["w049_1.jpeg", "w049_2.jpg", "w049_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -208,7 +208,7 @@
         "weather":  ["słonecznie", "deszczowo", "śnieżnie"],
         "budget": "wysoki",
         "address": "Soho Factory, Mińska 29A/bud. 46, 03-808 Warszawa",
-		"zdj": ["w010_1.jpg", "w010_2.jpg", "w010_3.jpg"]
+	"zdj": ["w010_1.jpg", "w010_2.jpg", "w010_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -241,7 +241,7 @@
         "weather":  ["słonecznie"],
         "budget": "średni",
         "address": "ul. Ratuszowa 1/3, Warszawa",
-		"zdj": ["w036_1.jpg", "w036_2.jpg", "w036_3.jpg"]
+	"zdj": ["w036_1.jpg", "w036_2.jpg", "w036_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -270,7 +270,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],        
         "budget": "średni",
         "address": "ul. Anielewicza 6, Warszawa",
-		"zdj": ["w029_1.jpg", "w029_2.jpg", "w029_3.jpg"]
+	"zdj": ["w029_1.jpg", "w029_2.jpg", "w029_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -304,7 +304,7 @@
         "weather": ["słonecznie"],        
         "budget": "bezpłatny",
         "address": "Skwer I Dywizji Pancernej, Warszawa",
-		"zdj": ["w002_1.jpg", "w002_2.jpg", "w002_3.jpg"]
+	"zdj": ["w002_1.jpg", "w002_2.jpg", "w002_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -336,7 +336,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "Rynek Starego Miasta 21, Warszawa",
-		"zdj": ["w023_1.jpg", "w023_2.png", "w023_3.png"]
+	"zdj": ["w023_1.jpg", "w023_2.png", "w023_3.png"]
       },
       "geometry": {
         "coordinates": [
@@ -369,7 +369,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "Plac Zamkowy 4, Warszawa",
-		"zdj": ["w027_1.jpg", "w027_2.jpg", "w027_3.jpg"]
+	"zdj": ["w027_1.jpg", "w027_2.jpg", "w027_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -404,7 +404,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "wysoki",
         "address": "Plac Teatralny 1, Warszawa",
-		"zdj": ["w026_1.jpg", "w026_2.jpg", "w026_3.jpg"]
+	"zdj": ["w026_1.jpg", "w026_2.jpg", "w026_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -436,7 +436,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "bezpłatny",
         "address": "ul. Karowa 20, Warszawa",
-		"zdj": ["w022_1.jpg", "w022_2.jpg", "w022_3.jpg"]
+	"zdj": ["w022_1.jpg", "w022_2.jpg", "w022_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -470,7 +470,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "ul. Okólnik 1, Warszawa",
-		"zdj": ["w030_1.jpg", "w030_2.png", "w030_3.jpg"]
+	"zdj": ["w030_1.jpg", "w030_2.png", "w030_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -505,7 +505,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "al. Jerozolimskie 3, Warszawa",
-		"zdj": ["w028_1.jpeg", "w028_2.jpg", "w028_3.jpg"]
+	"zdj": ["w028_1.jpeg", "w028_2.jpg", "w028_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -541,7 +541,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],       
         "budget": "średni",
         "address": "ul. Łazienkowska 6a, Warszawa",
-		"zdj": ["w018_1.jpeg", "w018_2.jpg", "w018_3.jpg"]
+	"zdj": ["w018_1.jpeg", "w018_2.jpg", "w018_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -575,7 +575,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Łazienkowska 3, Warszawa",
-		"zdj": ["w017_1.jpg", "w017_2.jpg", "w017_3.jpg"]
+	"zdj": ["w017_1.jpg", "w017_2.jpg", "w017_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -609,7 +609,7 @@
         "weather": ["słonecznie"],    
         "budget": "bezpłatny",
         "address": "ul. Agrykola 1, Warszawa",
-		"zdj": ["w004_1.jpg", "w004_2.jpg", "w004_3.jpg"]
+	"zdj": ["w004_1.jpg", "w004_2.jpg", "w004_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -644,7 +644,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Jazdów 2, Warszawa",
-		"zdj": ["w024_1.jpg", "w024_2.jpg", "w024_3.jpg"]
+	"zdj": ["w024_1.jpg", "w024_2.jpg", "w024_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -677,7 +677,7 @@
         "weather": ["słonecznie"],    
         "budget": "bezpłatny",
         "address": "Aleje Ujazdowskie 4, Warszawa",
-		"zdj": ["w011_1.jpg", "w011_2.jpg", "w011_3.jpg"]
+	"zdj": ["w011_1.jpg", "w011_2.jpg", "w011_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -709,7 +709,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "średni",
         "address": "ul. Koszykowa 63, Warszawa",
-		"zdj": ["w032_1.jpg", "w032_2.jpg", "w032_3.jpg"]
+	"zdj": ["w032_1.jpg", "w032_2.jpg", "w032_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -744,7 +744,7 @@
         "weather": ["słonecznie"],    
         "budget": "średni",
         "address": "Plac Zbawiciela, Warszawa",
-		"zdj": ["w042_1.jpg", "w042_2.jpg", "w042_3.jpg"]
+	"zdj": ["w042_1.jpg", "w042_2.jpg", "w042_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -778,7 +778,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],    
         "budget": "wysoki",
         "address": "ul. Mokotowska 48, Warszawa",
-		"zdj": ["w006_1.jpg", "w006_2.jpg", "w006_3.jpg"]
+	"zdj": ["w006_1.jpg", "w006_2.jpg", "w006_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -1407,7 +1407,7 @@
         "weather": ["słonecznie", "deszczowo", "śnieżnie"],  
         "budget": "niski",
         "address": "ul. Merliniego 2, Warszawa",
-		"zdj": [w038_1.jpg, w038_2.jpg, w038_3.jpg]
+	"zdj": ["w038_1.jpg", "w038_2.jpg", "w038_3.jpg"]
       },
       "geometry": {
         "coordinates": [
@@ -1557,7 +1557,7 @@
         "weather": ["słonecznie","pochmurno"],
         "budget": "bezpłatny",
         "address": "ul. Przy Grobli 3, 02-749 Warszawa",
-        "zdj": ["w046_1.jpeg", "w046_2.jpg", "w046_3.jpg"
+        "zdj": ["w046_1.jpeg", "w046_2.jpg", "w046_3.jpg"]
       },
       "geometry": {
         "coordinates": [
