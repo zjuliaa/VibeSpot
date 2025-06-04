@@ -1174,7 +1174,7 @@
         "weather": ["słonecznie"],  
         "budget": "niski",
         "address": "Pole Mokotowskie, Warszawa",
-		"zdj": ["w015_1.png", "w015_2.jpg", "w015_3.jpg"
+	"zdj": ["w015_1.png", "w015_2.jpg", "w015_3.jpg"]
       },
       "geometry": {
         "coordinates": [
