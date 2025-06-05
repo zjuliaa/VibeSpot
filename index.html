@@ -38,6 +38,7 @@
     <img id="user-photo" src="" alt="Zdjęcie profilowe" />
     <span id="user-name"></span>
     <button id="logout-btn">Wyloguj</button>
+    <button id="user-panel-btn">Panel użytkownika</button>
   </div>
 
   <!-- dodane 0 -->
@@ -93,6 +94,16 @@
       text-align: left;
       color: #563B29;
     ">Wyloguj się</button>
+
+    <button id="user-panel-btn" style="
+      padding: 10px 20px;
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      color: #563B29;
+    ">Panel użytkownika</button>
   </div>
 
   <div id="weather-info" style="
@@ -224,7 +235,7 @@
 
 <div id="attraction-info-panel" class="info-panel" style="display: none;">
   <button id="close-info-panel" class="close-info-panel">×</button>
-  <img id="info-image" src="" alt="Zdjęcie atrakcji" class="info-image">
+  <div id="info-image-gallery" class="info-image-gallery"></div>
   <div class="info-title-address">
     <h2 id="info-title">Tytuł atrakcji</h2>
     <span id="info-address">Adres: brak danych</span>
@@ -238,6 +249,43 @@
 
 <div id="premium-toast" class="premium-toast">Dostępne tylko w wersji premium 💎</div>
 
+<div id="user-details-panel" class="user-details-panel" style="display: none;">
+  <button id="close-user-details-btn" class="close-user-details-btn">×</button>
+
+  <div class="user-details-left">
+    <h2>Jan Nowak</h2>
+    <p class="premium-label">Użytkownik premium</p>
+    <ul class="user-menu">
+      <li>Twoje polubione miejsca</li>
+      <li>Ostatnio odwiedzane</li>
+      <li class="active">Zarządzaj subskrypcją</li>
+      <li>Resetuj hasło</li>
+      <li>Powiadomienia</li>
+      <li>Ustawienia konta</li>
+      <li>Centrum pomocy</li>
+      <li>Wyloguj</li>
+    </ul>
+  </div>
+
+  <div class="user-details-right">
+    <h3>Użytkownik premium</h3>
+    <p>wykupiona: 13.04.2025<br>wygasa: 13.05.2025</p>
+    <label><input type="checkbox" checked> Automatyczne odnawianie</label>
+    <p class="link">Anuluj subskrypcję</p>
+
+    <h4>Twój plan</h4>
+    <p>12.99 zł/miesiąc, opłata co miesiąc</p>
+    <p class="link">Zmień plan</p>
+
+    <h4>Metoda płatności</h4>
+    <p><img src="visa.png" alt="Visa" style="height: 24px;"> **** 1234</p>
+    <p class="link">Zmień metodę płatności</p>
+
+    <h4>Powiadomienia</h4>
+    <label><input type="checkbox" checked> SMS</label>
+    <label><input type="checkbox"> E-mail</label>
+  </div>
+</div>
 
 
   <script src="script.js"></script>
