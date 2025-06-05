@@ -319,6 +319,7 @@ document.getElementById('close-info-btn').addEventListener('click', () => {
   const user = firebase.auth().currentUser;
   if (user) {
     document.getElementById('filter-panel').style.display = 'block';
+    showUserPanel(user);
   } else {
     document.querySelector('.login-box').style.display = 'block';
   }
@@ -336,13 +337,14 @@ firebase.auth().onAuthStateChanged(user => {
   }
 
   if (user) {
-    showUserPanel(user);
-    if (loginBox) loginBox.style.display = 'none';
-    if (filterPanel) filterPanel.style.display = 'none';
-  } else {
+    // showUserPanel(user);
     if (loginBox) loginBox.style.display = 'none';
     if (filterPanel) filterPanel.style.display = 'none';
     if (userInitials) userInitials.style.display = 'none';
+  } else {
+    if (loginBox) loginBox.style.display = 'none';
+    if (filterPanel) filterPanel.style.display = 'none';
+    // if (userInitials) userInitials.style.display = 'none';
     if (userMenu) userMenu.style.display = 'none';
   }
 
@@ -919,50 +921,6 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
       }
     });
     
-    // const infoWindow = new google.maps.InfoWindow({
-    //   content: `<strong>${name}</strong><br>${desc}`
-    // });
-    // marker.addListener('click', () => {
-    //   infoWindow.open(map, marker);
-    // });
-
-
-    // marker.addListener('click', () => {
-    //   const card = document.getElementById(`carousel-card-${featureId}`);
-    //   const carousel = document.getElementById('attraction-carousel');
-    //   if (activeMarker) {
-    //     activeMarker.setIcon(customIcon);
-    //   }
-
-    //    marker.setIcon(selectedIcon);
-    //   activeMarker = marker;
-
-    //   if (card&& carousel) {
-    //     document.querySelectorAll('.carousel-card').forEach(el => el.classList.remove('highlight')); // usuń stare podświetlenia
-    //     card.classList.add('highlight'); // dodaj podświetlenie
-    //     carousel.style.display = 'flex';
-    //     // card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    //   // const carouselRect = carousel.getBoundingClientRect();
-    //   // const cardRect = card.getBoundingClientRect();
-    //   // const offset = cardRect.left - carouselRect.left - (carouselRect.width / 2) + (cardRect.width / 2);
-
-    //   // carousel.scrollBy({
-    //   //   left: offset,
-    //   //   behavior: 'smooth'
-    //   // });
-    //   const cardOffsetLeft = card.offsetLeft;
-    //   const cardWidth = card.offsetWidth;
-    //   const carouselWidth = carousel.offsetWidth;
-
-    //   const scrollTo = cardOffsetLeft - (carouselWidth / 2) + (cardWidth / 2);
-
-    //   carousel.scrollTo({
-    //     left: scrollTo,
-    //     behavior: 'smooth'
-    //   });
-    //   }
-    // });
-
   return marker;
   });
 
