@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function initMap() {
-    fetch('figma/googlemaps.json')
+    fetch('googlemaps.json')
       .then(res => res.json())
       .then(style => initMapWithStyle(style))
       .catch(err => {
