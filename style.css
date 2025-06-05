@@ -349,37 +349,41 @@ font-size: 18px;
   left: 0;
   right: 0;
   height: 220px; /* zwiększamy wysokość by zmieścić obraz + tekst */
-  background-color: #563B29;
+  background-color: none;
   display: flex;
   overflow-x: auto;
   padding: 10px;
   gap: 10px;
-  border-top: 1px solid #ccc;
+  border-top: none;
   z-index: 1000;
 }
 
 .carousel-card {
-  flex: 0 0 auto; /* ważne: nie pozwól kartom się kurczyć */
-  width: 260px;
-  background: #FFF2CF;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 10px;
+  background-color: #fffaed;
+  border: 2px solid #563b29;
+  border-radius: 20px;
+  padding: 12px;
+  margin: 8px;
+  box-shadow: 5px 5px 0px #3a2516;
+
+  width: 250px; /* możesz dostosować szerokość */
+  flex: 0 0 auto;
+
+  font-family: 'Mogra', cursive;
+  color: #563b29;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  scroll-snap-align: center; /* karta wyrówna się na środku */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  font-size: 14px;
 }
 
 .carousel-image {
   width: 100%;
-  height: 120px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 10px;
 }
+
 
 .carousel::-webkit-scrollbar {
   height: 8px;
