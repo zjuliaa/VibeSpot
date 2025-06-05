@@ -398,8 +398,8 @@ font-size: 18px;
 /* Podświetlenie klikniętej karty */
 .carousel-card.highlight {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #563B29;
-  border: 6px solid #563B29;
+  box-shadow: 0 0 10px #C9461E;
+  border: 6px solid #C9461E;
 }
 
 
@@ -900,4 +900,66 @@ input[type=range]::-moz-range-thumb {
   cursor: pointer;
   margin-top: 6px;
   display: inline-block;
+}
+
+#user-initials.user-initials {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #E99B25;
+  color: #563B29;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#user-menu.user-menu {
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  background-color: #FFF2CF;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1001;
+  font-size: 14px;
+}
+
+.user-menu-btn {
+  padding: 10px 20px;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: #563B29;
+}
+
+
+.styled-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #fffaed;
+  border-radius: 20px;
+  border: 2px solid #563b29;
+  padding: 30px 40px;
+
+  max-width: 80vw;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 1002;
+
+  box-shadow: 10px 10px 0px #3a2516;
 }
