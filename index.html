@@ -34,7 +34,7 @@
     <button>kontynuuj</button>
   </div>
 
-  <div class="user-panel" style="display: none; color: E99B25;">
+  <div class="user-panel styled-panel" style="display: none">
     <img id="user-photo" src="" alt="Zdjęcie profilowe" />
     <span id="user-name"></span>
     <button id="logout-btn">Wyloguj</button>
@@ -69,41 +69,11 @@
     Filtry
   </div>
 
-  <div id="user-initials" style="display: none; position: absolute; top: 20px; right: 20px; z-index: 1000;
-    background-color: #E99B25; color: #563B29; border-radius: 50%; width: 40px; height: 40px;
-    display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; cursor: pointer;">
-  </div>
-  <div id="user-menu" style="
-    display: none;
-    position: absolute;
-    top: 65px;
-    right: 20px;
-    background-color: #FFF2CF;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    z-index: 1001;
-    font-size: 14px;
-  ">
-    <button id="logout-btn-menu" style="
-      padding: 10px 20px;
-      width: 100%;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      color: #563B29;
-    ">Wyloguj się</button>
+  <div id="user-initials" class="user-initials"></div>
 
-    <button id="user-panel-btn" style="
-      padding: 10px 20px;
-      width: 100%;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      color: #563B29;
-    ">Panel użytkownika</button>
+  <div id="user-menu" class="user-menu">
+    <button id="logout-btn-menu" class="user-menu-btn">Wyloguj się</button>
+    <button id="user-panel-btn" class="user-menu-btn">Panel użytkownika</button>
   </div>
 
   <div id="weather-info" style="
@@ -233,10 +203,10 @@
 
   </div>
 
-<div id="attraction-info-panel" class="info-panel" style="display: none;">
+<div id="attraction-info-panel" class="info-panel styled-panel" style="display: none;">
   <button id="close-info-panel" class="close-info-panel">×</button>
   <div id="info-image-gallery" class="info-image-gallery"></div>
-  <div class="info-title-address">
+  <div class="info-title-address"> 
     <h2 id="info-title">Tytuł atrakcji</h2>
     <span id="info-address">Adres: brak danych</span>
   </div>
@@ -249,7 +219,7 @@
 
 <div id="premium-toast" class="premium-toast">Dostępne tylko w wersji premium 💎</div>
 
-<div id="user-details-panel" class="user-details-panel" style="display: none;">
+<div id="user-details-panel" class="user-details-panel styled-panel" style="display: none;">
   <button id="close-user-details-btn" class="close-user-details-btn">×</button>
 
   <div class="user-details-left">
