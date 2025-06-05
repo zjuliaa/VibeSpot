@@ -176,16 +176,21 @@ body, html {
 
   .filter-btn {
     margin: 10px;
-    background: transparent;
+    background-color: #fffaed;
+    color: #563B29;
     border: 2px solid #563B29;
     border-radius: 20px;
     padding: 8px 16px;
     font-family: Mogra;
-    color: #563b29;
     cursor: pointer;
   }
   .filter-btn:hover {
-    background: #563B29;
+    background-color: #563B29;   
+    color: #fffaed;
+  }
+  .filter-btn.selected {
+    background-color: #563B29;
+    color: #fffaed;
   }
 
   .other-btn.active {
