@@ -623,7 +623,11 @@ function displayAttractionsInCarousel(features) {
 
     const godziny = (open && closed) ? `${open} – ${closed}` : "brak godzin";
 
-    const imageName = props.zdj || "default.jpg";
+    let imageName = "default.jpg";
+    if (Array.isArray(props.zdj) && props.zdj.length > 0) {
+      imageName = props.zdj[0]; // możesz też dać losowe: props.zdj[Math.floor(Math.random() * props.zdj.length)]
+    }
+
     const imagePath = `zdj/${imageName}`;
     const featureId = props.id || `feature-${index}`;
 
@@ -700,7 +704,8 @@ window.addEventListener('DOMContentLoaded', () => {
 function showAttractionInfoPanel(feature) {
   const panel = document.getElementById('attraction-info-panel');
   const title = document.getElementById('info-title');
-  const image = document.getElementById('info-image');
+  const gallery = document.getElementById('info-image-gallery');
+  gallery.innerHTML = ''; // wyczyść poprzednie zdjęcia
   const desc = document.getElementById('info-description');
   const address = document.getElementById('info-address');
   const hours = document.getElementById('info-hours');
@@ -709,7 +714,15 @@ function showAttractionInfoPanel(feature) {
   const props = feature.properties || {};
 
   title.textContent = props.name || "Brak nazwy";
-  image.src = `zdj/${props.zdj || 'default.jpg'}`;
+  const images = Array.isArray(props.zdj) ? props.zdj : [props.zdj || 'default.jpg'];
+
+  images.forEach(filename => {
+  const img = document.createElement('img');
+  img.src = `zdj/${filename}`;
+  img.alt = props.name || "Zdjęcie atrakcji";
+  gallery.appendChild(img);
+  });
+
   desc.textContent = props.description || "Brak opisu.";
   address.textContent = "Adres: " + (props.address || props.vicinity || "brak danych");
 
@@ -769,6 +782,34 @@ document.getElementById('close-info-panel').addEventListener('click', () => {
   if (carousel && carousel.children.length > 0) {
     carousel.style.display = 'flex';
   }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('✅ DOMContentLoaded – skrypt uruchomiony');
+
+  const panel = document.getElementById('user-details-panel');
+  const openBtn = document.getElementById('user-panel-btn');
+  const closeBtn = document.getElementById('close-user-details-btn');
+
+  console.log('🔍 openBtn:', openBtn);
+  console.log('🔍 closeBtn:', closeBtn);
+  console.log('🔍 panel:', panel);
+
+  if (!openBtn || !closeBtn || !panel) {
+    console.error('❌ Nie znaleziono któregoś z elementów: openBtn, closeBtn, panel');
+    return;
+  }
+
+  openBtn.addEventListener('click', () => {
+    console.log('🟢 Kliknięto przycisk "Panel użytkownika"');
+    panel.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    console.log('🔴 Kliknięto przycisk zamknięcia panelu');
+    panel.style.display = 'none';
+  });
 });
 
 
