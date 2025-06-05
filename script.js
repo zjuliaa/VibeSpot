@@ -73,12 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.initMap = initMap;
   
 
-
-  // const map = L.map('map').setView([52.2297, 21.0122], 13);
-  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  //   attribution: '&copy; OpenStreetMap contributors'
-  // }).addTo(map);
-
   let userLat = null;
   let userLon = null;
 
