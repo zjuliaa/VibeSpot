@@ -3,6 +3,8 @@ let customIcon;
 let selectedIcon;
 let activeInfoWindow = null;
 
+
+
 function updateSliderDistance(slider_d, tooltip_d) {
   const value = slider_d.value;
   tooltip_d.textContent = `${value} km`;
@@ -281,6 +283,8 @@ if (searchBtn) {
         const user = result.user;
         // alert("Zalogowano jako: " + user.displayName);
         onUserLogin(user); 
+        userInitials = document.getElementById('user-initials');
+        userInitials.style.display = 'flex';
       })
       .catch(error => {
         if (error.code === 'auth/popup-closed-by-user') {
@@ -762,9 +766,8 @@ document.getElementById('close-info-panel').addEventListener('click', () => {
   }
 });
 
-
 document.addEventListener('click', (event) => {
-  const clickedElement = event.target;
+
 
   // Obsługa kliknięcia w przycisk panelu użytkownika
   if (clickedElement && clickedElement.id === 'user-panel-btn') {
@@ -787,7 +790,81 @@ document.addEventListener('click', (event) => {
   }
 });
 
+document.addEventListener('click', (event) => {
+  const clickedId = event.target.id;
 
+  const userPanel = document.getElementById('user-details-panel');
+  const filterPanel = document.getElementById('filter-panel');
+  const carousel = document.getElementById('attraction-carousel');
+  const weatherInfo = document.getElementById('weather-info');
+  const panel = document.getElementById('attraction-info-panel');
+
+
+
+  let filtersWereOpen = false;
+
+
+  // Otwórz panel użytkownika
+  if (clickedId === 'user-panel-btn') {
+    console.log('🟢 Otwieram panel użytkownika');
+    if (userPanel) userPanel.style.display = 'flex';
+
+    // 🔸 ZAPISZ stan karuzeli przed ukryciem
+    wasCarouselVisibleBeforePanel = carousel && carousel.style.display !== 'none';
+
+    // 🔸 Ukryj karuzelę i filtry
+    if (carousel) carousel.style.display = 'none';
+    weatherInfo.style.display = 'none'; // Ukryj informacje o pogodzie
+    if (filterPanel) filterPanel.style.display = 'none';
+    panel.style.display = 'none'; // Ukryj panel atrakcji
+  }
+
+  if (clickedId === 'close-user-details-btn') {
+    console.log('🔴 Zamykam panel użytkownika');
+    if (userPanel) userPanel.style.display = 'none';
+
+    // 🔸 ODZYSKAJ karuzelę tylko jeśli była wcześniej widoczna i ma dane
+    const hasCards = carousel && carousel.querySelectorAll('.carousel-card').length > 0;
+    if (wasCarouselVisibleBeforePanel && hasCards) {
+      carousel.style.display = 'flex';
+    }
+
+    // 🔸 Pokaż toggle bar, ale NIE pokazuj filtrów
+    if (filterToggleBar) filterToggleBar.style.display = 'flex';
+    if (filterPanel) filterPanel.style.display = 'none';
+    weatherInfo.style.display = 'flex'; // Pokaż informacje o pogodzie
+
+    // 🔁 Reset flagi
+    wasCarouselVisibleBeforePanel = false;
+  }
+
+});
+
+
+
+window.onload = () => {
+  console.log("Strona załadowana");
+
+  const buttons = document.querySelectorAll('.menu-btn');
+  const contentDiv = document.getElementById('user-details-content');
+
+  function updateActiveButton(clickedButton) {
+      buttons.forEach(btn => btn.classList.remove('active'));
+      clickedButton.classList.add('active');
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        contentDiv.innerHTML = contentMap[tab] || "<p>Brak treści.</p>";
+        updateActiveButton(btn);
+      });
+    });
+
+    if (buttons.length > 0) {
+      buttons[0].click(); 
+    }
+};
 
 
 
@@ -857,17 +934,17 @@ function displayAttractionsInRange(userLat, userLon, maxDistanceKm, weatherCondi
       icon: customIcon 
     });
     
-    const infoWindow = new google.maps.InfoWindow({
-      content: `<strong>${name}</strong><br>${desc}`
-    });
+    // const infoWindow = new google.maps.InfoWindow({
+    //   // content: `<strong>${name}</strong><br>${desc}`
+    // });
 
     marker.addListener('click', () => {
-      if (activeInfoWindow) {
-        activeInfoWindow.close(); // zamyka poprzednie
-      }
+      // if (activeInfoWindow) {
+      //   activeInfoWindow.close(); // zamyka poprzednie
+      // }
 
-      infoWindow.open(map, marker); // otwiera nowe
-      activeInfoWindow = infoWindow; // zapamiętuje to jako aktualnie otwarte
+      // infoWindow.open(map, marker); // otwiera nowe
+      // activeInfoWindow = infoWindow; // zapamiętuje to jako aktualnie otwarte
 
       // reszta twojego kodu: highlight, scroll, zmiana ikon
       const card = document.getElementById(`carousel-card-${featureId}`);
