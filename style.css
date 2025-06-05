@@ -11,7 +11,7 @@ body, html {
     z-index: 1;
     position: relative;
   }
-  
+/*   
   .login-box {
     position: absolute;
     top: 50%;
@@ -41,7 +41,7 @@ body, html {
     font-family: Mogra;
   }
   
-
+*/
 .login-box button, .login-box input {
     display: block;
     width: 100%;
@@ -52,10 +52,11 @@ body, html {
     font-size: 14px;
     cursor: pointer;
     background-color: #563B29;
-    font-family: Mogra;
-}
+    font-family: 'Mogra', cursive;
+    transition: background-color 0.3s ease;
+  }
 
-  
+
   .google-btn {
     background-color: #563B29;
   }
@@ -74,7 +75,60 @@ body, html {
   
   input {
     box-sizing: border-box;
-  }
+  } 
+
+
+
+  .login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFAED;
+  border-radius: 25px;
+  padding: 40px 20px;
+  width: 320px;
+  box-shadow: 8px 8px 0 #563B29;
+  z-index: 1000;
+  border: none;
+}
+
+.login-box h2 {
+  font-size: 48px;
+  font-family: 'Mogra', cursive;
+  color: #563B29;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-box button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #563B29;
+  color: #FFFAED;
+  font-family: 'Mogra', cursive;
+  transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #6f4d38;
+}
+
+.separator {
+  text-align: center;
+  margin: 16px 0;
+  font-style: italic;
+  font-family: 'Mogra', cursive;
+  color: #563B29;
+  font-size: 18px;
+}
+
   
   .close-btn {
     position: absolute;
@@ -647,7 +701,7 @@ input[type=range]::-moz-range-thumb {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 800px;
+  width: 850px;
   max-height: 80vh;
   overflow-y: auto;
   background: #fffaed;
@@ -666,7 +720,7 @@ input[type=range]::-moz-range-thumb {
   width: 10px;
 }
 
-.info-panel::-webkit-scrollbar-thumb {
+/* .info-panel::-webkit-scrollbar-thumb {
   background-color: #563B29;
   border-radius: 10px;
   margin-top: 8px;
@@ -675,13 +729,13 @@ input[type=range]::-moz-range-thumb {
 
 .info-panel::-webkit-scrollbar-track {
   background-color: transparent;
-}
+} */
 
-/* Firefox */
+/* Firefox
 .info-panel {
   scrollbar-width: thin;
   scrollbar-color: #563B29 transparent;
-}
+} */
 
 
 
@@ -920,8 +974,8 @@ input[type=range]::-moz-range-thumb {
   top: 20px;
   right: 20px;
   z-index: 1000;
-  background-color: #E99B25;
-  color: #563B29;
+  background-color: #C9461E;
+  color: #FFFAED;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -938,7 +992,7 @@ input[type=range]::-moz-range-thumb {
   position: absolute;
   top: 65px;
   right: 20px;
-  background-color: #FFF2CF;
+  background-color: #FFFAED;
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -975,3 +1029,55 @@ input[type=range]::-moz-range-thumb {
 
   box-shadow: 10px 10px 0px #3a2516;
 }
+
+
+.user-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  text-align: left;
+  font-family: inherit;
+  color: #563b29;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu-btn:hover {
+  background-color: #f3e4c6;
+}
+
+.user-details-panel {
+      display: flex;
+      border: 1px solid #ccc;
+      max-width: 800px;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .user-details-left {
+      flex: 1;
+    }
+
+    .user-details-right {
+      flex: 2;
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+    }
+
+    .menu-btn {
+      display: block;
+      margin-bottom: 10px;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .menu-btn.active {
+      background: #e35225;
+      color: #fffaed;
+    }
