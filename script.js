@@ -785,32 +785,30 @@ document.getElementById('close-info-panel').addEventListener('click', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('✅ DOMContentLoaded – skrypt uruchomiony');
+document.addEventListener('click', (event) => {
+  const clickedElement = event.target;
 
-  const panel = document.getElementById('user-details-panel');
-  const openBtn = document.getElementById('user-panel-btn');
-  const closeBtn = document.getElementById('close-user-details-btn');
-
-  console.log('🔍 openBtn:', openBtn);
-  console.log('🔍 closeBtn:', closeBtn);
-  console.log('🔍 panel:', panel);
-
-  if (!openBtn || !closeBtn || !panel) {
-    console.error('❌ Nie znaleziono któregoś z elementów: openBtn, closeBtn, panel');
-    return;
+  // Obsługa kliknięcia w przycisk panelu użytkownika
+  if (clickedElement && clickedElement.id === 'user-panel-btn') {
+    console.log('🟢 Kliknięto przycisk Panel użytkownika');
+    const panel = document.getElementById('user-details-panel');
+    if (panel) {
+      panel.style.display = 'flex';
+    } else {
+      console.warn('⚠️ Nie znaleziono #user-details-panel');
+    }
   }
 
-  openBtn.addEventListener('click', () => {
-    console.log('🟢 Kliknięto przycisk "Panel użytkownika"');
-    panel.style.display = 'flex';
-  });
-
-  closeBtn.addEventListener('click', () => {
-    console.log('🔴 Kliknięto przycisk zamknięcia panelu');
-    panel.style.display = 'none';
-  });
+  // Obsługa zamknięcia panelu
+  if (clickedElement && clickedElement.id === 'close-user-details-btn') {
+    console.log('🔴 Zamknięto panel użytkownika');
+    const panel = document.getElementById('user-details-panel');
+    if (panel) {
+      panel.style.display = 'none';
+    }
+  }
 });
+
 
 
 
