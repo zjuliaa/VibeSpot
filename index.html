@@ -69,7 +69,7 @@
     Filtry
   </div>
 
-  <div id="user-initials" class="user-initials"></div>
+  <div id="user-initials" class="user-initials" style="display: none"></div>
 
   <div id="user-menu" class="user-menu">
     <button id="logout-btn-menu" class="user-menu-btn">Wyloguj się</button>
@@ -101,8 +101,7 @@
     </div>
 
     <div class="odkrywaj-wydarzenia-dopasowane">
-      Odkrywaj wydarzenia dopasowane do Twojego nastroju, zainteresowań i lokalizacji...
-    </div>
+    Odkrywaj wydarzenia dopasowane do Twojego nastroju, zainteresowań i lokalizacji. Skorzystaj z filtrów, aby znaleźć idealne miejsce lub aktywność!    </div>
 
     <button id="close-info-btn" class="button">
       <div class="button-text">Zaczynamy!</div>
@@ -222,42 +221,29 @@
 <div id="user-details-panel" class="user-details-panel styled-panel" style="display: none;">
   <button id="close-user-details-btn" class="close-user-details-btn">×</button>
 
-  <div class="user-details-left">
+  <div class="user-details-left" style="text-align: center;">
+    <img src="icon/icon_person.svg" alt="Ikona użytkownika" style="width:64px; height:64px; margin-bottom:10px; ">
     <h2 id="user-fullname">Jan Nowak</h2>
-    <p class="premium-label">Użytkownik premium</p>
-    <ul class="user-menu">
-      <li>Twoje polubione miejsca</li>
-      <li>Ostatnio odwiedzane</li>
-      <li class="active">Zarządzaj subskrypcją</li>
-      <li>Resetuj hasło</li>
-      <li>Powiadomienia</li>
-      <li>Ustawienia konta</li>
-      <li>Centrum pomocy</li>
-      <li>Wyloguj</li>
-    </ul>
-  </div>
+    <p class="premium-label">Użytkownik standard</p>
+    <div class="user-menu">
+      <button class="menu-btn" data-tab="favorites">Twoje polubione miejsca</button>
+      <button class="menu-btn" data-tab="recent">Ostatnio odwiedzane</button>
+      <button class="menu-btn" data-tab="subscription">Zarządzaj subskrypcją</button>
+      <button class="menu-btn" data-tab="reset">Resetuj hasło</button>
+      <button class="menu-btn" data-tab="notifications">Powiadomienia</button>
+      <button class="menu-btn" data-tab="settings">Ustawienia konta</button>
+      <button class="menu-btn" data-tab="help">Centrum pomocy</button>
+    </div>
+  </div> <!-- ← dodane zamknięcie -->
 
-  <div class="user-details-right">
-    <h3>Użytkownik premium</h3>
-    <p>wykupiona: 13.04.2025<br>wygasa: 13.05.2025</p>
-    <label><input type="checkbox" checked> Automatyczne odnawianie</label>
-    <p class="link">Anuluj subskrypcję</p>
-
-    <h4>Twój plan</h4>
-    <p>12.99 zł/miesiąc, opłata co miesiąc</p>
-    <p class="link">Zmień plan</p>
-
-    <h4>Metoda płatności</h4>
-    <p><img src="visa.png" alt="Visa" style="height: 24px;"> **** 1234</p>
-    <p class="link">Zmień metodę płatności</p>
-
-    <h4>Powiadomienia</h4>
-    <label><input type="checkbox" checked> SMS</label>
-    <label><input type="checkbox"> E-mail</label>
+  <div class="user-details-right" id="user-details-content">
+    <!-- Tu będzie ładowana zawartość -->
   </div>
 </div>
 
 
+  <script src="contentMap.js"></script>
   <script src="script.js"></script>
+  
 </body>
 </html>
