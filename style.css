@@ -398,8 +398,8 @@ font-size: 18px;
 /* Podświetlenie klikniętej karty */
 .carousel-card.highlight {
   transform: scale(1.05);
-  box-shadow: 0 0 10px #563B29;
-  border: 6px solid #563B29;
+  box-shadow: 0 0 10px #C9461E;
+  border: 6px solid #C9461E;
 }
 
 
