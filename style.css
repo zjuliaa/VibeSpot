@@ -630,7 +630,7 @@ input[type=range]::-moz-range-thumb {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 1000px;
+  width: 800px;
   max-height: 80vh;
   overflow-y: auto;
   background: #fffaed;
@@ -681,14 +681,14 @@ input[type=range]::-moz-range-thumb {
 
 }
 
-.info-image {
+/* .info-image {
   width: 100%;
   height: 300px;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
   margin-top: 40px;
-}
+} */
 
 #info-rating {
   display: flex;
@@ -801,4 +801,98 @@ input[type=range]::-moz-range-thumb {
 .premium-toast.visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+.info-image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  max-width: 100%;
+  margin: 20px auto 0 auto; /* ⬅️ dodane: odstęp od góry */
+}
+
+
+.info-image-gallery img {
+  height: 180px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.user-details-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  max-width: 95%;
+  background-color: #fff8e5;
+  border: 4px solid #563b29;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  gap: 30px;
+}
+
+.user-details-left {
+  flex: 1;
+  border-right: 2px solid #563b29;
+  padding-right: 20px;
+}
+
+.user-details-right {
+  flex: 1;
+  font-size: 14px;
+}
+
+.user-details-panel h2, .user-details-panel h3, .user-details-panel h4 {
+  font-family: 'Mogra', cursive;
+  margin-bottom: 10px;
+  color: #563b29;
+}
+
+.user-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.user-menu li {
+  padding: 6px 0;
+  cursor: pointer;
+}
+.user-menu li.active {
+  font-weight: bold;
+  color: #e99b25;
+}
+
+.close-user-details-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #563b29;
+  cursor: pointer;
+}
+
+.premium-label {
+  color: #e35225;
+  font-style: italic;
+}
+
+.link {
+  color: #e35225;
+  font-style: italic;
+  cursor: pointer;
+  margin-top: 6px;
+  display: inline-block;
 }
