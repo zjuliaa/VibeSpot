@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function initMap() {
-    fetch('figma/googlemaps.json')
+    fetch('googlemaps.json')
       .then(res => res.json())
       .then(style => initMapWithStyle(style))
       .catch(err => {
@@ -72,12 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.initMap = initMap;
   
-
-
-  // const map = L.map('map').setView([52.2297, 21.0122], 13);
-  // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  //   attribution: '&copy; OpenStreetMap contributors'
-  // }).addTo(map);
 
   let userLat = null;
   let userLon = null;
@@ -486,10 +480,22 @@ let selectedTimeRange = null;
 let selectedMood = null;
 let selectedExtras = new Set();
 
+// document.querySelectorAll('.mood_btn').forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     document.querySelectorAll('.mood_btn').forEach(b => b.classList.remove('selected'));
+//     btn.classList.add('selected');
+//     selectedMood = btn.textContent.trim();
+//     console.log("Wybrany nastrój:", selectedMood);
+//   });
+// });
+
 document.querySelectorAll('.mood_btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.mood_btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
+    // Usuń klasę active z wszystkich przycisków
+    document.querySelectorAll('.mood_btn').forEach(b => b.classList.remove('active'));
+    // Dodaj active do klikniętego
+    btn.classList.add('active');
+    // Zapisz wybrany nastrój
     selectedMood = btn.textContent.trim();
     console.log("Wybrany nastrój:", selectedMood);
   });
@@ -657,40 +663,6 @@ function displayAttractionsInCarousel(features) {
 }
 
 
-
-// function displayAttractionsInCarousel(features) {
-//   const carousel = document.getElementById('attraction-carousel');
-//   if (!carousel) return;
- 
-//   if (!features || features.length === 0) {
-//     carousel.style.display = 'none';
-//     return;
-//   }
- 
-//   carousel.innerHTML = ''; // Wyczyść poprzednie
- 
-//   features.forEach(feature => {
-//     const props = feature.properties || {};
-//     const name = props.name || "Brak nazwy";
-//     const address = props.address || props.vicinity || "Brak adresu";
-//     const imageName = props.zdj || "default.jpg"; // jeśli brak zdjęcia, użyj domyślnego
-//     const imagePath = `zdj/${imageName}`; // ścieżka do zdjęcia
-//     const featureId = props.id || `feature-${index}`;
-
-//     const card = document.createElement('div');
-//     card.className = 'carousel-card';
-//     card.id = `carousel-card-${featureId}`;
-//     card.innerHTML = `
-//       <img src="${imagePath}" alt="${name}" class="carousel-image">
-//       <strong>${name}</strong><br>
-//       <span>${address}</span>
-//     `;
-//     carousel.appendChild(card);
-//   });
- 
-//   carousel.style.display = 'flex';
-// }
- 
  
 window.addEventListener('DOMContentLoaded', () => {
   const carousel = document.getElementById('attraction-carousel');
