@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function initMap() {
-    fetch('googlemaps.json')
+    fetch('figma/googlemaps.json')
       .then(res => res.json())
       .then(style => initMapWithStyle(style))
       .catch(err => {
@@ -331,6 +331,7 @@ firebase.auth().onAuthStateChanged(user => {
   const userInitials = document.getElementById('user-initials');
   const userMenu = document.getElementById('user-menu');
   const infoPanel = document.getElementById('info-panel');
+  const fullNameElement = document.getElementById('user-fullname');
 
   if (infoPanel) {
     infoPanel.style.display = 'block';
@@ -338,6 +339,9 @@ firebase.auth().onAuthStateChanged(user => {
 
   if (user) {
     // showUserPanel(user);
+    if (fullNameElement && user.displayName) {
+      fullNameElement.textContent = user.displayName;
+    }
     if (loginBox) loginBox.style.display = 'none';
     if (filterPanel) filterPanel.style.display = 'none';
     if (userInitials) userInitials.style.display = 'none';
