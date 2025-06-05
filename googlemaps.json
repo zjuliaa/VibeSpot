@@ -320,5 +320,28 @@
         "color": "#92998d"
       }
     ]
+  },
+  
+  {
+    "featureType": "poi",
+    "stylers": [{ "visibility": "off" }]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      },
+      {
+        "saturation": 100
+      },
+      {
+        "lightness": -60
+      },
+      {
+        "visibility": "on"
+      }
+    ]
   }
 ]
